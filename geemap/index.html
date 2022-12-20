@@ -6,12 +6,16 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="A Python package for interactive mapping with Google Earth Engine">
+      
+      
+        <meta name="author" content="Qiusheng Wu">
       
       
         <link rel="canonical" href="https://geemap.org/geemap/">
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.0, mkdocs-material-8.2.11">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
     
     
       
@@ -19,12 +23,14 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.8c5ef100.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.975780f9.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.9647289d.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
         
       
+      
+
     
     
     
@@ -32,14 +38,16 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans:300,300i,400,400i,700,700i%7CRegular:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Google Sans";--md-code-font:"Regular"}</style>
       
     
+    
+      <link rel="stylesheet" href="../css/timeago.css">
     
       <link rel="stylesheet" href="../assets/_mkdocstrings.css">
     
-    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -49,10 +57,13 @@
   
 
 
-  <script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-186406134-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),"undefined"!=typeof location$&&location$.subscribe(function(e){ga("send","pageview",e.pathname)})})</script>
-  <script async src="https://www.google-analytics.com/analytics.js"></script>
+  <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-H322CB6ZEC"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-H322CB6ZEC",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-H322CB6ZEC",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
 
+    
     
     
   </head>
@@ -60,12 +71,16 @@
   
     
     
+      
     
     
     
-    <body dir="ltr" data-md-color-scheme="preference" data-md-color-primary="" data-md-color-accent="">
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
   
     
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -113,6 +128,30 @@
       </div>
     </div>
     
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+          
+        
+          
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
     
     
       <label class="md-header__button md-icon" for="__search">
@@ -129,11 +168,11 @@
       </label>
       <nav class="md-search__options" aria-label="Search">
         
-          <a href="javascript:void(0)" class="md-search__icon md-icon" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
           </a>
         
-        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
       </nav>
@@ -157,7 +196,7 @@
         <a href="https://github.com/giswqs/geemap" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -202,7 +241,7 @@
       <a href="https://github.com/giswqs/geemap" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -430,7 +469,7 @@
   
   
     <li class="md-nav__item">
-      <a href="https://www.youtube.com/c/QiushengWu" class="md-nav__link">
+      <a href="https://youtube.com/@giswqs" class="md-nav__link">
         YouTube Channel
       </a>
     </li>
@@ -782,6 +821,20 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#geemap.geemap.Map.add_html" class="md-nav__link">
+    add_html()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#geemap.geemap.Map.add_image" class="md-nav__link">
+    add_image()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#geemap.geemap.Map.add_kml" class="md-nav__link">
     add_kml()
   </a>
@@ -985,6 +1038,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#geemap.geemap.Map.add_text" class="md-nav__link">
+    add_text()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#geemap.geemap.Map.add_tile_layer" class="md-nav__link">
     add_tile_layer()
   </a>
@@ -1008,6 +1068,13 @@
           <li class="md-nav__item">
   <a href="#geemap.geemap.Map.add_velocity" class="md-nav__link">
     add_velocity()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#geemap.geemap.Map.add_widget" class="md-nav__link">
+    add_widget()
   </a>
   
 </li>
@@ -1607,6 +1674,34 @@
     <li class="md-nav__item">
       <a href="../workshops/Japan_2022/" class="md-nav__link">
         Japan 2022
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../workshops/GEE_Workshop_2022_Part1/" class="md-nav__link">
+        GEE Workshop 2022 Part1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../workshops/GEE_Workshop_2022_Part2/" class="md-nav__link">
+        GEE Workshop 2022 Part2
       </a>
     </li>
   
@@ -3221,8 +3316,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../notebooks/112_cartoee_basemap/" class="md-nav__link">
-        112 cartoee basemap
+      <a href="../notebooks/112_cartoee_basemap_X/" class="md-nav__link">
+        112 cartoee basemap X
       </a>
     </li>
   
@@ -3430,35 +3525,9 @@
   
   
   
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_19_128" type="checkbox" id="__nav_19_128" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_19_128">
-          miscellaneous
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="miscellaneous" data-md-level="2">
-        <label class="md-nav__title" for="__nav_19_128">
-          <span class="md-nav__icon md-icon"></span>
-          miscellaneous
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
     <li class="md-nav__item">
-      <a href="../notebooks/cartoee_colab/" class="md-nav__link">
-        Cartoee colab
+      <a href="../notebooks/127_create_legend/" class="md-nav__link">
+        127 create legend
       </a>
     </li>
   
@@ -3471,8 +3540,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../notebooks/cartoee_colorbar/" class="md-nav__link">
-        Cartoee colorbar
+      <a href="../notebooks/128_add_widget/" class="md-nav__link">
+        128 add widget
       </a>
     </li>
   
@@ -3485,8 +3554,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../notebooks/cartoee_projections/" class="md-nav__link">
-        Cartoee projections
+      <a href="../notebooks/129_vector_to_gif/" class="md-nav__link">
+        129 vector to gif
       </a>
     </li>
   
@@ -3499,8 +3568,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../notebooks/cartoee_quickstart/" class="md-nav__link">
-        Cartoee quickstart
+      <a href="../notebooks/130_print_objects/" class="md-nav__link">
+        130 print objects
       </a>
     </li>
   
@@ -3513,548 +3582,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../notebooks/cartoee_scalebar/" class="md-nav__link">
-        Cartoee scalebar
+      <a href="../notebooks/131_arcgis/" class="md-nav__link">
+        131 arcgis
       </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../notebooks/cartoee_subplots/" class="md-nav__link">
-        Cartoee subplots
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../notebooks/file_browser/" class="md-nav__link">
-        File browser
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../notebooks/geemap_and_earthengine/" class="md-nav__link">
-        Geemap and earthengine
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../notebooks/geemap_and_folium/" class="md-nav__link">
-        Geemap and folium
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../notebooks/geemap_and_ipyleaflet/" class="md-nav__link">
-        Geemap and ipyleaflet
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../notebooks/geemap_and_ipywidgets/" class="md-nav__link">
-        Geemap and ipywidgets
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../notebooks/geemap_colab/" class="md-nav__link">
-        Geemap colab
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../notebooks/geemap_matplotlib/" class="md-nav__link">
-        Geemap matplotlib
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../notebooks/geopandas/" class="md-nav__link">
-        Geopandas
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../notebooks/image_overlay/" class="md-nav__link">
-        Image overlay
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../notebooks/ipyleaflet_draw_control/" class="md-nav__link">
-        Ipyleaflet draw control
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../notebooks/ipyleaflet_tutorials/" class="md-nav__link">
-        Ipyleaflet tutorials
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../notebooks/ipywidgets_demo/" class="md-nav__link">
-        Ipywidgets demo
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../notebooks/kml_kmz/" class="md-nav__link">
-        Kml kmz
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../notebooks/local_rf_training/" class="md-nav__link">
-        Local rf training
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../notebooks/mouse_click_coordinates/" class="md-nav__link">
-        Mouse click coordinates
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../notebooks/netcdf/" class="md-nav__link">
-        Netcdf
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../notebooks/numpy_to_ee/" class="md-nav__link">
-        Numpy to ee
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../notebooks/nlcd_app/" class="md-nav__link">
-        Nlcd app
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../notebooks/nlcd_datapane/" class="md-nav__link">
-        Nlcd datapane
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../notebooks/notebook_template/" class="md-nav__link">
-        Notebook template
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../notebooks/oil_palm_and_rubber_plantation/" class="md-nav__link">
-        Oil palm and rubber plantation
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../notebooks/otsu/" class="md-nav__link">
-        Otsu
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../notebooks/qgis_layer_style_file/" class="md-nav__link">
-        Qgis layer style file
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../notebooks/random_sampling/" class="md-nav__link">
-        Random sampling
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../notebooks/river_width/" class="md-nav__link">
-        River width
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../notebooks/select_features/" class="md-nav__link">
-        Select features
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../notebooks/select_features_old/" class="md-nav__link">
-        Select features old
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../notebooks/sentinel1_timelapse/" class="md-nav__link">
-        Sentinel1 timelapse
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../notebooks/surface_water_mapping/" class="md-nav__link">
-        Surface water mapping
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../notebooks/template/" class="md-nav__link">
-        Template
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../notebooks/tn_surface_water/" class="md-nav__link">
-        Tn surface water
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../notebooks/us_census_data/" class="md-nav__link">
-        Us census data
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../notebooks/usda_naip_imagery/" class="md-nav__link">
-        Usda naip imagery
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../notebooks/velocity/" class="md-nav__link">
-        Velocity
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../notebooks/video_overlay/" class="md-nav__link">
-        Video overlay
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../notebooks/water_app/" class="md-nav__link">
-        Water app
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../notebooks/world_pop_density/" class="md-nav__link">
-        World pop density
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
     </li>
   
 
@@ -4208,6 +3738,20 @@
           <li class="md-nav__item">
   <a href="#geemap.geemap.Map.add_heatmap" class="md-nav__link">
     add_heatmap()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#geemap.geemap.Map.add_html" class="md-nav__link">
+    add_html()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#geemap.geemap.Map.add_image" class="md-nav__link">
+    add_image()
   </a>
   
 </li>
@@ -4416,6 +3960,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#geemap.geemap.Map.add_text" class="md-nav__link">
+    add_text()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#geemap.geemap.Map.add_tile_layer" class="md-nav__link">
     add_tile_layer()
   </a>
@@ -4439,6 +3990,13 @@
           <li class="md-nav__item">
   <a href="#geemap.geemap.Map.add_velocity" class="md-nav__link">
     add_velocity()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#geemap.geemap.Map.add_widget" class="md-nav__link">
+    add_widget()
   </a>
   
 </li>
@@ -4813,17 +4371,19 @@
               </div>
             
           
-          <div class="md-content" data-md-component="content">
-            <article class="md-content__inner md-typeset">
-              
-
-
-
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
                 
+
+
+
+                  
+
   <a href="https://github.com/giswqs/geemap/edit/master/docs/geemap.md" title="Edit this page" class="md-content__button md-icon">
+    
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
-
 
 
 <h1 id="geemap-module">geemap module<a class="headerlink" href="#geemap-module" title="Permanent link">&para;</a></h1>
@@ -4994,7 +4554,7 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
 
     <div class="doc doc-contents ">
 
-      <p>The Map class inherits from ipyleaflet.Map. The arguments you can pass to the Map can be found at https://ipyleaflet.readthedocs.io/en/latest/api_reference/map.html. By default, the Map will add Google Maps as the basemap. Set add_google_map = False to use OpenStreetMap as the basemap.</p>
+      <p>The Map class inherits from ipyleaflet.Map. The arguments you can pass to the Map can be found at https://ipyleaflet.readthedocs.io/en/latest/map_and_basemaps/map.html. By default, the Map will add Google Maps as the basemap. Set add_google_map = False to use OpenStreetMap as the basemap.</p>
 
 <p><strong>Returns:</strong></p>
 <table>
@@ -5014,7 +4574,7 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
         <details class="quote">
           <summary>Source code in <code>geemap/geemap.py</code></summary>
           <div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Map</span><span class="p">(</span><span class="n">ipyleaflet</span><span class="o">.</span><span class="n">Map</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;The Map class inherits from ipyleaflet.Map. The arguments you can pass to the Map can be found at https://ipyleaflet.readthedocs.io/en/latest/api_reference/map.html. By default, the Map will add Google Maps as the basemap. Set add_google_map = False to use OpenStreetMap as the basemap.</span>
+    <span class="sd">&quot;&quot;&quot;The Map class inherits from ipyleaflet.Map. The arguments you can pass to the Map can be found at https://ipyleaflet.readthedocs.io/en/latest/map_and_basemaps/map.html. By default, the Map will add Google Maps as the basemap. Set add_google_map = False to use OpenStreetMap as the basemap.</span>
 
 <span class="sd">    Returns:</span>
 <span class="sd">        object: ipyleaflet map object.</span>
@@ -6469,8 +6029,9 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
                 <span class="p">)</span>
 
         <span class="n">map_id_dict</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="n">image</span><span class="p">)</span><span class="o">.</span><span class="n">getMapId</span><span class="p">(</span><span class="n">vis_params</span><span class="p">)</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="n">map_id_dict</span><span class="p">[</span><span class="s2">&quot;tile_fetcher&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">url_format</span>
         <span class="n">tile_layer</span> <span class="o">=</span> <span class="n">ipyleaflet</span><span class="o">.</span><span class="n">TileLayer</span><span class="p">(</span>
-            <span class="n">url</span><span class="o">=</span><span class="n">map_id_dict</span><span class="p">[</span><span class="s2">&quot;tile_fetcher&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">url_format</span><span class="p">,</span>
+            <span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span>
             <span class="n">attribution</span><span class="o">=</span><span class="s2">&quot;Google Earth Engine&quot;</span><span class="p">,</span>
             <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span>
             <span class="n">opacity</span><span class="o">=</span><span class="n">opacity</span><span class="p">,</span>
@@ -6528,6 +6089,8 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
             <span class="bp">self</span><span class="o">.</span><span class="n">ee_vector_layers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ee_object</span><span class="p">)</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">ee_vector_layer_names</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
 
+        <span class="n">arc_add_layer</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">shown</span><span class="p">,</span> <span class="n">opacity</span><span class="p">)</span>
+
     <span class="n">addLayer</span> <span class="o">=</span> <span class="n">add_ee_layer</span>
 
     <span class="k">def</span> <span class="nf">remove_ee_layer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
@@ -6574,6 +6137,9 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
         <span class="k">if</span> <span class="n">zoom</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">zoom</span> <span class="o">=</span> <span class="n">zoom</span>
 
+        <span class="k">if</span> <span class="n">is_arcpy</span><span class="p">():</span>
+            <span class="n">arc_zoom_to_extent</span><span class="p">(</span><span class="n">lon</span><span class="p">,</span> <span class="n">lat</span><span class="p">,</span> <span class="n">lon</span><span class="p">,</span> <span class="n">lat</span><span class="p">)</span>
+
     <span class="n">setCenter</span> <span class="o">=</span> <span class="n">set_center</span>
 
     <span class="k">def</span> <span class="nf">center_object</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ee_object</span><span class="p">,</span> <span class="n">zoom</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
@@ -6604,6 +6170,10 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
                 <span class="n">lat</span> <span class="o">=</span> <span class="n">centroid</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
                 <span class="n">lon</span> <span class="o">=</span> <span class="n">centroid</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">set_center</span><span class="p">(</span><span class="n">lon</span><span class="p">,</span> <span class="n">lat</span><span class="p">,</span> <span class="n">zoom</span><span class="p">)</span>
+
+                <span class="k">if</span> <span class="n">is_arcpy</span><span class="p">():</span>
+                    <span class="n">arc_zoom_to_extent</span><span class="p">(</span><span class="n">lon</span><span class="p">,</span> <span class="n">lat</span><span class="p">,</span> <span class="n">lon</span><span class="p">,</span> <span class="n">lat</span><span class="p">)</span>
+
         <span class="k">else</span><span class="p">:</span>
             <span class="n">coordinates</span> <span class="o">=</span> <span class="n">geometry</span><span class="o">.</span><span class="n">bounds</span><span class="p">(</span><span class="n">maxError</span><span class="p">)</span><span class="o">.</span><span class="n">getInfo</span><span class="p">()[</span><span class="s2">&quot;coordinates&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
             <span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="n">c</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">coordinates</span><span class="p">]</span>
@@ -6614,6 +6184,9 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
             <span class="n">ymax</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
             <span class="n">bounds</span> <span class="o">=</span> <span class="p">[[</span><span class="n">ymin</span><span class="p">,</span> <span class="n">xmin</span><span class="p">],</span> <span class="p">[</span><span class="n">ymax</span><span class="p">,</span> <span class="n">xmax</span><span class="p">]]</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">fit_bounds</span><span class="p">(</span><span class="n">bounds</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">is_arcpy</span><span class="p">():</span>
+                <span class="n">arc_zoom_to_extent</span><span class="p">(</span><span class="n">xmin</span><span class="p">,</span> <span class="n">ymin</span><span class="p">,</span> <span class="n">xmax</span><span class="p">,</span> <span class="n">ymax</span><span class="p">)</span>
 
     <span class="n">centerObject</span> <span class="o">=</span> <span class="n">center_object</span>
 
@@ -6696,6 +6269,9 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
         <span class="k">try</span><span class="p">:</span>
             <span class="k">if</span> <span class="n">basemap</span> <span class="ow">in</span> <span class="n">basemaps</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span> <span class="ow">and</span> <span class="n">basemaps</span><span class="p">[</span><span class="n">basemap</span><span class="p">]</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">layers</span><span class="p">:</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">add_layer</span><span class="p">(</span><span class="n">basemaps</span><span class="p">[</span><span class="n">basemap</span><span class="p">])</span>
+
+                <span class="k">if</span> <span class="n">is_arcpy</span><span class="p">():</span>
+                    <span class="n">arc_add_layer</span><span class="p">(</span><span class="n">basemaps</span><span class="p">[</span><span class="n">basemap</span><span class="p">]</span><span class="o">.</span><span class="n">url</span><span class="p">,</span> <span class="n">basemap</span><span class="p">)</span>
 
         <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
@@ -6843,6 +6419,12 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
 <span class="sd">            opacity (float, optional): The opacity of the layer. Defaults to 1.</span>
 <span class="sd">            shown (bool, optional): A flag indicating whether the layer should be on by default. Defaults to True.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="s2">&quot;max_zoom&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="p">:</span>
+            <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;max_zoom&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">100</span>
+        <span class="k">if</span> <span class="s2">&quot;max_native_zoom&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="p">:</span>
+            <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;max_native_zoom&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">100</span>
+
         <span class="k">try</span><span class="p">:</span>
             <span class="n">tile_layer</span> <span class="o">=</span> <span class="n">ipyleaflet</span><span class="o">.</span><span class="n">TileLayer</span><span class="p">(</span>
                 <span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span>
@@ -6866,7 +6448,7 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
         <span class="n">opacity</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span>
         <span class="n">shown</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
         <span class="n">bands</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-        <span class="n">titiler_endpoint</span><span class="o">=</span><span class="s2">&quot;https://titiler.xyz&quot;</span><span class="p">,</span>
+        <span class="n">titiler_endpoint</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
         <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
     <span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Adds a COG TileLayer to the map.</span>
@@ -7383,22 +6965,61 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
     <span class="n">addLayerControl</span> <span class="o">=</span> <span class="n">add_layer_control</span>
 
     <span class="k">def</span> <span class="nf">split_map</span><span class="p">(</span>
-        <span class="bp">self</span><span class="p">,</span> <span class="n">left_layer</span><span class="o">=</span><span class="s2">&quot;HYBRID&quot;</span><span class="p">,</span> <span class="n">right_layer</span><span class="o">=</span><span class="s2">&quot;ROADMAP&quot;</span><span class="p">,</span> <span class="n">add_close_button</span><span class="o">=</span><span class="kc">False</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">left_layer</span><span class="o">=</span><span class="s2">&quot;HYBRID&quot;</span><span class="p">,</span>
+        <span class="n">right_layer</span><span class="o">=</span><span class="s2">&quot;ROADMAP&quot;</span><span class="p">,</span>
+        <span class="n">zoom_control</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">fullscreen_control</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">add_close_button</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">left_label</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">right_label</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">left_position</span><span class="o">=</span><span class="s2">&quot;bottomleft&quot;</span><span class="p">,</span>
+        <span class="n">right_position</span><span class="o">=</span><span class="s2">&quot;bottomright&quot;</span><span class="p">,</span>
+        <span class="n">widget_layout</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
     <span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Adds split map.</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            left_layer (str, optional): The layer tile layer. Defaults to &#39;HYBRID&#39;.</span>
 <span class="sd">            right_layer (str, optional): The right tile layer. Defaults to &#39;ROADMAP&#39;.</span>
+<span class="sd">            zoom_control (bool, optional): Whether to show the zoom control. Defaults to True.</span>
+<span class="sd">            fullscreen_control (bool, optional): Whether to show the full screen control. Defaults to True.</span>
 <span class="sd">            add_close_button (bool, optional): Whether to add a close button. Defaults to False.</span>
+<span class="sd">            left_label (str, optional): The label for the left map. Defaults to None.</span>
+<span class="sd">            right_label (str, optional): The label for the right map. Defaults to None.</span>
+<span class="sd">            left_position (str, optional): The position of the left label. Defaults to &#39;bottomleft&#39;.</span>
+<span class="sd">            right_position (str, optional): The position of the right label. Defaults to &#39;bottomright&#39;.</span>
+<span class="sd">            widget_layout (str, optional): The layout of the label widget, such as ipywidgets.Layout(padding=&quot;0px 4px 0px 4px&quot;). Defaults to None.</span>
+<span class="sd">            kwargs: Other arguments for ipyleaflet.TileLayer.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="s2">&quot;max_zoom&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="p">:</span>
+            <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;max_zoom&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">100</span>
+        <span class="k">if</span> <span class="s2">&quot;max_native_zoom&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="p">:</span>
+            <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;max_native_zoom&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">100</span>
         <span class="k">try</span><span class="p">:</span>
             <span class="n">controls</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">controls</span>
             <span class="n">layers</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">layers</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">clear_controls</span><span class="p">()</span>
 
-            <span class="bp">self</span><span class="o">.</span><span class="n">add_control</span><span class="p">(</span><span class="n">ipyleaflet</span><span class="o">.</span><span class="n">ZoomControl</span><span class="p">())</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">add_control</span><span class="p">(</span><span class="n">ipyleaflet</span><span class="o">.</span><span class="n">FullScreenControl</span><span class="p">())</span>
+            <span class="k">if</span> <span class="n">zoom_control</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">add_control</span><span class="p">(</span><span class="n">ipyleaflet</span><span class="o">.</span><span class="n">ZoomControl</span><span class="p">())</span>
+            <span class="k">if</span> <span class="n">fullscreen_control</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">add_control</span><span class="p">(</span><span class="n">ipyleaflet</span><span class="o">.</span><span class="n">FullScreenControl</span><span class="p">())</span>
+
+            <span class="k">if</span> <span class="n">left_label</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">left_name</span> <span class="o">=</span> <span class="n">left_label</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">left_name</span> <span class="o">=</span> <span class="s2">&quot;Left Layer&quot;</span>
+
+            <span class="k">if</span> <span class="n">right_label</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">right_name</span> <span class="o">=</span> <span class="n">right_label</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">right_name</span> <span class="o">=</span> <span class="s2">&quot;Right Layer&quot;</span>
+
+            <span class="k">if</span> <span class="s2">&quot;attribution&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="p">:</span>
+                <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;attribution&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot; &quot;</span>
+
             <span class="k">if</span> <span class="n">left_layer</span> <span class="ow">in</span> <span class="n">basemaps</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
                 <span class="n">left_layer</span> <span class="o">=</span> <span class="n">basemaps</span><span class="p">[</span><span class="n">left_layer</span><span class="p">]</span>
             <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">left_layer</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
@@ -7406,14 +7027,14 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
                     <span class="n">url</span> <span class="o">=</span> <span class="n">cog_tile</span><span class="p">(</span><span class="n">left_layer</span><span class="p">)</span>
                     <span class="n">left_layer</span> <span class="o">=</span> <span class="n">ipyleaflet</span><span class="o">.</span><span class="n">TileLayer</span><span class="p">(</span>
                         <span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span>
-                        <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Left Layer&quot;</span><span class="p">,</span>
-                        <span class="n">attribution</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">,</span>
+                        <span class="n">name</span><span class="o">=</span><span class="n">left_name</span><span class="p">,</span>
+                        <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
                     <span class="p">)</span>
                 <span class="k">else</span><span class="p">:</span>
                     <span class="n">left_layer</span> <span class="o">=</span> <span class="n">ipyleaflet</span><span class="o">.</span><span class="n">TileLayer</span><span class="p">(</span>
                         <span class="n">url</span><span class="o">=</span><span class="n">left_layer</span><span class="p">,</span>
-                        <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Left Layer&quot;</span><span class="p">,</span>
-                        <span class="n">attribution</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">,</span>
+                        <span class="n">name</span><span class="o">=</span><span class="n">left_name</span><span class="p">,</span>
+                        <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
                     <span class="p">)</span>
             <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">left_layer</span><span class="p">,</span> <span class="n">ipyleaflet</span><span class="o">.</span><span class="n">TileLayer</span><span class="p">):</span>
                 <span class="k">pass</span>
@@ -7429,14 +7050,14 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
                     <span class="n">url</span> <span class="o">=</span> <span class="n">cog_tile</span><span class="p">(</span><span class="n">right_layer</span><span class="p">)</span>
                     <span class="n">right_layer</span> <span class="o">=</span> <span class="n">ipyleaflet</span><span class="o">.</span><span class="n">TileLayer</span><span class="p">(</span>
                         <span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span>
-                        <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Right Layer&quot;</span><span class="p">,</span>
-                        <span class="n">attribution</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">,</span>
+                        <span class="n">name</span><span class="o">=</span><span class="n">right_name</span><span class="p">,</span>
+                        <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
                     <span class="p">)</span>
                 <span class="k">else</span><span class="p">:</span>
                     <span class="n">right_layer</span> <span class="o">=</span> <span class="n">ipyleaflet</span><span class="o">.</span><span class="n">TileLayer</span><span class="p">(</span>
                         <span class="n">url</span><span class="o">=</span><span class="n">right_layer</span><span class="p">,</span>
-                        <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Right Layer&quot;</span><span class="p">,</span>
-                        <span class="n">attribution</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">,</span>
+                        <span class="n">name</span><span class="o">=</span><span class="n">right_name</span><span class="p">,</span>
+                        <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
                     <span class="p">)</span>
             <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">right_layer</span><span class="p">,</span> <span class="n">ipyleaflet</span><span class="o">.</span><span class="n">TileLayer</span><span class="p">):</span>
                 <span class="k">pass</span>
@@ -7448,6 +7069,28 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
             <span class="n">control</span> <span class="o">=</span> <span class="n">ipyleaflet</span><span class="o">.</span><span class="n">SplitMapControl</span><span class="p">(</span>
                 <span class="n">left_layer</span><span class="o">=</span><span class="n">left_layer</span><span class="p">,</span> <span class="n">right_layer</span><span class="o">=</span><span class="n">right_layer</span>
             <span class="p">)</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">add_control</span><span class="p">(</span><span class="n">control</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">left_label</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">widget_layout</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="n">widget_layout</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span><span class="n">padding</span><span class="o">=</span><span class="s2">&quot;0px 4px 0px 4px&quot;</span><span class="p">)</span>
+                <span class="n">left_widget</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">HTML</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="n">left_label</span><span class="p">,</span> <span class="n">layout</span><span class="o">=</span><span class="n">widget_layout</span><span class="p">)</span>
+
+                <span class="n">left_control</span> <span class="o">=</span> <span class="n">ipyleaflet</span><span class="o">.</span><span class="n">WidgetControl</span><span class="p">(</span>
+                    <span class="n">widget</span><span class="o">=</span><span class="n">left_widget</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="n">left_position</span>
+                <span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">add_control</span><span class="p">(</span><span class="n">left_control</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">right_label</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+
+                <span class="k">if</span> <span class="n">widget_layout</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="n">widget_layout</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span><span class="n">padding</span><span class="o">=</span><span class="s2">&quot;0px 4px 0px 4px&quot;</span><span class="p">)</span>
+                <span class="n">right_widget</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">HTML</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="n">right_label</span><span class="p">,</span> <span class="n">layout</span><span class="o">=</span><span class="n">widget_layout</span><span class="p">)</span>
+                <span class="n">right_control</span> <span class="o">=</span> <span class="n">ipyleaflet</span><span class="o">.</span><span class="n">WidgetControl</span><span class="p">(</span>
+                    <span class="n">widget</span><span class="o">=</span><span class="n">right_widget</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="n">right_position</span>
+                <span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">add_control</span><span class="p">(</span><span class="n">right_control</span><span class="p">)</span>
 
             <span class="n">close_button</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">ToggleButton</span><span class="p">(</span>
                 <span class="n">value</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
@@ -7464,12 +7107,17 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
                     <span class="bp">self</span><span class="o">.</span><span class="n">layers</span> <span class="o">=</span> <span class="n">layers</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
                     <span class="bp">self</span><span class="o">.</span><span class="n">add_layer</span><span class="p">(</span><span class="n">layers</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
 
+                <span class="k">if</span> <span class="n">left_label</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">remove_control</span><span class="p">(</span><span class="n">left_control</span><span class="p">)</span>
+
+                <span class="k">if</span> <span class="n">right_label</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">remove_control</span><span class="p">(</span><span class="n">right_control</span><span class="p">)</span>
+
             <span class="n">close_button</span><span class="o">.</span><span class="n">observe</span><span class="p">(</span><span class="n">close_btn_click</span><span class="p">,</span> <span class="s2">&quot;value&quot;</span><span class="p">)</span>
             <span class="n">close_control</span> <span class="o">=</span> <span class="n">ipyleaflet</span><span class="o">.</span><span class="n">WidgetControl</span><span class="p">(</span>
                 <span class="n">widget</span><span class="o">=</span><span class="n">close_button</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="s2">&quot;bottomright&quot;</span>
             <span class="p">)</span>
 
-            <span class="bp">self</span><span class="o">.</span><span class="n">add_control</span><span class="p">(</span><span class="n">control</span><span class="p">)</span>
             <span class="k">if</span> <span class="n">add_close_button</span><span class="p">:</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">add_control</span><span class="p">(</span><span class="n">close_control</span><span class="p">)</span>
 
@@ -8506,6 +8154,12 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
         <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
     <span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Add a local raster dataset to the map.</span>
+
+<span class="sd">            If you are using this function in JupyterHub on a remote server and the raster does not render properly, try</span>
+<span class="sd">            running the following two lines before calling this function:</span>
+
+<span class="sd">            import os</span>
+<span class="sd">            os.environ[&#39;LOCALTILESERVER_CLIENT_PREFIX&#39;] = &#39;proxy/{port}&#39;</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            source (str): The path to the GeoTIFF file or the URL of the Cloud Optimized GeoTIFF.</span>
@@ -12281,6 +11935,106 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
             <span class="n">nodes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">objects_node</span><span class="p">)</span>
         <span class="n">tree</span><span class="o">.</span><span class="n">nodes</span> <span class="o">=</span> <span class="n">nodes</span>
         <span class="k">return</span> <span class="n">tree</span>
+
+    <span class="k">def</span> <span class="nf">add_widget</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">content</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="s2">&quot;bottomright&quot;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Add a widget (e.g., text, HTML, figure) to the map.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            content (str | ipywidgets.Widget | object): The widget to add.</span>
+<span class="sd">            position (str, optional): The position of the widget. Defaults to &quot;bottomright&quot;.</span>
+<span class="sd">            **kwargs: Other keyword arguments for ipywidgets.HTML().</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">allowed_positions</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;topleft&quot;</span><span class="p">,</span> <span class="s2">&quot;topright&quot;</span><span class="p">,</span> <span class="s2">&quot;bottomleft&quot;</span><span class="p">,</span> <span class="s2">&quot;bottomright&quot;</span><span class="p">]</span>
+
+        <span class="k">if</span> <span class="n">position</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">allowed_positions</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;position must be one of </span><span class="si">{</span><span class="n">allowed_positions</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="s2">&quot;layout&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="p">:</span>
+            <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;layout&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span><span class="n">padding</span><span class="o">=</span><span class="s2">&quot;0px 4px 0px 4px&quot;</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">content</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+                <span class="n">widget</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">HTML</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="n">content</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+                <span class="n">control</span> <span class="o">=</span> <span class="n">ipyleaflet</span><span class="o">.</span><span class="n">WidgetControl</span><span class="p">(</span><span class="n">widget</span><span class="o">=</span><span class="n">widget</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="n">position</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">output</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Output</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+                <span class="k">with</span> <span class="n">output</span><span class="p">:</span>
+                    <span class="n">display</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
+                <span class="n">control</span> <span class="o">=</span> <span class="n">ipyleaflet</span><span class="o">.</span><span class="n">WidgetControl</span><span class="p">(</span><span class="n">widget</span><span class="o">=</span><span class="n">output</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="n">position</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">add_control</span><span class="p">(</span><span class="n">control</span><span class="p">)</span>
+
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error adding widget: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">add_image</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">image</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="s2">&quot;bottomright&quot;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Add an image to the map.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            image (str | ipywidgets.Image): The image to add.</span>
+<span class="sd">            position (str, optional): The position of the image, can be one of &quot;topleft&quot;,</span>
+<span class="sd">                &quot;topright&quot;, &quot;bottomleft&quot;, &quot;bottomright&quot;. Defaults to &quot;bottomright&quot;.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">image</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;http&quot;</span><span class="p">):</span>
+                <span class="n">image</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">image</span><span class="p">)</span><span class="o">.</span><span class="n">content</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">image</span><span class="p">):</span>
+                <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+                    <span class="n">image</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(),</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Image</span><span class="p">):</span>
+            <span class="k">pass</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;Invalid image&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">add_widget</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="n">position</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">add_html</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">html</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="s2">&quot;bottomright&quot;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Add HTML to the map.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            html (str): The HTML to add.</span>
+<span class="sd">            position (str, optional): The position of the HTML, can be one of &quot;topleft&quot;,</span>
+<span class="sd">                &quot;topright&quot;, &quot;bottomleft&quot;, &quot;bottomright&quot;. Defaults to &quot;bottomright&quot;.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add_widget</span><span class="p">(</span><span class="n">html</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="n">position</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">add_text</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">text</span><span class="p">,</span>
+        <span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span>
+        <span class="n">fontcolor</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span>
+        <span class="n">bold</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">padding</span><span class="o">=</span><span class="s2">&quot;5px&quot;</span><span class="p">,</span>
+        <span class="n">background</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">bg_color</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span>
+        <span class="n">border_radius</span><span class="o">=</span><span class="s2">&quot;5px&quot;</span><span class="p">,</span>
+        <span class="n">position</span><span class="o">=</span><span class="s2">&quot;bottomright&quot;</span><span class="p">,</span>
+        <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+    <span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Add text to the map.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            text (str): The text to add.</span>
+<span class="sd">            fontsize (int, optional): The font size. Defaults to 20.</span>
+<span class="sd">            fontcolor (str, optional): The font color. Defaults to &quot;black&quot;.</span>
+<span class="sd">            bold (bool, optional): Whether to use bold font. Defaults to False.</span>
+<span class="sd">            padding (str, optional): The padding. Defaults to &quot;5px&quot;.</span>
+<span class="sd">            background (bool, optional): Whether to use background. Defaults to True.</span>
+<span class="sd">            bg_color (str, optional): The background color. Defaults to &quot;white&quot;.</span>
+<span class="sd">            border_radius (str, optional): The border radius. Defaults to &quot;5px&quot;.</span>
+<span class="sd">            position (str, optional): The position of the widget. Defaults to &quot;bottomright&quot;.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">background</span><span class="p">:</span>
+            <span class="n">text</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;&lt;div style=&quot;font-size: </span><span class="si">{</span><span class="n">fontsize</span><span class="si">}</span><span class="s2">px; color: </span><span class="si">{</span><span class="n">fontcolor</span><span class="si">}</span><span class="s2">; font-weight: </span><span class="si">{</span><span class="s1">&#39;bold&#39;</span> <span class="k">if</span> <span class="n">bold</span> <span class="k">else</span> <span class="s1">&#39;normal&#39;</span><span class="si">}</span><span class="s2">; </span>
+<span class="s2">            padding: </span><span class="si">{</span><span class="n">padding</span><span class="si">}</span><span class="s2">; background-color: </span><span class="si">{</span><span class="n">bg_color</span><span class="si">}</span><span class="s2">; </span>
+<span class="s2">            border-radius: </span><span class="si">{</span><span class="n">border_radius</span><span class="si">}</span><span class="s2">;&quot;&gt;</span><span class="si">{</span><span class="n">text</span><span class="si">}</span><span class="s2">&lt;/div&gt;&quot;&quot;&quot;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">text</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;&lt;div style=&quot;font-size: </span><span class="si">{</span><span class="n">fontsize</span><span class="si">}</span><span class="s2">px; color: </span><span class="si">{</span><span class="n">fontcolor</span><span class="si">}</span><span class="s2">; font-weight: </span><span class="si">{</span><span class="s1">&#39;bold&#39;</span> <span class="k">if</span> <span class="n">bold</span> <span class="k">else</span> <span class="s1">&#39;normal&#39;</span><span class="si">}</span><span class="s2">; </span>
+<span class="s2">            padding: </span><span class="si">{</span><span class="n">padding</span><span class="si">}</span><span class="s2">;&quot;&gt;</span><span class="si">{</span><span class="n">text</span><span class="si">}</span><span class="s2">&lt;/div&gt;&quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">add_html</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="n">position</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 </code></pre></div>
         </details>
 
@@ -12435,8 +12189,9 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
             <span class="p">)</span>
 
     <span class="n">map_id_dict</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="n">image</span><span class="p">)</span><span class="o">.</span><span class="n">getMapId</span><span class="p">(</span><span class="n">vis_params</span><span class="p">)</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="n">map_id_dict</span><span class="p">[</span><span class="s2">&quot;tile_fetcher&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">url_format</span>
     <span class="n">tile_layer</span> <span class="o">=</span> <span class="n">ipyleaflet</span><span class="o">.</span><span class="n">TileLayer</span><span class="p">(</span>
-        <span class="n">url</span><span class="o">=</span><span class="n">map_id_dict</span><span class="p">[</span><span class="s2">&quot;tile_fetcher&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">url_format</span><span class="p">,</span>
+        <span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span>
         <span class="n">attribution</span><span class="o">=</span><span class="s2">&quot;Google Earth Engine&quot;</span><span class="p">,</span>
         <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span>
         <span class="n">opacity</span><span class="o">=</span><span class="n">opacity</span><span class="p">,</span>
@@ -12493,6 +12248,8 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
     <span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">ee_vector_layers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ee_object</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">ee_vector_layer_names</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+
+    <span class="n">arc_add_layer</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">shown</span><span class="p">,</span> <span class="n">opacity</span><span class="p">)</span>
 </code></pre></div>
         </details>
     </div>
@@ -12575,6 +12332,9 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
     <span class="k">try</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">basemap</span> <span class="ow">in</span> <span class="n">basemaps</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span> <span class="ow">and</span> <span class="n">basemaps</span><span class="p">[</span><span class="n">basemap</span><span class="p">]</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">layers</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">add_layer</span><span class="p">(</span><span class="n">basemaps</span><span class="p">[</span><span class="n">basemap</span><span class="p">])</span>
+
+            <span class="k">if</span> <span class="n">is_arcpy</span><span class="p">():</span>
+                <span class="n">arc_add_layer</span><span class="p">(</span><span class="n">basemaps</span><span class="p">[</span><span class="n">basemap</span><span class="p">]</span><span class="o">.</span><span class="n">url</span><span class="p">,</span> <span class="n">basemap</span><span class="p">)</span>
 
     <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
@@ -12812,7 +12572,7 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
 
 
 <h3 id="geemap.geemap.Map.add_cog_layer" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">add_cog_layer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Untitled&#39;</span><span class="p">,</span> <span class="n">attribution</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">opacity</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">shown</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">bands</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">titiler_endpoint</span><span class="o">=</span><span class="s1">&#39;https://titiler.xyz&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">add_cog_layer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Untitled&#39;</span><span class="p">,</span> <span class="n">attribution</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">opacity</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">shown</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">bands</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">titiler_endpoint</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
 
 
 <a href="#geemap.geemap.Map.add_cog_layer" class="headerlink" title="Permanent link">&para;</a></h3>
@@ -12872,7 +12632,7 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
         <td><code>titiler_endpoint</code></td>
         <td><code>str</code></td>
         <td><p>Titiler endpoint. Defaults to "https://titiler.xyz".</p></td>
-        <td><code>&#39;https://titiler.xyz&#39;</code></td>
+        <td><code>None</code></td>
       </tr>
       <tr>
         <td><code>**kwargs</code></td>
@@ -12892,7 +12652,7 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
     <span class="n">opacity</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span>
     <span class="n">shown</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
     <span class="n">bands</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-    <span class="n">titiler_endpoint</span><span class="o">=</span><span class="s2">&quot;https://titiler.xyz&quot;</span><span class="p">,</span>
+    <span class="n">titiler_endpoint</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
     <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
 <span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Adds a COG TileLayer to the map.</span>
@@ -13825,8 +13585,9 @@ style_callback = lambda feat: {"fillColor": feat["properties"][&quot;color&quot;
             <span class="p">)</span>
 
     <span class="n">map_id_dict</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="n">image</span><span class="p">)</span><span class="o">.</span><span class="n">getMapId</span><span class="p">(</span><span class="n">vis_params</span><span class="p">)</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="n">map_id_dict</span><span class="p">[</span><span class="s2">&quot;tile_fetcher&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">url_format</span>
     <span class="n">tile_layer</span> <span class="o">=</span> <span class="n">ipyleaflet</span><span class="o">.</span><span class="n">TileLayer</span><span class="p">(</span>
-        <span class="n">url</span><span class="o">=</span><span class="n">map_id_dict</span><span class="p">[</span><span class="s2">&quot;tile_fetcher&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">url_format</span><span class="p">,</span>
+        <span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span>
         <span class="n">attribution</span><span class="o">=</span><span class="s2">&quot;Google Earth Engine&quot;</span><span class="p">,</span>
         <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span>
         <span class="n">opacity</span><span class="o">=</span><span class="n">opacity</span><span class="p">,</span>
@@ -13883,6 +13644,8 @@ style_callback = lambda feat: {"fillColor": feat["properties"][&quot;color&quot;
     <span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">ee_vector_layers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ee_object</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">ee_vector_layer_names</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+
+    <span class="n">arc_add_layer</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">shown</span><span class="p">,</span> <span class="n">opacity</span><span class="p">)</span>
 </code></pre></div>
         </details>
     </div>
@@ -14568,6 +14331,137 @@ style_callback = lambda feat: {"fillColor": feat["properties"][&quot;color&quot;
 
     <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
         <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h3 id="geemap.geemap.Map.add_html" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">add_html</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">html</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="s1">&#39;bottomright&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+
+
+<a href="#geemap.geemap.Map.add_html" class="headerlink" title="Permanent link">&para;</a></h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Add HTML to the map.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>html</code></td>
+        <td><code>str</code></td>
+        <td><p>The HTML to add.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>position</code></td>
+        <td><code>str</code></td>
+        <td><p>The position of the HTML, can be one of "topleft",
+"topright", "bottomleft", "bottomright". Defaults to "bottomright".</p></td>
+        <td><code>&#39;bottomright&#39;</code></td>
+      </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>geemap/geemap.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">add_html</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">html</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="s2">&quot;bottomright&quot;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Add HTML to the map.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        html (str): The HTML to add.</span>
+<span class="sd">        position (str, optional): The position of the HTML, can be one of &quot;topleft&quot;,</span>
+<span class="sd">            &quot;topright&quot;, &quot;bottomleft&quot;, &quot;bottomright&quot;. Defaults to &quot;bottomright&quot;.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">add_widget</span><span class="p">(</span><span class="n">html</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="n">position</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h3 id="geemap.geemap.Map.add_image" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">add_image</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">image</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="s1">&#39;bottomright&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+
+
+<a href="#geemap.geemap.Map.add_image" class="headerlink" title="Permanent link">&para;</a></h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Add an image to the map.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>image</code></td>
+        <td><code>str | ipywidgets.Image</code></td>
+        <td><p>The image to add.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>position</code></td>
+        <td><code>str</code></td>
+        <td><p>The position of the image, can be one of "topleft",
+"topright", "bottomleft", "bottomright". Defaults to "bottomright".</p></td>
+        <td><code>&#39;bottomright&#39;</code></td>
+      </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>geemap/geemap.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">add_image</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">image</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="s2">&quot;bottomright&quot;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Add an image to the map.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        image (str | ipywidgets.Image): The image to add.</span>
+<span class="sd">        position (str, optional): The position of the image, can be one of &quot;topleft&quot;,</span>
+<span class="sd">            &quot;topright&quot;, &quot;bottomleft&quot;, &quot;bottomright&quot;. Defaults to &quot;bottomright&quot;.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">image</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;http&quot;</span><span class="p">):</span>
+            <span class="n">image</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">image</span><span class="p">)</span><span class="o">.</span><span class="n">content</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">image</span><span class="p">):</span>
+            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+                <span class="n">image</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(),</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Image</span><span class="p">):</span>
+        <span class="k">pass</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;Invalid image&quot;</span><span class="p">)</span>
+
+    <span class="bp">self</span><span class="o">.</span><span class="n">add_widget</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="n">position</span><span class="p">)</span>
 </code></pre></div>
         </details>
     </div>
@@ -15547,6 +15441,16 @@ style_callback = lambda feat: {"fillColor": feat["properties"][&quot;color&quot;
     <div class="doc doc-contents ">
 
       <p>Add a local raster dataset to the map.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>If you are using this function in JupyterHub on a remote server and the raster does not render properly, try
+running the following two lines before calling this function:
+
+import os
+os.environ[&#39;LOCALTILESERVER_CLIENT_PREFIX&#39;] = &#39;proxy/{port}&#39;
+</code></pre></div></td></tr></table></div>
 
 <p><strong>Parameters:</strong></p>
 <table>
@@ -15624,6 +15528,12 @@ style_callback = lambda feat: {"fillColor": feat["properties"][&quot;color&quot;
     <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
 <span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Add a local raster dataset to the map.</span>
+
+<span class="sd">        If you are using this function in JupyterHub on a remote server and the raster does not render properly, try</span>
+<span class="sd">        running the following two lines before calling this function:</span>
+
+<span class="sd">        import os</span>
+<span class="sd">        os.environ[&#39;LOCALTILESERVER_CLIENT_PREFIX&#39;] = &#39;proxy/{port}&#39;</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        source (str): The path to the GeoTIFF file or the URL of the Cloud Optimized GeoTIFF.</span>
@@ -15932,11 +15842,10 @@ style_callback = lambda feat: {"fillColor": feat["properties"][&quot;color&quot;
       <p>Generate an ipyleaflet/folium TileLayer from a netCDF file.
     If you are using this function in JupyterHub on a remote server (e.g., Binder, Microsoft Planetary Computer),
     try adding to following two lines to the beginning of the notebook if the raster does not render properly.</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>import os
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>import os
 os.environ[&#39;LOCALTILESERVER_CLIENT_PREFIX&#39;] = f&#39;{os.environ[&#39;JUPYTERHUB_SERVICE_PREFIX&#39;].lstrip(&#39;/&#39;)}/proxy/{{port}}&#39;
-</code></pre></div>
-</td></tr></table>
+</code></pre></div></td></tr></table></div>
 
 <p><strong>Parameters:</strong></p>
 <table>
@@ -17870,6 +17779,16 @@ os.environ[&#39;LOCALTILESERVER_CLIENT_PREFIX&#39;] = f&#39;{os.environ[&#39;JUP
     <div class="doc doc-contents ">
 
       <p>Add a local raster dataset to the map.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>If you are using this function in JupyterHub on a remote server and the raster does not render properly, try
+running the following two lines before calling this function:
+
+import os
+os.environ[&#39;LOCALTILESERVER_CLIENT_PREFIX&#39;] = &#39;proxy/{port}&#39;
+</code></pre></div></td></tr></table></div>
 
 <p><strong>Parameters:</strong></p>
 <table>
@@ -17947,6 +17866,12 @@ os.environ[&#39;LOCALTILESERVER_CLIENT_PREFIX&#39;] = f&#39;{os.environ[&#39;JUP
     <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
 <span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Add a local raster dataset to the map.</span>
+
+<span class="sd">        If you are using this function in JupyterHub on a remote server and the raster does not render properly, try</span>
+<span class="sd">        running the following two lines before calling this function:</span>
+
+<span class="sd">        import os</span>
+<span class="sd">        os.environ[&#39;LOCALTILESERVER_CLIENT_PREFIX&#39;] = &#39;proxy/{port}&#39;</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        source (str): The path to the GeoTIFF file or the URL of the Cloud Optimized GeoTIFF.</span>
@@ -18803,6 +18728,133 @@ os.environ[&#39;LOCALTILESERVER_CLIENT_PREFIX&#39;] = f&#39;{os.environ[&#39;JUP
 
 
 
+<h3 id="geemap.geemap.Map.add_text" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">add_text</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">fontcolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">bold</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="s1">&#39;5px&#39;</span><span class="p">,</span> <span class="n">background</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">bg_color</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">,</span> <span class="n">border_radius</span><span class="o">=</span><span class="s1">&#39;5px&#39;</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="s1">&#39;bottomright&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+
+
+<a href="#geemap.geemap.Map.add_text" class="headerlink" title="Permanent link">&para;</a></h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Add text to the map.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>text</code></td>
+        <td><code>str</code></td>
+        <td><p>The text to add.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>fontsize</code></td>
+        <td><code>int</code></td>
+        <td><p>The font size. Defaults to 20.</p></td>
+        <td><code>20</code></td>
+      </tr>
+      <tr>
+        <td><code>fontcolor</code></td>
+        <td><code>str</code></td>
+        <td><p>The font color. Defaults to "black".</p></td>
+        <td><code>&#39;black&#39;</code></td>
+      </tr>
+      <tr>
+        <td><code>bold</code></td>
+        <td><code>bool</code></td>
+        <td><p>Whether to use bold font. Defaults to False.</p></td>
+        <td><code>False</code></td>
+      </tr>
+      <tr>
+        <td><code>padding</code></td>
+        <td><code>str</code></td>
+        <td><p>The padding. Defaults to "5px".</p></td>
+        <td><code>&#39;5px&#39;</code></td>
+      </tr>
+      <tr>
+        <td><code>background</code></td>
+        <td><code>bool</code></td>
+        <td><p>Whether to use background. Defaults to True.</p></td>
+        <td><code>True</code></td>
+      </tr>
+      <tr>
+        <td><code>bg_color</code></td>
+        <td><code>str</code></td>
+        <td><p>The background color. Defaults to "white".</p></td>
+        <td><code>&#39;white&#39;</code></td>
+      </tr>
+      <tr>
+        <td><code>border_radius</code></td>
+        <td><code>str</code></td>
+        <td><p>The border radius. Defaults to "5px".</p></td>
+        <td><code>&#39;5px&#39;</code></td>
+      </tr>
+      <tr>
+        <td><code>position</code></td>
+        <td><code>str</code></td>
+        <td><p>The position of the widget. Defaults to "bottomright".</p></td>
+        <td><code>&#39;bottomright&#39;</code></td>
+      </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>geemap/geemap.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">add_text</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span>
+    <span class="n">text</span><span class="p">,</span>
+    <span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span>
+    <span class="n">fontcolor</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span>
+    <span class="n">bold</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">padding</span><span class="o">=</span><span class="s2">&quot;5px&quot;</span><span class="p">,</span>
+    <span class="n">background</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">bg_color</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span>
+    <span class="n">border_radius</span><span class="o">=</span><span class="s2">&quot;5px&quot;</span><span class="p">,</span>
+    <span class="n">position</span><span class="o">=</span><span class="s2">&quot;bottomright&quot;</span><span class="p">,</span>
+    <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+<span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Add text to the map.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        text (str): The text to add.</span>
+<span class="sd">        fontsize (int, optional): The font size. Defaults to 20.</span>
+<span class="sd">        fontcolor (str, optional): The font color. Defaults to &quot;black&quot;.</span>
+<span class="sd">        bold (bool, optional): Whether to use bold font. Defaults to False.</span>
+<span class="sd">        padding (str, optional): The padding. Defaults to &quot;5px&quot;.</span>
+<span class="sd">        background (bool, optional): Whether to use background. Defaults to True.</span>
+<span class="sd">        bg_color (str, optional): The background color. Defaults to &quot;white&quot;.</span>
+<span class="sd">        border_radius (str, optional): The border radius. Defaults to &quot;5px&quot;.</span>
+<span class="sd">        position (str, optional): The position of the widget. Defaults to &quot;bottomright&quot;.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="n">background</span><span class="p">:</span>
+        <span class="n">text</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;&lt;div style=&quot;font-size: </span><span class="si">{</span><span class="n">fontsize</span><span class="si">}</span><span class="s2">px; color: </span><span class="si">{</span><span class="n">fontcolor</span><span class="si">}</span><span class="s2">; font-weight: </span><span class="si">{</span><span class="s1">&#39;bold&#39;</span> <span class="k">if</span> <span class="n">bold</span> <span class="k">else</span> <span class="s1">&#39;normal&#39;</span><span class="si">}</span><span class="s2">; </span>
+<span class="s2">        padding: </span><span class="si">{</span><span class="n">padding</span><span class="si">}</span><span class="s2">; background-color: </span><span class="si">{</span><span class="n">bg_color</span><span class="si">}</span><span class="s2">; </span>
+<span class="s2">        border-radius: </span><span class="si">{</span><span class="n">border_radius</span><span class="si">}</span><span class="s2">;&quot;&gt;</span><span class="si">{</span><span class="n">text</span><span class="si">}</span><span class="s2">&lt;/div&gt;&quot;&quot;&quot;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">text</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;&lt;div style=&quot;font-size: </span><span class="si">{</span><span class="n">fontsize</span><span class="si">}</span><span class="s2">px; color: </span><span class="si">{</span><span class="n">fontcolor</span><span class="si">}</span><span class="s2">; font-weight: </span><span class="si">{</span><span class="s1">&#39;bold&#39;</span> <span class="k">if</span> <span class="n">bold</span> <span class="k">else</span> <span class="s1">&#39;normal&#39;</span><span class="si">}</span><span class="s2">; </span>
+<span class="s2">        padding: </span><span class="si">{</span><span class="n">padding</span><span class="si">}</span><span class="s2">;&quot;&gt;</span><span class="si">{</span><span class="n">text</span><span class="si">}</span><span class="s2">&lt;/div&gt;&quot;&quot;&quot;</span>
+
+    <span class="bp">self</span><span class="o">.</span><span class="n">add_html</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="n">position</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
 <h3 id="geemap.geemap.Map.add_tile_layer" class="doc doc-heading">
 <code class="highlight language-python"><span class="n">add_tile_layer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="o">=</span><span class="s1">&#39;https://</span><span class="si">{s}</span><span class="s1">.tile.openstreetmap.org/</span><span class="si">{z}</span><span class="s1">/</span><span class="si">{x}</span><span class="s1">/</span><span class="si">{y}</span><span class="s1">.png&#39;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Untitled&#39;</span><span class="p">,</span> <span class="n">attribution</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">opacity</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">shown</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
 
@@ -18876,6 +18928,12 @@ os.environ[&#39;LOCALTILESERVER_CLIENT_PREFIX&#39;] = f&#39;{os.environ[&#39;JUP
 <span class="sd">        opacity (float, optional): The opacity of the layer. Defaults to 1.</span>
 <span class="sd">        shown (bool, optional): A flag indicating whether the layer should be on by default. Defaults to True.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="s2">&quot;max_zoom&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="p">:</span>
+        <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;max_zoom&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">100</span>
+    <span class="k">if</span> <span class="s2">&quot;max_native_zoom&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="p">:</span>
+        <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;max_native_zoom&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">100</span>
+
     <span class="k">try</span><span class="p">:</span>
         <span class="n">tile_layer</span> <span class="o">=</span> <span class="n">ipyleaflet</span><span class="o">.</span><span class="n">TileLayer</span><span class="p">(</span>
             <span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span>
@@ -19592,6 +19650,90 @@ os.environ[&#39;LOCALTILESERVER_CLIENT_PREFIX&#39;] = f&#39;{os.environ[&#39;JUP
 
 
 
+<h3 id="geemap.geemap.Map.add_widget" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">add_widget</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">content</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="s1">&#39;bottomright&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+
+
+<a href="#geemap.geemap.Map.add_widget" class="headerlink" title="Permanent link">&para;</a></h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Add a widget (e.g., text, HTML, figure) to the map.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>content</code></td>
+        <td><code>str | ipywidgets.Widget | object</code></td>
+        <td><p>The widget to add.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>position</code></td>
+        <td><code>str</code></td>
+        <td><p>The position of the widget. Defaults to "bottomright".</p></td>
+        <td><code>&#39;bottomright&#39;</code></td>
+      </tr>
+      <tr>
+        <td><code>**kwargs</code></td>
+        <td></td>
+        <td><p>Other keyword arguments for ipywidgets.HTML().</p></td>
+        <td><code>{}</code></td>
+      </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>geemap/geemap.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">add_widget</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">content</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="s2">&quot;bottomright&quot;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Add a widget (e.g., text, HTML, figure) to the map.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        content (str | ipywidgets.Widget | object): The widget to add.</span>
+<span class="sd">        position (str, optional): The position of the widget. Defaults to &quot;bottomright&quot;.</span>
+<span class="sd">        **kwargs: Other keyword arguments for ipywidgets.HTML().</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">allowed_positions</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;topleft&quot;</span><span class="p">,</span> <span class="s2">&quot;topright&quot;</span><span class="p">,</span> <span class="s2">&quot;bottomleft&quot;</span><span class="p">,</span> <span class="s2">&quot;bottomright&quot;</span><span class="p">]</span>
+
+    <span class="k">if</span> <span class="n">position</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">allowed_positions</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;position must be one of </span><span class="si">{</span><span class="n">allowed_positions</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="s2">&quot;layout&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="p">:</span>
+        <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;layout&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span><span class="n">padding</span><span class="o">=</span><span class="s2">&quot;0px 4px 0px 4px&quot;</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">content</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+            <span class="n">widget</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">HTML</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="n">content</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+            <span class="n">control</span> <span class="o">=</span> <span class="n">ipyleaflet</span><span class="o">.</span><span class="n">WidgetControl</span><span class="p">(</span><span class="n">widget</span><span class="o">=</span><span class="n">widget</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="n">position</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">output</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Output</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+            <span class="k">with</span> <span class="n">output</span><span class="p">:</span>
+                <span class="n">display</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
+            <span class="n">control</span> <span class="o">=</span> <span class="n">ipyleaflet</span><span class="o">.</span><span class="n">WidgetControl</span><span class="p">(</span><span class="n">widget</span><span class="o">=</span><span class="n">output</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="n">position</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add_control</span><span class="p">(</span><span class="n">control</span><span class="p">)</span>
+
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error adding widget: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
 <h3 id="geemap.geemap.Map.add_wms_layer" class="doc doc-heading">
 <code class="highlight language-python"><span class="n">add_wms_layer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">layers</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">attribution</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;image/png&#39;</span><span class="p">,</span> <span class="n">transparent</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">opacity</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">shown</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
 
@@ -20090,6 +20232,10 @@ os.environ[&#39;LOCALTILESERVER_CLIENT_PREFIX&#39;] = f&#39;{os.environ[&#39;JUP
             <span class="n">lat</span> <span class="o">=</span> <span class="n">centroid</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
             <span class="n">lon</span> <span class="o">=</span> <span class="n">centroid</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">set_center</span><span class="p">(</span><span class="n">lon</span><span class="p">,</span> <span class="n">lat</span><span class="p">,</span> <span class="n">zoom</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">is_arcpy</span><span class="p">():</span>
+                <span class="n">arc_zoom_to_extent</span><span class="p">(</span><span class="n">lon</span><span class="p">,</span> <span class="n">lat</span><span class="p">,</span> <span class="n">lon</span><span class="p">,</span> <span class="n">lat</span><span class="p">)</span>
+
     <span class="k">else</span><span class="p">:</span>
         <span class="n">coordinates</span> <span class="o">=</span> <span class="n">geometry</span><span class="o">.</span><span class="n">bounds</span><span class="p">(</span><span class="n">maxError</span><span class="p">)</span><span class="o">.</span><span class="n">getInfo</span><span class="p">()[</span><span class="s2">&quot;coordinates&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
         <span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="n">c</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">coordinates</span><span class="p">]</span>
@@ -20100,6 +20246,9 @@ os.environ[&#39;LOCALTILESERVER_CLIENT_PREFIX&#39;] = f&#39;{os.environ[&#39;JUP
         <span class="n">ymax</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
         <span class="n">bounds</span> <span class="o">=</span> <span class="p">[[</span><span class="n">ymin</span><span class="p">,</span> <span class="n">xmin</span><span class="p">],</span> <span class="p">[</span><span class="n">ymax</span><span class="p">,</span> <span class="n">xmax</span><span class="p">]]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">fit_bounds</span><span class="p">(</span><span class="n">bounds</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">is_arcpy</span><span class="p">():</span>
+            <span class="n">arc_zoom_to_extent</span><span class="p">(</span><span class="n">xmin</span><span class="p">,</span> <span class="n">ymin</span><span class="p">,</span> <span class="n">xmax</span><span class="p">,</span> <span class="n">ymax</span><span class="p">)</span>
 </code></pre></div>
         </details>
     </div>
@@ -20177,6 +20326,10 @@ os.environ[&#39;LOCALTILESERVER_CLIENT_PREFIX&#39;] = f&#39;{os.environ[&#39;JUP
             <span class="n">lat</span> <span class="o">=</span> <span class="n">centroid</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
             <span class="n">lon</span> <span class="o">=</span> <span class="n">centroid</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">set_center</span><span class="p">(</span><span class="n">lon</span><span class="p">,</span> <span class="n">lat</span><span class="p">,</span> <span class="n">zoom</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">is_arcpy</span><span class="p">():</span>
+                <span class="n">arc_zoom_to_extent</span><span class="p">(</span><span class="n">lon</span><span class="p">,</span> <span class="n">lat</span><span class="p">,</span> <span class="n">lon</span><span class="p">,</span> <span class="n">lat</span><span class="p">)</span>
+
     <span class="k">else</span><span class="p">:</span>
         <span class="n">coordinates</span> <span class="o">=</span> <span class="n">geometry</span><span class="o">.</span><span class="n">bounds</span><span class="p">(</span><span class="n">maxError</span><span class="p">)</span><span class="o">.</span><span class="n">getInfo</span><span class="p">()[</span><span class="s2">&quot;coordinates&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
         <span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="n">c</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">coordinates</span><span class="p">]</span>
@@ -20187,6 +20340,9 @@ os.environ[&#39;LOCALTILESERVER_CLIENT_PREFIX&#39;] = f&#39;{os.environ[&#39;JUP
         <span class="n">ymax</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
         <span class="n">bounds</span> <span class="o">=</span> <span class="p">[[</span><span class="n">ymin</span><span class="p">,</span> <span class="n">xmin</span><span class="p">],</span> <span class="p">[</span><span class="n">ymax</span><span class="p">,</span> <span class="n">xmax</span><span class="p">]]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">fit_bounds</span><span class="p">(</span><span class="n">bounds</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">is_arcpy</span><span class="p">():</span>
+            <span class="n">arc_zoom_to_extent</span><span class="p">(</span><span class="n">xmin</span><span class="p">,</span> <span class="n">ymin</span><span class="p">,</span> <span class="n">xmax</span><span class="p">,</span> <span class="n">ymax</span><span class="p">)</span>
 </code></pre></div>
         </details>
     </div>
@@ -23299,6 +23455,9 @@ os.environ[&#39;LOCALTILESERVER_CLIENT_PREFIX&#39;] = f&#39;{os.environ[&#39;JUP
     <span class="bp">self</span><span class="o">.</span><span class="n">center</span> <span class="o">=</span> <span class="p">(</span><span class="n">lat</span><span class="p">,</span> <span class="n">lon</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">zoom</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">zoom</span> <span class="o">=</span> <span class="n">zoom</span>
+
+    <span class="k">if</span> <span class="n">is_arcpy</span><span class="p">():</span>
+        <span class="n">arc_zoom_to_extent</span><span class="p">(</span><span class="n">lon</span><span class="p">,</span> <span class="n">lat</span><span class="p">,</span> <span class="n">lon</span><span class="p">,</span> <span class="n">lat</span><span class="p">)</span>
 </code></pre></div>
         </details>
     </div>
@@ -23516,6 +23675,9 @@ os.environ[&#39;LOCALTILESERVER_CLIENT_PREFIX&#39;] = f&#39;{os.environ[&#39;JUP
     <span class="bp">self</span><span class="o">.</span><span class="n">center</span> <span class="o">=</span> <span class="p">(</span><span class="n">lat</span><span class="p">,</span> <span class="n">lon</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">zoom</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">zoom</span> <span class="o">=</span> <span class="n">zoom</span>
+
+    <span class="k">if</span> <span class="n">is_arcpy</span><span class="p">():</span>
+        <span class="n">arc_zoom_to_extent</span><span class="p">(</span><span class="n">lon</span><span class="p">,</span> <span class="n">lat</span><span class="p">,</span> <span class="n">lon</span><span class="p">,</span> <span class="n">lat</span><span class="p">)</span>
 </code></pre></div>
         </details>
     </div>
@@ -23876,7 +24038,7 @@ os.environ[&#39;LOCALTILESERVER_CLIENT_PREFIX&#39;] = f&#39;{os.environ[&#39;JUP
 
 
 <h3 id="geemap.geemap.Map.split_map" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">split_map</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">left_layer</span><span class="o">=</span><span class="s1">&#39;HYBRID&#39;</span><span class="p">,</span> <span class="n">right_layer</span><span class="o">=</span><span class="s1">&#39;ROADMAP&#39;</span><span class="p">,</span> <span class="n">add_close_button</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">split_map</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">left_layer</span><span class="o">=</span><span class="s1">&#39;HYBRID&#39;</span><span class="p">,</span> <span class="n">right_layer</span><span class="o">=</span><span class="s1">&#39;ROADMAP&#39;</span><span class="p">,</span> <span class="n">zoom_control</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">fullscreen_control</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">add_close_button</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">left_label</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">right_label</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">left_position</span><span class="o">=</span><span class="s1">&#39;bottomleft&#39;</span><span class="p">,</span> <span class="n">right_position</span><span class="o">=</span><span class="s1">&#39;bottomright&#39;</span><span class="p">,</span> <span class="n">widget_layout</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
 
 
 <a href="#geemap.geemap.Map.split_map" class="headerlink" title="Permanent link">&para;</a></h3>
@@ -23909,32 +24071,119 @@ os.environ[&#39;LOCALTILESERVER_CLIENT_PREFIX&#39;] = f&#39;{os.environ[&#39;JUP
         <td><code>&#39;ROADMAP&#39;</code></td>
       </tr>
       <tr>
+        <td><code>zoom_control</code></td>
+        <td><code>bool</code></td>
+        <td><p>Whether to show the zoom control. Defaults to True.</p></td>
+        <td><code>True</code></td>
+      </tr>
+      <tr>
+        <td><code>fullscreen_control</code></td>
+        <td><code>bool</code></td>
+        <td><p>Whether to show the full screen control. Defaults to True.</p></td>
+        <td><code>True</code></td>
+      </tr>
+      <tr>
         <td><code>add_close_button</code></td>
         <td><code>bool</code></td>
         <td><p>Whether to add a close button. Defaults to False.</p></td>
         <td><code>False</code></td>
+      </tr>
+      <tr>
+        <td><code>left_label</code></td>
+        <td><code>str</code></td>
+        <td><p>The label for the left map. Defaults to None.</p></td>
+        <td><code>None</code></td>
+      </tr>
+      <tr>
+        <td><code>right_label</code></td>
+        <td><code>str</code></td>
+        <td><p>The label for the right map. Defaults to None.</p></td>
+        <td><code>None</code></td>
+      </tr>
+      <tr>
+        <td><code>left_position</code></td>
+        <td><code>str</code></td>
+        <td><p>The position of the left label. Defaults to 'bottomleft'.</p></td>
+        <td><code>&#39;bottomleft&#39;</code></td>
+      </tr>
+      <tr>
+        <td><code>right_position</code></td>
+        <td><code>str</code></td>
+        <td><p>The position of the right label. Defaults to 'bottomright'.</p></td>
+        <td><code>&#39;bottomright&#39;</code></td>
+      </tr>
+      <tr>
+        <td><code>widget_layout</code></td>
+        <td><code>str</code></td>
+        <td><p>The layout of the label widget, such as ipywidgets.Layout(padding="0px 4px 0px 4px"). Defaults to None.</p></td>
+        <td><code>None</code></td>
+      </tr>
+      <tr>
+        <td><code>kwargs</code></td>
+        <td></td>
+        <td><p>Other arguments for ipyleaflet.TileLayer.</p></td>
+        <td><code>{}</code></td>
       </tr>
   </tbody>
 </table>
         <details class="quote">
           <summary>Source code in <code>geemap/geemap.py</code></summary>
           <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">split_map</span><span class="p">(</span>
-    <span class="bp">self</span><span class="p">,</span> <span class="n">left_layer</span><span class="o">=</span><span class="s2">&quot;HYBRID&quot;</span><span class="p">,</span> <span class="n">right_layer</span><span class="o">=</span><span class="s2">&quot;ROADMAP&quot;</span><span class="p">,</span> <span class="n">add_close_button</span><span class="o">=</span><span class="kc">False</span>
+    <span class="bp">self</span><span class="p">,</span>
+    <span class="n">left_layer</span><span class="o">=</span><span class="s2">&quot;HYBRID&quot;</span><span class="p">,</span>
+    <span class="n">right_layer</span><span class="o">=</span><span class="s2">&quot;ROADMAP&quot;</span><span class="p">,</span>
+    <span class="n">zoom_control</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">fullscreen_control</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">add_close_button</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">left_label</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">right_label</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">left_position</span><span class="o">=</span><span class="s2">&quot;bottomleft&quot;</span><span class="p">,</span>
+    <span class="n">right_position</span><span class="o">=</span><span class="s2">&quot;bottomright&quot;</span><span class="p">,</span>
+    <span class="n">widget_layout</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
 <span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Adds split map.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        left_layer (str, optional): The layer tile layer. Defaults to &#39;HYBRID&#39;.</span>
 <span class="sd">        right_layer (str, optional): The right tile layer. Defaults to &#39;ROADMAP&#39;.</span>
+<span class="sd">        zoom_control (bool, optional): Whether to show the zoom control. Defaults to True.</span>
+<span class="sd">        fullscreen_control (bool, optional): Whether to show the full screen control. Defaults to True.</span>
 <span class="sd">        add_close_button (bool, optional): Whether to add a close button. Defaults to False.</span>
+<span class="sd">        left_label (str, optional): The label for the left map. Defaults to None.</span>
+<span class="sd">        right_label (str, optional): The label for the right map. Defaults to None.</span>
+<span class="sd">        left_position (str, optional): The position of the left label. Defaults to &#39;bottomleft&#39;.</span>
+<span class="sd">        right_position (str, optional): The position of the right label. Defaults to &#39;bottomright&#39;.</span>
+<span class="sd">        widget_layout (str, optional): The layout of the label widget, such as ipywidgets.Layout(padding=&quot;0px 4px 0px 4px&quot;). Defaults to None.</span>
+<span class="sd">        kwargs: Other arguments for ipyleaflet.TileLayer.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="s2">&quot;max_zoom&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="p">:</span>
+        <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;max_zoom&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">100</span>
+    <span class="k">if</span> <span class="s2">&quot;max_native_zoom&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="p">:</span>
+        <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;max_native_zoom&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">100</span>
     <span class="k">try</span><span class="p">:</span>
         <span class="n">controls</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">controls</span>
         <span class="n">layers</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">layers</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">clear_controls</span><span class="p">()</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">add_control</span><span class="p">(</span><span class="n">ipyleaflet</span><span class="o">.</span><span class="n">ZoomControl</span><span class="p">())</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">add_control</span><span class="p">(</span><span class="n">ipyleaflet</span><span class="o">.</span><span class="n">FullScreenControl</span><span class="p">())</span>
+        <span class="k">if</span> <span class="n">zoom_control</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">add_control</span><span class="p">(</span><span class="n">ipyleaflet</span><span class="o">.</span><span class="n">ZoomControl</span><span class="p">())</span>
+        <span class="k">if</span> <span class="n">fullscreen_control</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">add_control</span><span class="p">(</span><span class="n">ipyleaflet</span><span class="o">.</span><span class="n">FullScreenControl</span><span class="p">())</span>
+
+        <span class="k">if</span> <span class="n">left_label</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">left_name</span> <span class="o">=</span> <span class="n">left_label</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">left_name</span> <span class="o">=</span> <span class="s2">&quot;Left Layer&quot;</span>
+
+        <span class="k">if</span> <span class="n">right_label</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">right_name</span> <span class="o">=</span> <span class="n">right_label</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">right_name</span> <span class="o">=</span> <span class="s2">&quot;Right Layer&quot;</span>
+
+        <span class="k">if</span> <span class="s2">&quot;attribution&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="p">:</span>
+            <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;attribution&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot; &quot;</span>
+
         <span class="k">if</span> <span class="n">left_layer</span> <span class="ow">in</span> <span class="n">basemaps</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
             <span class="n">left_layer</span> <span class="o">=</span> <span class="n">basemaps</span><span class="p">[</span><span class="n">left_layer</span><span class="p">]</span>
         <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">left_layer</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
@@ -23942,14 +24191,14 @@ os.environ[&#39;LOCALTILESERVER_CLIENT_PREFIX&#39;] = f&#39;{os.environ[&#39;JUP
                 <span class="n">url</span> <span class="o">=</span> <span class="n">cog_tile</span><span class="p">(</span><span class="n">left_layer</span><span class="p">)</span>
                 <span class="n">left_layer</span> <span class="o">=</span> <span class="n">ipyleaflet</span><span class="o">.</span><span class="n">TileLayer</span><span class="p">(</span>
                     <span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span>
-                    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Left Layer&quot;</span><span class="p">,</span>
-                    <span class="n">attribution</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">,</span>
+                    <span class="n">name</span><span class="o">=</span><span class="n">left_name</span><span class="p">,</span>
+                    <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
                 <span class="p">)</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="n">left_layer</span> <span class="o">=</span> <span class="n">ipyleaflet</span><span class="o">.</span><span class="n">TileLayer</span><span class="p">(</span>
                     <span class="n">url</span><span class="o">=</span><span class="n">left_layer</span><span class="p">,</span>
-                    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Left Layer&quot;</span><span class="p">,</span>
-                    <span class="n">attribution</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">,</span>
+                    <span class="n">name</span><span class="o">=</span><span class="n">left_name</span><span class="p">,</span>
+                    <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
                 <span class="p">)</span>
         <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">left_layer</span><span class="p">,</span> <span class="n">ipyleaflet</span><span class="o">.</span><span class="n">TileLayer</span><span class="p">):</span>
             <span class="k">pass</span>
@@ -23965,14 +24214,14 @@ os.environ[&#39;LOCALTILESERVER_CLIENT_PREFIX&#39;] = f&#39;{os.environ[&#39;JUP
                 <span class="n">url</span> <span class="o">=</span> <span class="n">cog_tile</span><span class="p">(</span><span class="n">right_layer</span><span class="p">)</span>
                 <span class="n">right_layer</span> <span class="o">=</span> <span class="n">ipyleaflet</span><span class="o">.</span><span class="n">TileLayer</span><span class="p">(</span>
                     <span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span>
-                    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Right Layer&quot;</span><span class="p">,</span>
-                    <span class="n">attribution</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">,</span>
+                    <span class="n">name</span><span class="o">=</span><span class="n">right_name</span><span class="p">,</span>
+                    <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
                 <span class="p">)</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="n">right_layer</span> <span class="o">=</span> <span class="n">ipyleaflet</span><span class="o">.</span><span class="n">TileLayer</span><span class="p">(</span>
                     <span class="n">url</span><span class="o">=</span><span class="n">right_layer</span><span class="p">,</span>
-                    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Right Layer&quot;</span><span class="p">,</span>
-                    <span class="n">attribution</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">,</span>
+                    <span class="n">name</span><span class="o">=</span><span class="n">right_name</span><span class="p">,</span>
+                    <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
                 <span class="p">)</span>
         <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">right_layer</span><span class="p">,</span> <span class="n">ipyleaflet</span><span class="o">.</span><span class="n">TileLayer</span><span class="p">):</span>
             <span class="k">pass</span>
@@ -23984,6 +24233,28 @@ os.environ[&#39;LOCALTILESERVER_CLIENT_PREFIX&#39;] = f&#39;{os.environ[&#39;JUP
         <span class="n">control</span> <span class="o">=</span> <span class="n">ipyleaflet</span><span class="o">.</span><span class="n">SplitMapControl</span><span class="p">(</span>
             <span class="n">left_layer</span><span class="o">=</span><span class="n">left_layer</span><span class="p">,</span> <span class="n">right_layer</span><span class="o">=</span><span class="n">right_layer</span>
         <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">add_control</span><span class="p">(</span><span class="n">control</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">left_label</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">widget_layout</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">widget_layout</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span><span class="n">padding</span><span class="o">=</span><span class="s2">&quot;0px 4px 0px 4px&quot;</span><span class="p">)</span>
+            <span class="n">left_widget</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">HTML</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="n">left_label</span><span class="p">,</span> <span class="n">layout</span><span class="o">=</span><span class="n">widget_layout</span><span class="p">)</span>
+
+            <span class="n">left_control</span> <span class="o">=</span> <span class="n">ipyleaflet</span><span class="o">.</span><span class="n">WidgetControl</span><span class="p">(</span>
+                <span class="n">widget</span><span class="o">=</span><span class="n">left_widget</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="n">left_position</span>
+            <span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">add_control</span><span class="p">(</span><span class="n">left_control</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">right_label</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+
+            <span class="k">if</span> <span class="n">widget_layout</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">widget_layout</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span><span class="n">padding</span><span class="o">=</span><span class="s2">&quot;0px 4px 0px 4px&quot;</span><span class="p">)</span>
+            <span class="n">right_widget</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">HTML</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="n">right_label</span><span class="p">,</span> <span class="n">layout</span><span class="o">=</span><span class="n">widget_layout</span><span class="p">)</span>
+            <span class="n">right_control</span> <span class="o">=</span> <span class="n">ipyleaflet</span><span class="o">.</span><span class="n">WidgetControl</span><span class="p">(</span>
+                <span class="n">widget</span><span class="o">=</span><span class="n">right_widget</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="n">right_position</span>
+            <span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">add_control</span><span class="p">(</span><span class="n">right_control</span><span class="p">)</span>
 
         <span class="n">close_button</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">ToggleButton</span><span class="p">(</span>
             <span class="n">value</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
@@ -24000,12 +24271,17 @@ os.environ[&#39;LOCALTILESERVER_CLIENT_PREFIX&#39;] = f&#39;{os.environ[&#39;JUP
                 <span class="bp">self</span><span class="o">.</span><span class="n">layers</span> <span class="o">=</span> <span class="n">layers</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">add_layer</span><span class="p">(</span><span class="n">layers</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
 
+            <span class="k">if</span> <span class="n">left_label</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">remove_control</span><span class="p">(</span><span class="n">left_control</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">right_label</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">remove_control</span><span class="p">(</span><span class="n">right_control</span><span class="p">)</span>
+
         <span class="n">close_button</span><span class="o">.</span><span class="n">observe</span><span class="p">(</span><span class="n">close_btn_click</span><span class="p">,</span> <span class="s2">&quot;value&quot;</span><span class="p">)</span>
         <span class="n">close_control</span> <span class="o">=</span> <span class="n">ipyleaflet</span><span class="o">.</span><span class="n">WidgetControl</span><span class="p">(</span>
             <span class="n">widget</span><span class="o">=</span><span class="n">close_button</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="s2">&quot;bottomright&quot;</span>
         <span class="p">)</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">add_control</span><span class="p">(</span><span class="n">control</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">add_close_button</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">add_control</span><span class="p">(</span><span class="n">close_control</span><span class="p">)</span>
 
@@ -25321,18 +25597,31 @@ os.environ[&#39;LOCALTILESERVER_CLIENT_PREFIX&#39;] = f&#39;{os.environ[&#39;JUP
   <small>
     
       Last update:
-      2022-09-24
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2020-08-22T14:37:32+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2020-08-22</span>
+      
+        <br>
+        Created:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2020-08-22T14:37:32+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2020-08-22</span>
+      
     
   </small>
 </div>
 
-              
 
-            </article>
-          </div>
+  
+
+
+
+
+                
+
+              </article>
+            </div>
+          
+          
         </div>
         
-          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
             Back to top
           </a>
@@ -25341,7 +25630,8 @@ os.environ[&#39;LOCALTILESERVER_CLIENT_PREFIX&#39;] = f&#39;{os.environ[&#39;JUP
       
         <footer class="md-footer">
   
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
         <a href="../foliumap/" class="md-footer__link md-footer__link--prev" aria-label="Previous: foliumap module" rel="prev">
@@ -25380,10 +25670,63 @@ os.environ[&#39;LOCALTILESERVER_CLIENT_PREFIX&#39;] = f&#39;{os.environ[&#39;JUP
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
   
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2022 - 2023 Qiusheng Wu
+    </div>
+  
   
     Made with
     <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
       Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+      
+      
+    
+    <a href="https://github.com/giswqs" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://medium.com/@giswqs" target="_blank" rel="noopener" title="medium.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M180.5 74.262C80.813 74.262 0 155.633 0 256s80.819 181.738 180.5 181.738S361 356.373 361 256 280.191 74.262 180.5 74.262Zm288.25 10.646c-49.845 0-90.245 76.619-90.245 171.095s40.406 171.1 90.251 171.1 90.251-76.619 90.251-171.1H559c0-94.503-40.4-171.095-90.248-171.095Zm139.506 17.821c-17.526 0-31.735 68.628-31.735 153.274s14.2 153.274 31.735 153.274S640 340.631 640 256c0-84.649-14.215-153.271-31.742-153.271Z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/giswqs" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/qiushengwu" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://youtube.com/@giswqs" target="_blank" rel="noopener" title="youtube.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
     </a>
   
 </div>
@@ -25396,11 +25739,17 @@ os.environ[&#39;LOCALTILESERVER_CLIENT_PREFIX&#39;] = f&#39;{os.environ[&#39;JUP
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.top", "search.highlight", "search.share"], "search": "../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.top", "search.highlight", "search.share"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.748e2769.min.js"></script>
+      <script src="../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
       
+        <script src="../js/timeago.min.js"></script>
+      
+        <script src="../js/timeago_mkdocs_material.js"></script>
+      
+    
     
   </body>
 </html>
