@@ -2905,6 +2905,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notebooks/132_folium_colorbar/" class="md-nav__link">
+        132 folium colorbar
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -3087,7 +3101,7 @@
         <details class="quote">
           <summary>Source code in <code>geemap/ml.py</code></summary>
           <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">csv_to_classifier</span><span class="p">(</span><span class="n">in_csv</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Convert a CSV file containing a list of strings (an ensemble of decision trees) to an ee.Classifier.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Convert a CSV file containing a list of strings (an ensemble of decision trees) to an ee.Classifier.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        in_csv (str): File path to the input CSV.</span>
@@ -3164,7 +3178,7 @@
         <details class="quote">
           <summary>Source code in <code>geemap/ml.py</code></summary>
           <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">export_trees_to_fc</span><span class="p">(</span><span class="n">trees</span><span class="p">,</span> <span class="n">asset_id</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;geemap_rf_export&quot;</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Function that creates a feature collection with a property tree which contains the string representation of decision trees and exports to ee asset for later use</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Function that creates a feature collection with a property tree which contains the string representation of decision trees and exports to ee asset for later use</span>
 
 <span class="sd">    args:</span>
 <span class="sd">        trees (list[str]): list of string representation of the decision trees</span>
@@ -3250,7 +3264,7 @@
         <details class="quote">
           <summary>Source code in <code>geemap/ml.py</code></summary>
           <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">fc_to_classifier</span><span class="p">(</span><span class="n">fc</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Function that takes a feature collection resulting from `export_trees_to_fc` and creates a ee.Classifier that can be used with ee objects</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Function that takes a feature collection resulting from `export_trees_to_fc` and creates a ee.Classifier that can be used with ee objects</span>
 
 <span class="sd">    args:</span>
 <span class="sd">        fc (ee.FeatureCollection): feature collection that has trees property for each feature that represents the decision tree</span>
@@ -3347,7 +3361,7 @@
         <details class="quote">
           <summary>Source code in <code>geemap/ml.py</code></summary>
           <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">rf_to_strings</span><span class="p">(</span><span class="n">estimator</span><span class="p">,</span> <span class="n">feature_names</span><span class="p">,</span> <span class="n">processes</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">output_mode</span><span class="o">=</span><span class="s2">&quot;INFER&quot;</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Function to convert a ensemble of decision trees into a list of strings. Wraps `tree_to_string`</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Function to convert a ensemble of decision trees into a list of strings. Wraps `tree_to_string`</span>
 
 <span class="sd">    args:</span>
 <span class="sd">        estimator (sklearn.ensemble.estimator): A decision tree classifier or regressor object created using sklearn</span>
@@ -3467,7 +3481,7 @@
         <details class="quote">
           <summary>Source code in <code>geemap/ml.py</code></summary>
           <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">strings_to_classifier</span><span class="p">(</span><span class="n">trees</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Function that takes string representation of decision trees and creates a ee.Classifier that can be used with ee objects</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Function that takes string representation of decision trees and creates a ee.Classifier that can be used with ee objects</span>
 
 <span class="sd">    args:</span>
 <span class="sd">        trees (list[str]): list of string representation of the decision trees</span>
@@ -3576,7 +3590,7 @@
         <details class="quote">
           <summary>Source code in <code>geemap/ml.py</code></summary>
           <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">tree_to_string</span><span class="p">(</span><span class="n">estimator</span><span class="p">,</span> <span class="n">feature_names</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">output_mode</span><span class="o">=</span><span class="s2">&quot;INFER&quot;</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Function to convert a sklearn decision tree object to a string format that EE can interpret</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Function to convert a sklearn decision tree object to a string format that EE can interpret</span>
 
 <span class="sd">    args:</span>
 <span class="sd">        estimator (sklearn.tree.estimator): An estimator consisting of multiple decision tree classifiers. Expects object to contain estimators_ attribute</span>
@@ -3856,7 +3870,7 @@
         <details class="quote">
           <summary>Source code in <code>geemap/ml.py</code></summary>
           <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">trees_to_csv</span><span class="p">(</span><span class="n">trees</span><span class="p">,</span> <span class="n">out_csv</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Save a list of strings (an ensemble of decision trees) to a CSV file.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Save a list of strings (an ensemble of decision trees) to a CSV file.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        trees (list): A list of strings (an ensemble of decision trees).</span>

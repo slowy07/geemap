@@ -2818,6 +2818,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../132_folium_colorbar/" class="md-nav__link">
+        132 folium colorbar
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -3909,7 +3923,13 @@ Licensed under the Apache License, Version 2.0.
 <p><a href="https://githubtocolab.com/giswqs/geemap/blob/master/examples/notebooks/61_vector_to_gif.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="image"></a>
 <a href="https://gishub.org/geemap-binder"><img src="https://mybinder.org/badge_logo.svg" alt="image"></a></p>
 <p><strong>Creating animated GIF from vector data</strong></p>
-<p>Inspired by Johannes Uhl's <a href="https://github.com/johannesuhl/shapefile2gif">shapefile2gif</a>, I created a <code>vector_to_gif()</code> function in geemap that makes it much easier to create animated GIF from vector data with only one line of code.</p>
+<p>Inspired by Johannes Uhl's <a href="https://github.com/johannesuhl/shapefile2gif">shapefile2gif</a>, I created a <code>vector_to_gif()</code> function in geemap that makes it much easier to create animated GIF from vector data with only one line of code. The sample dataset used in this notebook is a subset of the dataset retrieved from the <a href="https://github.com/johannesuhl/shapefile2gif">shapefile2gif</a> repo. Credits to Johannes Uhl. For more information about the datasets, check out the references below:</p>
+<ul>
+<li>Uhl, Johannes H; Leyk, Stefan (2022), "MTBF-33: A multi-temporal building footprint dataset for
+33 counties in the United States (1900–2015)", <em>Data in Brief</em>, 43, 108369. DOI: <a href="https://doi.org/10.1016/j.dib.2022.108369">10.1016/j.dib.2022.108369</a></li>
+<li>Uhl, Johannes H; Leyk, Stefan (2022), “MTBF-33: A multi-temporal building footprint dataset for 33 U.S. counties
+at annual resolution (1900-2015)”, <em>Mendeley Data</em>, V2. DOI: <a href="https://doi.org/10.17632/w33vbvjtdy.2">10.17632/w33vbvjtdy.2</a></li>
+</ul>
 <p>Uncomment the following line to install <a href="https://geemap.org">geemap</a> if needed.</p>
 
 </div>
@@ -4000,9 +4020,11 @@ Licensed under the Apache License, Version 2.0.
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="s1">&#39;https://github.com/giswqs/data/raw/main/us/boulder_buildings.zip&#39;</span>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># A subset of the dataset retrieved from https://github.com/johannesuhl/shapefile2gif</span>
+<span class="n">data</span> <span class="o">=</span> <span class="s1">&#39;https://github.com/giswqs/data/raw/main/us/boulder_buildings.zip&#39;</span>
 </pre></div>
-<div id="cell-3" class="clipboard-copy-txt">data = 'https://github.com/giswqs/data/raw/main/us/boulder_buildings.zip'</div>
+<div id="cell-3" class="clipboard-copy-txt"># A subset of the dataset retrieved from https://github.com/johannesuhl/shapefile2gif
+data = 'https://github.com/giswqs/data/raw/main/us/boulder_buildings.zip'</div>
     
         </div>
     </div>
@@ -4161,7 +4183,7 @@ title = 'Building Evolution in Boulder, Colorado, USA (1950-2015)'</div>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2022-11-29T04:13:22+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-11-29</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2022-12-29T03:28:14+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-12-29</span>
       
         <br>
         Created:

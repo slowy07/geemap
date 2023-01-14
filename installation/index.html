@@ -2889,6 +2889,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notebooks/132_folium_colorbar/" class="md-nav__link">
+        132 folium colorbar
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -2994,21 +3008,21 @@ the <a href="https://code.earthengine.google.com/">Earth Engine Code Editor</a> 
 <p><img alt="signup" src="https://i.imgur.com/ng0FzUT.png" /></p>
 <h2 id="install-from-pypi">Install from PyPI<a class="headerlink" href="#install-from-pypi" title="Permanent link">&para;</a></h2>
 <p><strong>Geemap</strong> is available on <a href="https://pypi.org/project/geemap/">PyPI</a>. To install <strong>geemap</strong>, run this command in your terminal:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>    pip install geemap
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">    </span>pip<span class="w"> </span>install<span class="w"> </span>geemap
 </code></pre></div></td></tr></table></div>
 <h2 id="install-from-conda-forge">Install from conda-forge<a class="headerlink" href="#install-from-conda-forge" title="Permanent link">&para;</a></h2>
 <p><strong>Geemap</strong> is also available on <a href="https://anaconda.org/conda-forge/geemap">conda-forge</a>. If you have
 <a href="https://www.anaconda.com/distribution/#download-section">Anaconda</a> or <a href="https://docs.conda.io/en/latest/miniconda.html">Miniconda</a> installed on your computer, you can install geemap using the following command:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>    conda install geemap -c conda-forge
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">    </span>conda<span class="w"> </span>install<span class="w"> </span>geemap<span class="w"> </span>-c<span class="w"> </span>conda-forge
 </code></pre></div></td></tr></table></div>
 <p>The geemap package has some optional dependencies, such as <a href="https://geopandas.org">GeoPandas</a> and <a href="https://github.com/banesullivan/localtileserver">localtileserver</a>. These optional dependencies can be challenging to install on some computers, especially Windows. It is highly recommended that you create a fresh conda environment to install geemap. Follow the commands below to set up a conda env and install geemap and <a href="https://pygis.gishub.org/">pygis</a>, which includes all the optional dependencies of geemap.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>    conda create -n gee python
-    conda activate gee
-    conda install -c conda-forge mamba
-    mamba install -c conda-forge geemap pygis
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">    </span>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>gee<span class="w"> </span>python
+<span class="w">    </span>conda<span class="w"> </span>activate<span class="w"> </span>gee
+<span class="w">    </span>conda<span class="w"> </span>install<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>mamba
+<span class="w">    </span>mamba<span class="w"> </span>install<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>geemap<span class="w"> </span>pygis
 </code></pre></div></td></tr></table></div>
 <p>All the optional dependencies are listed in <a href="https://github.com/giswqs/geemap/blob/master/requirements_dev.txt">requirements_dev.txt</a>, which can be installed using one of the following:</p>
 <ul>
@@ -3021,20 +3035,20 @@ the <a href="https://code.earthengine.google.com/">Earth Engine Code Editor</a> 
 <li><code>pip install geemap[vector]</code>: installing geopandas, osmnx.</li>
 </ul>
 <p>Optionally, you can install some <a href="https://github.com/ipython-contrib/jupyter_contrib_nbextensions">Jupyter notebook extensions</a>, which can improve your productivity in the notebook environment. Some useful extensions include Table of Contents, Gist-it, Autopep8, Variable Inspector, etc. See this <a href="https://towardsdatascience.com/jupyter-notebook-extensions-517fa69d2231">post</a> for more information.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>    conda install jupyter_contrib_nbextensions -c conda-forge
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">    </span>conda<span class="w"> </span>install<span class="w"> </span>jupyter_contrib_nbextensions<span class="w"> </span>-c<span class="w"> </span>conda-forge
 </code></pre></div></td></tr></table></div>
 <p>Check the <strong>YouTube</strong> video below on how to install geemap using conda.</p>
 <p><a href="http://www.youtube.com/watch?v=h0pz3S6Tvx0" title="Install geemap"><img alt="geemap" src="http://img.youtube.com/vi/h0pz3S6Tvx0/0.jpg" /></a></p>
 <h2 id="install-from-github">Install from GitHub<a class="headerlink" href="#install-from-github" title="Permanent link">&para;</a></h2>
 <p>To install the development version from GitHub using <a href="https://git-scm.com/">Git</a>, run the following command in your terminal:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>    pip install git+https://github.com/giswqs/geemap
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">    </span>pip<span class="w"> </span>install<span class="w"> </span>git+https://github.com/giswqs/geemap
 </code></pre></div></td></tr></table></div>
 <h2 id="upgrade-geemap">Upgrade geemap<a class="headerlink" href="#upgrade-geemap" title="Permanent link">&para;</a></h2>
 <p>If you have installed <strong>geemap</strong> before and want to upgrade to the latest version, you can run the following command in your terminal:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>    pip install -U geemap
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">    </span>pip<span class="w"> </span>install<span class="w"> </span>-U<span class="w"> </span>geemap
 </code></pre></div></td></tr></table></div>
 <p>If you use conda, you can update geemap to the latest version by running the following command in your terminal:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>    conda update -c conda-forge geemap
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">    </span>conda<span class="w"> </span>update<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>geemap
 </code></pre></div></td></tr></table></div>
 <p>To install the development version from GitHub directly within Jupyter notebook without using Git, run the following code:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>

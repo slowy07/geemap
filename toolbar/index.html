@@ -2933,6 +2933,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notebooks/132_folium_colorbar/" class="md-nav__link">
+        132 folium colorbar
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -3156,7 +3170,7 @@
         <details class="quote">
           <summary>Source code in <code>geemap/toolbar.py</code></summary>
           <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">build_toolbox</span><span class="p">(</span><span class="n">tools_dict</span><span class="p">,</span> <span class="n">max_width</span><span class="o">=</span><span class="s2">&quot;1080px&quot;</span><span class="p">,</span> <span class="n">max_height</span><span class="o">=</span><span class="s2">&quot;600px&quot;</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Build the GEE toolbox.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Build the GEE toolbox.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        tools_dict (dict): A dictionary containing information for all tools.</span>
@@ -3298,7 +3312,7 @@
         <details class="quote">
           <summary>Source code in <code>geemap/toolbar.py</code></summary>
           <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">change_basemap</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Widget for change basemaps.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Widget for change basemaps.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        m (object): geemap.Map()</span>
@@ -3390,7 +3404,7 @@
         <details class="quote">
           <summary>Source code in <code>geemap/toolbar.py</code></summary>
           <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">convert_js2py</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;A widget for converting Earth Engine JavaScript to Python.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;A widget for converting Earth Engine JavaScript to Python.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        m (object): geemap.Map</span>
@@ -3503,7 +3517,7 @@
         <details class="quote">
           <summary>Source code in <code>geemap/toolbar.py</code></summary>
           <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">inspector_gui</span><span class="p">(</span><span class="n">m</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Generates a tool GUI template using ipywidgets.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Generates a tool GUI template using ipywidgets.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        m (geemap.Map, optional): The leaflet Map object. Defaults to None.</span>
@@ -3927,7 +3941,7 @@
         <details class="quote">
           <summary>Source code in <code>geemap/toolbar.py</code></summary>
           <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">open_data_widget</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;A widget for opening local vector/raster data.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;A widget for opening local vector/raster data.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        m (object): geemap.Map</span>
@@ -4291,7 +4305,7 @@
         <details class="quote">
           <summary>Source code in <code>geemap/toolbar.py</code></summary>
           <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">plotly_basemap_gui</span><span class="p">(</span><span class="n">canvas</span><span class="p">,</span> <span class="n">map_min_width</span><span class="o">=</span><span class="s2">&quot;78%&quot;</span><span class="p">,</span> <span class="n">map_max_width</span><span class="o">=</span><span class="s2">&quot;98%&quot;</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Widget for changing basemaps.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Widget for changing basemaps.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        m (object): geemap.Map.</span>
@@ -4398,7 +4412,7 @@
         <details class="quote">
           <summary>Source code in <code>geemap/toolbar.py</code></summary>
           <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">plotly_search_basemaps</span><span class="p">(</span><span class="n">canvas</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;The widget for search XYZ tile services.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The widget for search XYZ tile services.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        m (plotlymap.Map, optional): The Plotly Map object. Defaults to None.</span>
@@ -4624,7 +4638,7 @@
           <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">plotly_toolbar</span><span class="p">(</span>
     <span class="n">canvas</span><span class="p">,</span>
 <span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Creates the main toolbar and adds it to the map.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Creates the main toolbar and adds it to the map.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        m (plotlymap.Map): The plotly Map object.</span>
@@ -4955,7 +4969,7 @@
         <details class="quote">
           <summary>Source code in <code>geemap/toolbar.py</code></summary>
           <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">time_slider</span><span class="p">(</span><span class="n">m</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Creates a time slider for visualizing any ee.ImageCollection.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Creates a time slider for visualizing any ee.ImageCollection.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        m (geemap.Map, optional): A geemap Map instance. Defaults to None.</span>
@@ -5904,7 +5918,7 @@
         <details class="quote">
           <summary>Source code in <code>geemap/toolbar.py</code></summary>
           <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">timelapse_gui</span><span class="p">(</span><span class="n">m</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Creates timelapse animations.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Creates timelapse animations.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        m (geemap.Map, optional): A geemap Map instance. Defaults to None.</span>
@@ -6415,7 +6429,7 @@
         <details class="quote">
           <summary>Source code in <code>geemap/toolbar.py</code></summary>
           <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">tool_gui</span><span class="p">(</span><span class="n">tool_dict</span><span class="p">,</span> <span class="n">max_width</span><span class="o">=</span><span class="s2">&quot;420px&quot;</span><span class="p">,</span> <span class="n">max_height</span><span class="o">=</span><span class="s2">&quot;600px&quot;</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Create a GUI for a tool based on the tool dictionary.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Create a GUI for a tool based on the tool dictionary.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        tool_dict (dict): The dictionary containing the tool info.</span>

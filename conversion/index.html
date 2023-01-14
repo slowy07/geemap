@@ -3003,6 +3003,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notebooks/132_folium_colorbar/" class="md-nav__link">
+        132 folium colorbar
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -3290,7 +3304,7 @@
         <details class="quote">
           <summary>Source code in <code>geemap/conversion.py</code></summary>
           <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">check_map_functions</span><span class="p">(</span><span class="n">input_lines</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Extracts Earth Engine map function</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Extracts Earth Engine map function</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        input_lines (list): List of Earth Engine JavaScrips</span>
@@ -3402,7 +3416,7 @@
         <details class="quote">
           <summary>Source code in <code>geemap/conversion.py</code></summary>
           <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">convert_for_loop</span><span class="p">(</span><span class="n">line</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Converts JavaScript for loop to Python for loop.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Converts JavaScript for loop to Python for loop.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        line (str): Input JavaScript for loop</span>
@@ -3496,7 +3510,7 @@
         <details class="quote">
           <summary>Source code in <code>geemap/conversion.py</code></summary>
           <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">create_new_cell</span><span class="p">(</span><span class="n">contents</span><span class="p">,</span> <span class="n">replace</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Create a new cell in Jupyter notebook based on the contents.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Create a new cell in Jupyter notebook based on the contents.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        contents (str): A string of Python code.</span>
@@ -3555,7 +3569,7 @@
         <details class="quote">
           <summary>Source code in <code>geemap/conversion.py</code></summary>
           <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">download_gee_app</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">out_file</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Downloads JavaScript source code from a GEE App</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Downloads JavaScript source code from a GEE App</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        url (str): The URL of the GEE App.</span>
@@ -3645,7 +3659,7 @@
         <details class="quote">
           <summary>Source code in <code>geemap/conversion.py</code></summary>
           <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">execute_notebook</span><span class="p">(</span><span class="n">in_file</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Executes a Jupyter notebook and save output cells</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Executes a Jupyter notebook and save output cells</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        in_file (str): Input Jupyter notebook.</span>
@@ -3698,7 +3712,7 @@
         <details class="quote">
           <summary>Source code in <code>geemap/conversion.py</code></summary>
           <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">execute_notebook_dir</span><span class="p">(</span><span class="n">in_dir</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Executes all Jupyter notebooks in the given directory recursively and save output cells.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Executes all Jupyter notebooks in the given directory recursively and save output cells.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        in_dir (str): Input folder containing notebooks.</span>
@@ -3711,7 +3725,7 @@
     <span class="k">if</span> <span class="n">files</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
         <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">file</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">files</span><span class="p">):</span>
             <span class="n">in_file</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
-            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Processing </span><span class="si">{</span><span class="n">index</span> <span class="o">+</span> <span class="mi">1</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">count</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">file</span><span class="si">}</span><span class="s2"> ...&quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Processing </span><span class="si">{</span><span class="n">index</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">count</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">file</span><span class="si">}</span><span class="s2"> ...&quot;</span><span class="p">)</span>
             <span class="n">execute_notebook</span><span class="p">(</span><span class="n">in_file</span><span class="p">)</span>
 </code></pre></div>
         </details>
@@ -3791,7 +3805,7 @@ matching_char_index (int): The position index of the matching closing bracket.</
         <details class="quote">
           <summary>Source code in <code>geemap/conversion.py</code></summary>
           <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">find_matching_bracket</span><span class="p">(</span><span class="n">lines</span><span class="p">,</span> <span class="n">start_line_index</span><span class="p">,</span> <span class="n">start_char_index</span><span class="p">,</span> <span class="n">matching_char</span><span class="o">=</span><span class="s2">&quot;{&quot;</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Finds the position of the matching closing bracket from a list of lines.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Finds the position of the matching closing bracket from a list of lines.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        lines (list): The input list of lines.</span>
@@ -3909,7 +3923,7 @@ For example, {min: 0, max: 10} will result in ('min': 0, 'max': 10)</p>
         <details class="quote">
           <summary>Source code in <code>geemap/conversion.py</code></summary>
           <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">format_params</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;:&quot;</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Formats keys in a dictionary and adds quotes to the keys.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Formats keys in a dictionary and adds quotes to the keys.</span>
 <span class="sd">    For example, {min: 0, max: 10} will result in (&#39;min&#39;: 0, &#39;max&#39;: 10)</span>
 
 <span class="sd">    Args:</span>
@@ -4034,7 +4048,7 @@ For example, {min: 0, max: 10} will result in ('min': 0, 'max': 10)</p>
         <details class="quote">
           <summary>Source code in <code>geemap/conversion.py</code></summary>
           <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_js_examples</span><span class="p">(</span><span class="n">out_dir</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Gets Earth Engine JavaScript examples from the geemap package.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Gets Earth Engine JavaScript examples from the geemap package.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        out_dir (str, optional): The folder to copy the JavaScript examples to. Defaults to None.</span>
@@ -4124,7 +4138,7 @@ For example, {min: 0, max: 10} will result in ('min': 0, 'max': 10)</p>
         <details class="quote">
           <summary>Source code in <code>geemap/conversion.py</code></summary>
           <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_nb_template</span><span class="p">(</span><span class="n">download_latest</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">out_file</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Get the Earth Engine Jupyter notebook template.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Get the Earth Engine Jupyter notebook template.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        download_latest (bool, optional): If True, downloads the latest notebook template from GitHub. Defaults to False.</span>
@@ -4245,7 +4259,7 @@ For example, {min: 0, max: 10} will result in ('min': 0, 'max': 10)</p>
     <span class="n">import_geemap</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
     <span class="n">show_map</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
 <span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Converts an Earth Engine JavaScript snippet wrapped in triple quotes to Python directly on a Jupyter notebook.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Converts an Earth Engine JavaScript snippet wrapped in triple quotes to Python directly on a Jupyter notebook.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        in_js_snippet (str): Earth Engine JavaScript within triple quotes.</span>
@@ -4345,7 +4359,7 @@ For example, {min: 0, max: 10} will result in ('min': 0, 'max': 10)</p>
           <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">js_to_python</span><span class="p">(</span>
     <span class="n">in_file</span><span class="p">,</span> <span class="n">out_file</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">use_qgis</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">github_repo</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">show_map</span><span class="o">=</span><span class="kc">True</span>
 <span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Converts an Earth Engine JavaScript to Python script.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Converts an Earth Engine JavaScript to Python script.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        in_file (str): File path of the input JavaScript.</span>
@@ -4586,7 +4600,7 @@ For example, {min: 0, max: 10} will result in ('min': 0, 'max': 10)</p>
         <details class="quote">
           <summary>Source code in <code>geemap/conversion.py</code></summary>
           <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">js_to_python_dir</span><span class="p">(</span><span class="n">in_dir</span><span class="p">,</span> <span class="n">out_dir</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">use_qgis</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">github_repo</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Converts all Earth Engine JavaScripts in a folder recursively to Python scripts.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Converts all Earth Engine JavaScripts in a folder recursively to Python scripts.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        in_dir (str): The input folder containing Earth Engine JavaScripts.</span>
@@ -4607,7 +4621,7 @@ For example, {min: 0, max: 10} will result in ('min': 0, 'max': 10)</p>
     <span class="n">files</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">Path</span><span class="p">(</span><span class="n">in_dir</span><span class="p">)</span><span class="o">.</span><span class="n">rglob</span><span class="p">(</span><span class="s2">&quot;*.js&quot;</span><span class="p">))</span>
 
     <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">in_file</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">files</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Processing </span><span class="si">{</span><span class="n">index</span> <span class="o">+</span> <span class="mi">1</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">files</span><span class="p">)</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">in_file</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Processing </span><span class="si">{</span><span class="n">index</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">files</span><span class="p">)</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">in_file</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
         <span class="c1"># if use_qgis:</span>
         <span class="c1">#     out_file = os.path.splitext(in_file)[0] + &quot;_qgis.py&quot;</span>
         <span class="c1"># else:</span>
@@ -4689,7 +4703,7 @@ For example, {min: 0, max: 10} will result in ('min': 0, 'max': 10)</p>
     <span class="n">github_username</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
     <span class="n">github_repo</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
 <span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Converts Earth Engine Python script to Jupyter notebook.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Converts Earth Engine Python script to Jupyter notebook.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        in_file (str): Input Earth Engine Python script.</span>
@@ -4836,7 +4850,7 @@ For example, {min: 0, max: 10} will result in ('min': 0, 'max': 10)</p>
           <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">py_to_ipynb_dir</span><span class="p">(</span>
     <span class="n">in_dir</span><span class="p">,</span> <span class="n">template_file</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">out_dir</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">github_username</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">github_repo</span><span class="o">=</span><span class="kc">None</span>
 <span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Converts Earth Engine Python scripts in a folder recursively to Jupyter notebooks.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Converts Earth Engine Python scripts in a folder recursively to Jupyter notebooks.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        in_dir (str): Input folder containing Earth Engine Python scripts.</span>
@@ -4872,7 +4886,7 @@ For example, {min: 0, max: 10} will result in ('min': 0, 'max': 10)</p>
             <span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;_qgis&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
             <span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;.py&quot;</span><span class="p">,</span> <span class="s2">&quot;.ipynb&quot;</span><span class="p">)</span>
         <span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Processing </span><span class="si">{</span><span class="n">index</span> <span class="o">+</span> <span class="mi">1</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">files</span><span class="p">)</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">in_file</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Processing </span><span class="si">{</span><span class="n">index</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">files</span><span class="p">)</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">in_file</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
         <span class="n">py_to_ipynb</span><span class="p">(</span><span class="n">in_file</span><span class="p">,</span> <span class="n">template_file</span><span class="p">,</span> <span class="n">out_file</span><span class="p">,</span> <span class="n">github_username</span><span class="p">,</span> <span class="n">github_repo</span><span class="p">)</span>
 </code></pre></div>
         </details>
@@ -4933,7 +4947,7 @@ For example, {min: 0, max: 10} will result in ('min': 0, 'max': 10)</p>
         <details class="quote">
           <summary>Source code in <code>geemap/conversion.py</code></summary>
           <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">remove_qgis_import</span><span class="p">(</span><span class="n">in_file</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Removes &#39;from ee_plugin import Map&#39; from an Earth Engine Python script.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Removes &#39;from ee_plugin import Map&#39; from an Earth Engine Python script.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        in_file (str): Input file path of the Python script.</span>
@@ -5017,7 +5031,7 @@ For example, {min: 0, max: 10} will result in ('min': 0, 'max': 10)</p>
         <details class="quote">
           <summary>Source code in <code>geemap/conversion.py</code></summary>
           <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">template_footer</span><span class="p">(</span><span class="n">in_template</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Extracts footer from the notebook template.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Extracts footer from the notebook template.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        in_template (str): Input notebook template file path.</span>
@@ -5097,7 +5111,7 @@ For example, {min: 0, max: 10} will result in ('min': 0, 'max': 10)</p>
         <details class="quote">
           <summary>Source code in <code>geemap/conversion.py</code></summary>
           <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">template_header</span><span class="p">(</span><span class="n">in_template</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Extracts header from the notebook template.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Extracts header from the notebook template.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        in_template (str): Input notebook template file path.</span>
@@ -5174,7 +5188,7 @@ For example, {min: 0, max: 10} will result in ('min': 0, 'max': 10)</p>
         <details class="quote">
           <summary>Source code in <code>geemap/conversion.py</code></summary>
           <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">update_nb_header</span><span class="p">(</span><span class="n">in_file</span><span class="p">,</span> <span class="n">github_username</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">github_repo</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Updates notebook header (binder and Google Colab URLs).</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Updates notebook header (binder and Google Colab URLs).</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        in_file (str): The input Jupyter notebook.</span>
@@ -5281,7 +5295,7 @@ For example, {min: 0, max: 10} will result in ('min': 0, 'max': 10)</p>
         <details class="quote">
           <summary>Source code in <code>geemap/conversion.py</code></summary>
           <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">update_nb_header_dir</span><span class="p">(</span><span class="n">in_dir</span><span class="p">,</span> <span class="n">github_username</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">github_repo</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Updates header (binder and Google Colab URLs) of all notebooks in a folder .</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Updates header (binder and Google Colab URLs) of all notebooks in a folder .</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        in_dir (str): The input directory containing Jupyter notebooks.</span>
@@ -5297,7 +5311,7 @@ For example, {min: 0, max: 10} will result in ('min': 0, 'max': 10)</p>
     <span class="k">if</span> <span class="n">files</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
         <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">file</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">files</span><span class="p">):</span>
             <span class="n">in_file</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
-            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Processing </span><span class="si">{</span><span class="n">index</span> <span class="o">+</span> <span class="mi">1</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">count</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">file</span><span class="si">}</span><span class="s2"> ...&quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Processing </span><span class="si">{</span><span class="n">index</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">count</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">file</span><span class="si">}</span><span class="s2"> ...&quot;</span><span class="p">)</span>
             <span class="n">update_nb_header</span><span class="p">(</span><span class="n">in_file</span><span class="p">,</span> <span class="n">github_username</span><span class="p">,</span> <span class="n">github_repo</span><span class="p">)</span>
 </code></pre></div>
         </details>
@@ -5358,7 +5372,7 @@ For example, {min: 0, max: 10} will result in ('min': 0, 'max': 10)</p>
         <details class="quote">
           <summary>Source code in <code>geemap/conversion.py</code></summary>
           <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">use_math</span><span class="p">(</span><span class="n">lines</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Checks if an Earth Engine uses Math library</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Checks if an Earth Engine uses Math library</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        lines (list): An Earth Engine JavaScript.</span>

@@ -2996,6 +2996,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notebooks/132_folium_colorbar/" class="md-nav__link">
+        132 folium colorbar
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -3285,7 +3299,7 @@ https://wiki.openstreetmap.org/wiki/Map_features </p>
         <details class="quote">
           <summary>Source code in <code>geemap/osm.py</code></summary>
           <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">osm_gdf_from_address</span><span class="p">(</span><span class="n">address</span><span class="p">,</span> <span class="n">tags</span><span class="p">,</span> <span class="n">dist</span><span class="o">=</span><span class="mi">1000</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Create GeoDataFrame of OSM entities within some distance N, S, E, W of address.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Create GeoDataFrame of OSM entities within some distance N, S, E, W of address.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        address (str): The address to geocode and use as the central point around which to get the geometries.</span>
@@ -3383,7 +3397,7 @@ https://wiki.openstreetmap.org/wiki/Map_features </p>
         <details class="quote">
           <summary>Source code in <code>geemap/osm.py</code></summary>
           <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">osm_gdf_from_bbox</span><span class="p">(</span><span class="n">north</span><span class="p">,</span> <span class="n">south</span><span class="p">,</span> <span class="n">east</span><span class="p">,</span> <span class="n">west</span><span class="p">,</span> <span class="n">tags</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Create a GeoDataFrame of OSM entities within a N, S, E, W bounding box.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Create a GeoDataFrame of OSM entities within a N, S, E, W bounding box.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        north (float): Northern latitude of bounding box.</span>
@@ -3482,7 +3496,7 @@ https://wiki.openstreetmap.org/wiki/Map_features </p>
     <span class="n">by_osmid</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
     <span class="n">buffer_dist</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
 <span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Retrieves place(s) by name or ID from the Nominatim API as a GeoDataFrame.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Retrieves place(s) by name or ID from the Nominatim API as a GeoDataFrame.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        query (str | dict | list): Query string(s) or structured dict(s) to geocode.</span>
@@ -3577,7 +3591,7 @@ https://wiki.openstreetmap.org/wiki/Map_features </p>
         <details class="quote">
           <summary>Source code in <code>geemap/osm.py</code></summary>
           <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">osm_gdf_from_place</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">tags</span><span class="p">,</span> <span class="n">which_result</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">buffer_dist</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Create GeoDataFrame of OSM entities within boundaries of geocodable place(s).</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Create GeoDataFrame of OSM entities within boundaries of geocodable place(s).</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        query (str | dict | list): Query string(s) or structured dict(s) to geocode.</span>
@@ -3666,7 +3680,7 @@ https://wiki.openstreetmap.org/wiki/Map_features </p>
         <details class="quote">
           <summary>Source code in <code>geemap/osm.py</code></summary>
           <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">osm_gdf_from_point</span><span class="p">(</span><span class="n">center_point</span><span class="p">,</span> <span class="n">tags</span><span class="p">,</span> <span class="n">dist</span><span class="o">=</span><span class="mi">1000</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Create GeoDataFrame of OSM entities within some distance N, S, E, W of a point.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Create GeoDataFrame of OSM entities within some distance N, S, E, W of a point.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        center_point (tuple): The (lat, lng) center point around which to get the geometries.</span>
@@ -3746,7 +3760,7 @@ https://wiki.openstreetmap.org/wiki/Map_features </p>
         <details class="quote">
           <summary>Source code in <code>geemap/osm.py</code></summary>
           <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">osm_gdf_from_polygon</span><span class="p">(</span><span class="n">polygon</span><span class="p">,</span> <span class="n">tags</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Create GeoDataFrame of OSM entities within boundaries of a (multi)polygon.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Create GeoDataFrame of OSM entities within boundaries of a (multi)polygon.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        polygon (shapely.geometry.Polygon | shapely.geometry.MultiPolygon): Geographic boundaries to fetch geometries within</span>
@@ -3831,7 +3845,7 @@ https://wiki.openstreetmap.org/wiki/Map_features </p>
         <details class="quote">
           <summary>Source code in <code>geemap/osm.py</code></summary>
           <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">osm_gdf_from_xml</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="n">polygon</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">tags</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Create a GeoDataFrame of OSM entities in an OSM-formatted XML file.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Create a GeoDataFrame of OSM entities in an OSM-formatted XML file.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        filepath (str): File path to file containing OSM XML data</span>
@@ -3923,7 +3937,7 @@ https://wiki.openstreetmap.org/wiki/Map_features </p>
         <details class="quote">
           <summary>Source code in <code>geemap/osm.py</code></summary>
           <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">osm_geojson_from_address</span><span class="p">(</span><span class="n">address</span><span class="p">,</span> <span class="n">tags</span><span class="p">,</span> <span class="n">filepath</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">dist</span><span class="o">=</span><span class="mi">1000</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Download OSM entities within some distance N, S, E, W of address as a GeoJSON.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Download OSM entities within some distance N, S, E, W of address as a GeoJSON.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        address (str): The address to geocode and use as the central point around which to get the geometries.</span>
@@ -4028,7 +4042,7 @@ https://wiki.openstreetmap.org/wiki/Map_features </p>
         <details class="quote">
           <summary>Source code in <code>geemap/osm.py</code></summary>
           <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">osm_geojson_from_bbox</span><span class="p">(</span><span class="n">north</span><span class="p">,</span> <span class="n">south</span><span class="p">,</span> <span class="n">east</span><span class="p">,</span> <span class="n">west</span><span class="p">,</span> <span class="n">tags</span><span class="p">,</span> <span class="n">filepath</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Download OSM entities within a N, S, E, W bounding box as a GeoJSON.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Download OSM entities within a N, S, E, W bounding box as a GeoJSON.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        north (float): Northern latitude of bounding box.</span>
@@ -4135,7 +4149,7 @@ https://wiki.openstreetmap.org/wiki/Map_features </p>
     <span class="n">by_osmid</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
     <span class="n">buffer_dist</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
 <span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Download place(s) by name or ID from the Nominatim API as a GeoJSON.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Download place(s) by name or ID from the Nominatim API as a GeoJSON.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        query (str | dict | list): Query string(s) or structured dict(s) to geocode.</span>
@@ -4237,7 +4251,7 @@ https://wiki.openstreetmap.org/wiki/Map_features </p>
           <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">osm_geojson_from_place</span><span class="p">(</span>
     <span class="n">query</span><span class="p">,</span> <span class="n">tags</span><span class="p">,</span> <span class="n">filepath</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">which_result</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">buffer_dist</span><span class="o">=</span><span class="kc">None</span>
 <span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Download OSM entities within boundaries of geocodable place(s) as a GeoJSON.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Download OSM entities within boundaries of geocodable place(s) as a GeoJSON.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        query (str | dict | list): Query string(s) or structured dict(s) to geocode.</span>
@@ -4332,7 +4346,7 @@ https://wiki.openstreetmap.org/wiki/Map_features </p>
         <details class="quote">
           <summary>Source code in <code>geemap/osm.py</code></summary>
           <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">osm_geojson_from_point</span><span class="p">(</span><span class="n">center_point</span><span class="p">,</span> <span class="n">tags</span><span class="p">,</span> <span class="n">filepath</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">dist</span><span class="o">=</span><span class="mi">1000</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Download OSM entities within some distance N, S, E, W of point as a GeoJSON.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Download OSM entities within some distance N, S, E, W of point as a GeoJSON.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        center_point (tuple): The (lat, lng) center point around which to get the geometries.</span>
@@ -4419,7 +4433,7 @@ https://wiki.openstreetmap.org/wiki/Map_features </p>
         <details class="quote">
           <summary>Source code in <code>geemap/osm.py</code></summary>
           <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">osm_geojson_from_polygon</span><span class="p">(</span><span class="n">polygon</span><span class="p">,</span> <span class="n">tags</span><span class="p">,</span> <span class="n">filepath</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Download OSM entities within boundaries of a (multi)polygon as a GeoJSON.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Download OSM entities within boundaries of a (multi)polygon as a GeoJSON.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        polygon (shapely.geometry.Polygon | shapely.geometry.MultiPolygon): Geographic boundaries to fetch geometries within</span>
@@ -4496,7 +4510,7 @@ https://wiki.openstreetmap.org/wiki/Map_features </p>
         <details class="quote">
           <summary>Source code in <code>geemap/osm.py</code></summary>
           <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">osm_shp_from_address</span><span class="p">(</span><span class="n">address</span><span class="p">,</span> <span class="n">tags</span><span class="p">,</span> <span class="n">filepath</span><span class="p">,</span> <span class="n">dist</span><span class="o">=</span><span class="mi">1000</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Download OSM entities within some distance N, S, E, W of address as a shapefile.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Download OSM entities within some distance N, S, E, W of address as a shapefile.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        address (str): The address to geocode and use as the central point around which to get the geometries.</span>
@@ -4581,7 +4595,7 @@ https://wiki.openstreetmap.org/wiki/Map_features </p>
         <details class="quote">
           <summary>Source code in <code>geemap/osm.py</code></summary>
           <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">osm_shp_from_bbox</span><span class="p">(</span><span class="n">north</span><span class="p">,</span> <span class="n">south</span><span class="p">,</span> <span class="n">east</span><span class="p">,</span> <span class="n">west</span><span class="p">,</span> <span class="n">tags</span><span class="p">,</span> <span class="n">filepath</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Download OSM entities within a N, S, E, W bounding box as a shapefile.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Download OSM entities within a N, S, E, W bounding box as a shapefile.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        north (float): Northern latitude of bounding box.</span>
@@ -4667,7 +4681,7 @@ https://wiki.openstreetmap.org/wiki/Map_features </p>
     <span class="n">by_osmid</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
     <span class="n">buffer_dist</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
 <span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Download place(s) by name or ID from the Nominatim API as a shapefile.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Download place(s) by name or ID from the Nominatim API as a shapefile.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        query (str | dict | list): Query string(s) or structured dict(s) to geocode.</span>
@@ -4746,7 +4760,7 @@ https://wiki.openstreetmap.org/wiki/Map_features </p>
         <details class="quote">
           <summary>Source code in <code>geemap/osm.py</code></summary>
           <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">osm_shp_from_place</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">tags</span><span class="p">,</span> <span class="n">filepath</span><span class="p">,</span> <span class="n">which_result</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">buffer_dist</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Download OSM entities within boundaries of geocodable place(s) as a shapefile.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Download OSM entities within boundaries of geocodable place(s) as a shapefile.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        query (str | dict | list): Query string(s) or structured dict(s) to geocode.</span>
@@ -4819,7 +4833,7 @@ https://wiki.openstreetmap.org/wiki/Map_features </p>
         <details class="quote">
           <summary>Source code in <code>geemap/osm.py</code></summary>
           <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">osm_shp_from_point</span><span class="p">(</span><span class="n">center_point</span><span class="p">,</span> <span class="n">tags</span><span class="p">,</span> <span class="n">filepath</span><span class="p">,</span> <span class="n">dist</span><span class="o">=</span><span class="mi">1000</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Download OSM entities within some distance N, S, E, W of point as a shapefile.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Download OSM entities within some distance N, S, E, W of point as a shapefile.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        center_point (tuple): The (lat, lng) center point around which to get the geometries.</span>
@@ -4885,7 +4899,7 @@ https://wiki.openstreetmap.org/wiki/Map_features </p>
         <details class="quote">
           <summary>Source code in <code>geemap/osm.py</code></summary>
           <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">osm_shp_from_polygon</span><span class="p">(</span><span class="n">polygon</span><span class="p">,</span> <span class="n">tags</span><span class="p">,</span> <span class="n">filepath</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Download OSM entities within boundaries of a (multi)polygon as a shapefile.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Download OSM entities within boundaries of a (multi)polygon as a shapefile.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        polygon (shapely.geometry.Polygon | shapely.geometry.MultiPolygon): Geographic boundaries to fetch geometries within</span>
@@ -4919,7 +4933,7 @@ https://wiki.openstreetmap.org/wiki/Map_features </p>
         <details class="quote">
           <summary>Source code in <code>geemap/osm.py</code></summary>
           <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">osm_tags_list</span><span class="p">():</span>
-    <span class="sd">&quot;&quot;&quot;Open a browser to see all tags of OSM features.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Open a browser to see all tags of OSM features.&quot;&quot;&quot;</span>
     <span class="kn">import</span> <span class="nn">webbrowser</span>
 
     <span class="n">webbrowser</span><span class="o">.</span><span class="n">open_new_tab</span><span class="p">(</span><span class="s2">&quot;https://wiki.openstreetmap.org/wiki/Map_features&quot;</span><span class="p">)</span>
