@@ -14,8 +14,14 @@
       
         <link rel="canonical" href="https://geemap.org/timelapse/">
       
-      <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+      
+        <link rel="prev" href="../plotlymap/">
+      
+      
+        <link rel="next" href="../toolbar/">
+      
+      <link rel="icon" href="../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.5">
     
     
       
@@ -23,11 +29,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.975780f9.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.7a7fce14.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
-        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.a0c5b2b5.min.css">
       
       
 
@@ -100,12 +105,13 @@
     
       
 
-<header class="md-header" data-md-component="header">
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href=".." title="geemap" class="md-header__button md-logo" aria-label="geemap" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <img src="../assets/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -131,8 +137,6 @@
       <form class="md-header__option" data-md-component="palette">
         
           
-          
-          
           <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
           
             <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
@@ -140,8 +144,6 @@
             </label>
           
         
-          
-          
           
           <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
           
@@ -184,7 +186,7 @@
           <div class="md-search-result__meta">
             Initializing search
           </div>
-          <ol class="md-search-result__list"></ol>
+          <ol class="md-search-result__list" role="presentation"></ol>
         </div>
       </div>
     </div>
@@ -196,7 +198,7 @@
         <a href="https://github.com/giswqs/geemap" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -230,8 +232,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="geemap" class="md-nav__button md-logo" aria-label="geemap" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <img src="../assets/logo.png" alt="logo">
 
     </a>
     geemap
@@ -241,7 +242,7 @@
       <a href="https://github.com/giswqs/geemap" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -504,17 +505,18 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_17" type="checkbox" id="__nav_17" checked>
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_17" checked>
       
       
       
-      
-        <label class="md-nav__link" for="__nav_17">
+        <label class="md-nav__link" for="__nav_17" id="__nav_17_label" tabindex="0">
           API Reference
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="API Reference" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_17_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_17">
           <span class="md-nav__icon md-icon"></span>
           API Reference
@@ -782,7 +784,7 @@
   
     <li class="md-nav__item md-nav__item--active">
       
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
         
@@ -1125,17 +1127,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_18" type="checkbox" id="__nav_18" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_18">
+        <label class="md-nav__link" for="__nav_18" id="__nav_18_label" tabindex="0">
           Workshops
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Workshops" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_18_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_18">
           <span class="md-nav__icon md-icon"></span>
           Workshops
@@ -1240,6 +1243,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../workshops/AmericaView_2023/" class="md-nav__link">
+        AmericaView 2023
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1257,17 +1274,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_19" type="checkbox" id="__nav_19" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_19" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_19">
+        <label class="md-nav__link" for="__nav_19" id="__nav_19_label" tabindex="0">
           Notebooks
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Notebooks" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_19_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_19">
           <span class="md-nav__icon md-icon"></span>
           Notebooks
@@ -3136,6 +3154,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notebooks/133_gradio/" class="md-nav__link">
+        133 gradio
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -3458,10 +3490,8 @@
 
                   
 
-  <a href="https://github.com/giswqs/geemap/edit/master/docs/timelapse.md" title="Edit this page" class="md-content__button md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
-  </a>
+  
+  
 
 
 <h1 id="timelapse-module">timelapse module<a class="headerlink" href="#timelapse-module" title="Permanent link">&para;</a></h1>
@@ -3667,7 +3697,6 @@
         <span class="p">)</span>
 
     <span class="k">try</span><span class="p">:</span>
-
         <span class="n">frames</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">frame</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">ImageSequence</span><span class="o">.</span><span class="n">Iterator</span><span class="p">(</span><span class="n">gif</span><span class="p">)):</span>
             <span class="n">frame</span> <span class="o">=</span> <span class="n">frame</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="s2">&quot;RGBA&quot;</span><span class="p">)</span>
@@ -3965,7 +3994,6 @@
     <span class="p">]</span>
 
     <span class="k">try</span><span class="p">:</span>
-
         <span class="n">frames</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="c1"># Loop over each frame in the animated image</span>
         <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">frame</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">ImageSequence</span><span class="o">.</span><span class="n">Iterator</span><span class="p">(</span><span class="n">image</span><span class="p">)):</span>
@@ -4242,7 +4270,6 @@
         <span class="n">text</span> <span class="o">=</span> <span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">text_sequence</span><span class="p">]</span>
 
     <span class="k">try</span><span class="p">:</span>
-
         <span class="n">frames</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="c1"># Loop over each frame in the animated image</span>
         <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">frame</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">ImageSequence</span><span class="o">.</span><span class="n">Iterator</span><span class="p">(</span><span class="n">image</span><span class="p">)):</span>
@@ -5107,7 +5134,6 @@
         <span class="p">)</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">bands</span><span class="p">)</span>
 
     <span class="k">try</span><span class="p">:</span>
-
         <span class="n">images</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">ImageCollection</span><span class="p">(</span><span class="n">dates</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">create_image</span><span class="p">))</span>
         <span class="k">if</span> <span class="n">drop_empty</span><span class="p">:</span>
             <span class="k">return</span> <span class="n">images</span><span class="o">.</span><span class="n">filterMetadata</span><span class="p">(</span><span class="s2">&quot;empty&quot;</span><span class="p">,</span> <span class="s2">&quot;equals&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
@@ -6033,7 +6059,6 @@ Credits to Justin Braaten. See also https://jstnbraaten.medium.com/goes-in-earth
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="k">try</span><span class="p">:</span>
-
         <span class="k">if</span> <span class="s2">&quot;region&quot;</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="p">:</span>
             <span class="n">roi</span> <span class="o">=</span> <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;region&quot;</span><span class="p">]</span>
 
@@ -6075,7 +6100,6 @@ Credits to Justin Braaten. See also https://jstnbraaten.medium.com/goes-in-earth
         <span class="n">download_ee_video</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="n">cmiFdcVisParams</span><span class="p">,</span> <span class="n">out_gif</span><span class="p">)</span>
 
         <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">out_gif</span><span class="p">):</span>
-
             <span class="n">add_text_to_gif</span><span class="p">(</span>
                 <span class="n">out_gif</span><span class="p">,</span>
                 <span class="n">out_gif</span><span class="p">,</span>
@@ -6568,7 +6592,6 @@ Credits to Justin Braaten. See also https://jstnbraaten.medium.com/goes-in-earth
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="k">try</span><span class="p">:</span>
-
         <span class="k">if</span> <span class="s2">&quot;region&quot;</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="p">:</span>
             <span class="n">roi</span> <span class="o">=</span> <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;region&quot;</span><span class="p">]</span>
 
@@ -6626,7 +6649,6 @@ Credits to Justin Braaten. See also https://jstnbraaten.medium.com/goes-in-earth
         <span class="n">download_ee_video</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="n">videoParams</span><span class="p">,</span> <span class="n">out_gif</span><span class="p">)</span>
 
         <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">out_gif</span><span class="p">):</span>
-
             <span class="n">add_text_to_gif</span><span class="p">(</span>
                 <span class="n">out_gif</span><span class="p">,</span>
                 <span class="n">out_gif</span><span class="p">,</span>
@@ -6926,7 +6948,7 @@ Credits to Justin Braaten. See also https://jstnbraaten.medium.com/goes-in-earth
 
 
 <h2 id="geemap.timelapse.landsat_timelapse" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">landsat_timelapse</span><span class="p">(</span><span class="n">roi</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">out_gif</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">start_year</span><span class="o">=</span><span class="mi">1984</span><span class="p">,</span> <span class="n">end_year</span><span class="o">=</span><span class="mi">2022</span><span class="p">,</span> <span class="n">start_date</span><span class="o">=</span><span class="s1">&#39;06-10&#39;</span><span class="p">,</span> <span class="n">end_date</span><span class="o">=</span><span class="s1">&#39;09-20&#39;</span><span class="p">,</span> <span class="n">bands</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;NIR&#39;</span><span class="p">,</span> <span class="s1">&#39;Red&#39;</span><span class="p">,</span> <span class="s1">&#39;Green&#39;</span><span class="p">],</span> <span class="n">vis_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">dimensions</span><span class="o">=</span><span class="mi">768</span><span class="p">,</span> <span class="n">frames_per_second</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">crs</span><span class="o">=</span><span class="s1">&#39;EPSG:3857&#39;</span><span class="p">,</span> <span class="n">apply_fmask</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">nd_bands</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">nd_threshold</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">nd_palette</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="s1">&#39;blue&#39;</span><span class="p">],</span> <span class="n">overlay_data</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">overlay_color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">overlay_width</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">overlay_opacity</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">frequency</span><span class="o">=</span><span class="s1">&#39;year&#39;</span><span class="p">,</span> <span class="n">date_format</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">title_xy</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;2%&#39;</span><span class="p">,</span> <span class="s1">&#39;90%&#39;</span><span class="p">),</span> <span class="n">add_text</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">text_xy</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;2%&#39;</span><span class="p">,</span> <span class="s1">&#39;2%&#39;</span><span class="p">),</span> <span class="n">text_sequence</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">font_type</span><span class="o">=</span><span class="s1">&#39;arial.ttf&#39;</span><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">font_color</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">,</span> <span class="n">add_progress_bar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">progress_bar_color</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">,</span> <span class="n">progress_bar_height</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">loop</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">mp4</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">fading</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">landsat_timelapse</span><span class="p">(</span><span class="n">roi</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">out_gif</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">start_year</span><span class="o">=</span><span class="mi">1984</span><span class="p">,</span> <span class="n">end_year</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">start_date</span><span class="o">=</span><span class="s1">&#39;06-10&#39;</span><span class="p">,</span> <span class="n">end_date</span><span class="o">=</span><span class="s1">&#39;09-20&#39;</span><span class="p">,</span> <span class="n">bands</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;NIR&#39;</span><span class="p">,</span> <span class="s1">&#39;Red&#39;</span><span class="p">,</span> <span class="s1">&#39;Green&#39;</span><span class="p">],</span> <span class="n">vis_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">dimensions</span><span class="o">=</span><span class="mi">768</span><span class="p">,</span> <span class="n">frames_per_second</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">crs</span><span class="o">=</span><span class="s1">&#39;EPSG:3857&#39;</span><span class="p">,</span> <span class="n">apply_fmask</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">nd_bands</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">nd_threshold</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">nd_palette</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="s1">&#39;blue&#39;</span><span class="p">],</span> <span class="n">overlay_data</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">overlay_color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">overlay_width</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">overlay_opacity</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">frequency</span><span class="o">=</span><span class="s1">&#39;year&#39;</span><span class="p">,</span> <span class="n">date_format</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">title_xy</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;2%&#39;</span><span class="p">,</span> <span class="s1">&#39;90%&#39;</span><span class="p">),</span> <span class="n">add_text</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">text_xy</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;2%&#39;</span><span class="p">,</span> <span class="s1">&#39;2%&#39;</span><span class="p">),</span> <span class="n">text_sequence</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">font_type</span><span class="o">=</span><span class="s1">&#39;arial.ttf&#39;</span><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">font_color</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">,</span> <span class="n">add_progress_bar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">progress_bar_color</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">,</span> <span class="n">progress_bar_height</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">loop</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">mp4</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">fading</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 
 <a href="#geemap.timelapse.landsat_timelapse" class="headerlink" title="Permanent link">&para;</a></h2>
@@ -6967,8 +6989,8 @@ Credits to Justin Braaten. See also https://jstnbraaten.medium.com/goes-in-earth
       <tr>
         <td><code>end_year</code></td>
         <td><code>int</code></td>
-        <td><p>Ending year for the timelapse. Defaults to 2022.</p></td>
-        <td><code>2022</code></td>
+        <td><p>Ending year for the timelapse. Defaults to None, which will use the current year.</p></td>
+        <td><code>None</code></td>
       </tr>
       <tr>
         <td><code>start_date</code></td>
@@ -7179,7 +7201,7 @@ Credits to Justin Braaten. See also https://jstnbraaten.medium.com/goes-in-earth
     <span class="n">roi</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
     <span class="n">out_gif</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
     <span class="n">start_year</span><span class="o">=</span><span class="mi">1984</span><span class="p">,</span>
-    <span class="n">end_year</span><span class="o">=</span><span class="mi">2022</span><span class="p">,</span>
+    <span class="n">end_year</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
     <span class="n">start_date</span><span class="o">=</span><span class="s2">&quot;06-10&quot;</span><span class="p">,</span>
     <span class="n">end_date</span><span class="o">=</span><span class="s2">&quot;09-20&quot;</span><span class="p">,</span>
     <span class="n">bands</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;NIR&quot;</span><span class="p">,</span> <span class="s2">&quot;Red&quot;</span><span class="p">,</span> <span class="s2">&quot;Green&quot;</span><span class="p">],</span>
@@ -7218,7 +7240,7 @@ Credits to Justin Braaten. See also https://jstnbraaten.medium.com/goes-in-earth
 <span class="sd">        roi (object, optional): Region of interest to create the timelapse. Defaults to None.</span>
 <span class="sd">        out_gif (str, optional): File path to the output animated GIF. Defaults to None.</span>
 <span class="sd">        start_year (int, optional): Starting year for the timelapse. Defaults to 1984.</span>
-<span class="sd">        end_year (int, optional): Ending year for the timelapse. Defaults to 2022.</span>
+<span class="sd">        end_year (int, optional): Ending year for the timelapse. Defaults to None, which will use the current year.</span>
 <span class="sd">        start_date (str, optional): Starting date (month-day) each year for filtering ImageCollection. Defaults to &#39;06-10&#39;.</span>
 <span class="sd">        end_date (str, optional): Ending date (month-day) each year for filtering ImageCollection. Defaults to &#39;09-20&#39;.</span>
 <span class="sd">        bands (list, optional): Three bands selected from [&#39;Blue&#39;, &#39;Green&#39;, &#39;Red&#39;, &#39;NIR&#39;, &#39;SWIR1&#39;, &#39;SWIR2&#39;, &#39;pixel_qa&#39;]. Defaults to [&#39;NIR&#39;, &#39;Red&#39;, &#39;Green&#39;].</span>
@@ -7287,6 +7309,9 @@ Credits to Justin Braaten. See also https://jstnbraaten.medium.com/goes-in-earth
     <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">out_dir</span><span class="p">):</span>
         <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">out_dir</span><span class="p">)</span>
 
+    <span class="k">if</span> <span class="n">end_year</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">end_year</span> <span class="o">=</span> <span class="n">get_current_year</span><span class="p">()</span>
+
     <span class="n">allowed_bands</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Blue&quot;</span><span class="p">,</span> <span class="s2">&quot;Green&quot;</span><span class="p">,</span> <span class="s2">&quot;Red&quot;</span><span class="p">,</span> <span class="s2">&quot;NIR&quot;</span><span class="p">,</span> <span class="s2">&quot;SWIR1&quot;</span><span class="p">,</span> <span class="s2">&quot;SWIR2&quot;</span><span class="p">,</span> <span class="s2">&quot;pixel_qa&quot;</span><span class="p">]</span>
 
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">bands</span><span class="p">)</span> <span class="o">==</span> <span class="mi">3</span> <span class="ow">and</span> <span class="nb">all</span><span class="p">(</span><span class="n">x</span> <span class="ow">in</span> <span class="n">allowed_bands</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">bands</span><span class="p">):</span>
@@ -7309,7 +7334,6 @@ Credits to Justin Braaten. See also https://jstnbraaten.medium.com/goes-in-earth
             <span class="p">)</span>
 
     <span class="k">try</span><span class="p">:</span>
-
         <span class="k">if</span> <span class="n">vis_params</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">vis_params</span> <span class="o">=</span> <span class="p">{}</span>
             <span class="n">vis_params</span><span class="p">[</span><span class="s2">&quot;bands&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">bands</span>
@@ -7382,7 +7406,6 @@ Credits to Justin Braaten. See also https://jstnbraaten.medium.com/goes-in-earth
             <span class="n">download_ee_video</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="n">video_args</span><span class="p">,</span> <span class="n">out_gif</span><span class="p">)</span>
 
         <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">out_gif</span><span class="p">):</span>
-
             <span class="k">if</span> <span class="n">title</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
                 <span class="n">add_text_to_gif</span><span class="p">(</span>
                     <span class="n">out_gif</span><span class="p">,</span>
@@ -7459,7 +7482,7 @@ Credits to Justin Braaten. See also https://jstnbraaten.medium.com/goes-in-earth
 
 
 <h2 id="geemap.timelapse.landsat_timelapse_legacy" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">landsat_timelapse_legacy</span><span class="p">(</span><span class="n">roi</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">out_gif</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">start_year</span><span class="o">=</span><span class="mi">1984</span><span class="p">,</span> <span class="n">end_year</span><span class="o">=</span><span class="mi">2022</span><span class="p">,</span> <span class="n">start_date</span><span class="o">=</span><span class="s1">&#39;06-10&#39;</span><span class="p">,</span> <span class="n">end_date</span><span class="o">=</span><span class="s1">&#39;09-20&#39;</span><span class="p">,</span> <span class="n">bands</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;NIR&#39;</span><span class="p">,</span> <span class="s1">&#39;Red&#39;</span><span class="p">,</span> <span class="s1">&#39;Green&#39;</span><span class="p">],</span> <span class="n">vis_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">dimensions</span><span class="o">=</span><span class="mi">768</span><span class="p">,</span> <span class="n">frames_per_second</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">crs</span><span class="o">=</span><span class="s1">&#39;EPSG:3857&#39;</span><span class="p">,</span> <span class="n">apply_fmask</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">nd_bands</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">nd_threshold</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">nd_palette</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="s1">&#39;blue&#39;</span><span class="p">],</span> <span class="n">overlay_data</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">overlay_color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">overlay_width</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">overlay_opacity</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">frequency</span><span class="o">=</span><span class="s1">&#39;year&#39;</span><span class="p">,</span> <span class="n">date_format</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">title_xy</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;2%&#39;</span><span class="p">,</span> <span class="s1">&#39;90%&#39;</span><span class="p">),</span> <span class="n">add_text</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">text_xy</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;2%&#39;</span><span class="p">,</span> <span class="s1">&#39;2%&#39;</span><span class="p">),</span> <span class="n">text_sequence</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">font_type</span><span class="o">=</span><span class="s1">&#39;arial.ttf&#39;</span><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">font_color</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">,</span> <span class="n">add_progress_bar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">progress_bar_color</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">,</span> <span class="n">progress_bar_height</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">loop</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">mp4</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">fading</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">landsat_timelapse_legacy</span><span class="p">(</span><span class="n">roi</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">out_gif</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">start_year</span><span class="o">=</span><span class="mi">1984</span><span class="p">,</span> <span class="n">end_year</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">start_date</span><span class="o">=</span><span class="s1">&#39;06-10&#39;</span><span class="p">,</span> <span class="n">end_date</span><span class="o">=</span><span class="s1">&#39;09-20&#39;</span><span class="p">,</span> <span class="n">bands</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;NIR&#39;</span><span class="p">,</span> <span class="s1">&#39;Red&#39;</span><span class="p">,</span> <span class="s1">&#39;Green&#39;</span><span class="p">],</span> <span class="n">vis_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">dimensions</span><span class="o">=</span><span class="mi">768</span><span class="p">,</span> <span class="n">frames_per_second</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">crs</span><span class="o">=</span><span class="s1">&#39;EPSG:3857&#39;</span><span class="p">,</span> <span class="n">apply_fmask</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">nd_bands</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">nd_threshold</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">nd_palette</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="s1">&#39;blue&#39;</span><span class="p">],</span> <span class="n">overlay_data</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">overlay_color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">overlay_width</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">overlay_opacity</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">frequency</span><span class="o">=</span><span class="s1">&#39;year&#39;</span><span class="p">,</span> <span class="n">date_format</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">title_xy</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;2%&#39;</span><span class="p">,</span> <span class="s1">&#39;90%&#39;</span><span class="p">),</span> <span class="n">add_text</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">text_xy</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;2%&#39;</span><span class="p">,</span> <span class="s1">&#39;2%&#39;</span><span class="p">),</span> <span class="n">text_sequence</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">font_type</span><span class="o">=</span><span class="s1">&#39;arial.ttf&#39;</span><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">font_color</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">,</span> <span class="n">add_progress_bar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">progress_bar_color</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">,</span> <span class="n">progress_bar_height</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">loop</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">mp4</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">fading</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 
 <a href="#geemap.timelapse.landsat_timelapse_legacy" class="headerlink" title="Permanent link">&para;</a></h2>
@@ -7500,8 +7523,8 @@ Credits to Justin Braaten. See also https://jstnbraaten.medium.com/goes-in-earth
       <tr>
         <td><code>end_year</code></td>
         <td><code>int</code></td>
-        <td><p>Ending year for the timelapse. Defaults to 2022.</p></td>
-        <td><code>2022</code></td>
+        <td><p>Ending year for the timelapse. Defaults to None, which means the current year.</p></td>
+        <td><code>None</code></td>
       </tr>
       <tr>
         <td><code>start_date</code></td>
@@ -7712,7 +7735,7 @@ Credits to Justin Braaten. See also https://jstnbraaten.medium.com/goes-in-earth
     <span class="n">roi</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
     <span class="n">out_gif</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
     <span class="n">start_year</span><span class="o">=</span><span class="mi">1984</span><span class="p">,</span>
-    <span class="n">end_year</span><span class="o">=</span><span class="mi">2022</span><span class="p">,</span>
+    <span class="n">end_year</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
     <span class="n">start_date</span><span class="o">=</span><span class="s2">&quot;06-10&quot;</span><span class="p">,</span>
     <span class="n">end_date</span><span class="o">=</span><span class="s2">&quot;09-20&quot;</span><span class="p">,</span>
     <span class="n">bands</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;NIR&quot;</span><span class="p">,</span> <span class="s2">&quot;Red&quot;</span><span class="p">,</span> <span class="s2">&quot;Green&quot;</span><span class="p">],</span>
@@ -7751,7 +7774,7 @@ Credits to Justin Braaten. See also https://jstnbraaten.medium.com/goes-in-earth
 <span class="sd">        roi (object, optional): Region of interest to create the timelapse. Defaults to None.</span>
 <span class="sd">        out_gif (str, optional): File path to the output animated GIF. Defaults to None.</span>
 <span class="sd">        start_year (int, optional): Starting year for the timelapse. Defaults to 1984.</span>
-<span class="sd">        end_year (int, optional): Ending year for the timelapse. Defaults to 2022.</span>
+<span class="sd">        end_year (int, optional): Ending year for the timelapse. Defaults to None, which means the current year.</span>
 <span class="sd">        start_date (str, optional): Starting date (month-day) each year for filtering ImageCollection. Defaults to &#39;06-10&#39;.</span>
 <span class="sd">        end_date (str, optional): Ending date (month-day) each year for filtering ImageCollection. Defaults to &#39;09-20&#39;.</span>
 <span class="sd">        bands (list, optional): Three bands selected from [&#39;Blue&#39;, &#39;Green&#39;, &#39;Red&#39;, &#39;NIR&#39;, &#39;SWIR1&#39;, &#39;SWIR2&#39;, &#39;pixel_qa&#39;]. Defaults to [&#39;NIR&#39;, &#39;Red&#39;, &#39;Green&#39;].</span>
@@ -7787,6 +7810,9 @@ Credits to Justin Braaten. See also https://jstnbraaten.medium.com/goes-in-earth
 <span class="sd">    Returns:</span>
 <span class="sd">        str: File path to the output GIF image.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="n">end_year</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">end_year</span> <span class="o">=</span> <span class="n">get_current_year</span><span class="p">()</span>
 
     <span class="k">if</span> <span class="n">roi</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
         <span class="n">roi</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">Geometry</span><span class="o">.</span><span class="n">Polygon</span><span class="p">(</span>
@@ -7842,7 +7868,6 @@ Credits to Justin Braaten. See also https://jstnbraaten.medium.com/goes-in-earth
             <span class="p">)</span>
 
     <span class="k">try</span><span class="p">:</span>
-
         <span class="k">if</span> <span class="n">vis_params</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">vis_params</span> <span class="o">=</span> <span class="p">{}</span>
             <span class="n">vis_params</span><span class="p">[</span><span class="s2">&quot;bands&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">bands</span>
@@ -7915,7 +7940,6 @@ Credits to Justin Braaten. See also https://jstnbraaten.medium.com/goes-in-earth
             <span class="n">download_ee_video</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="n">video_args</span><span class="p">,</span> <span class="n">out_gif</span><span class="p">)</span>
 
         <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">out_gif</span><span class="p">):</span>
-
             <span class="k">if</span> <span class="n">title</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
                 <span class="n">add_text_to_gif</span><span class="p">(</span>
                     <span class="n">out_gif</span><span class="p">,</span>
@@ -7992,7 +8016,7 @@ Credits to Justin Braaten. See also https://jstnbraaten.medium.com/goes-in-earth
 
 
 <h2 id="geemap.timelapse.landsat_timeseries" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">landsat_timeseries</span><span class="p">(</span><span class="n">roi</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">start_year</span><span class="o">=</span><span class="mi">1984</span><span class="p">,</span> <span class="n">end_year</span><span class="o">=</span><span class="mi">2022</span><span class="p">,</span> <span class="n">start_date</span><span class="o">=</span><span class="s1">&#39;06-10&#39;</span><span class="p">,</span> <span class="n">end_date</span><span class="o">=</span><span class="s1">&#39;09-20&#39;</span><span class="p">,</span> <span class="n">apply_fmask</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">frequency</span><span class="o">=</span><span class="s1">&#39;year&#39;</span><span class="p">,</span> <span class="n">date_format</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">landsat_timeseries</span><span class="p">(</span><span class="n">roi</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">start_year</span><span class="o">=</span><span class="mi">1984</span><span class="p">,</span> <span class="n">end_year</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">start_date</span><span class="o">=</span><span class="s1">&#39;06-10&#39;</span><span class="p">,</span> <span class="n">end_date</span><span class="o">=</span><span class="s1">&#39;09-20&#39;</span><span class="p">,</span> <span class="n">apply_fmask</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">frequency</span><span class="o">=</span><span class="s1">&#39;year&#39;</span><span class="p">,</span> <span class="n">date_format</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 
 <a href="#geemap.timelapse.landsat_timeseries" class="headerlink" title="Permanent link">&para;</a></h2>
@@ -8027,8 +8051,8 @@ Credits to Justin Braaten. See also https://jstnbraaten.medium.com/goes-in-earth
       <tr>
         <td><code>end_year</code></td>
         <td><code>int</code></td>
-        <td><p>Ending year for the timelapse. Defaults to 2022.</p></td>
-        <td><code>2022</code></td>
+        <td><p>Ending year for the timelapse. Defaults to None, which means the current year.</p></td>
+        <td><code>None</code></td>
       </tr>
       <tr>
         <td><code>start_date</code></td>
@@ -8082,7 +8106,7 @@ Credits to Justin Braaten. See also https://jstnbraaten.medium.com/goes-in-earth
           <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">landsat_timeseries</span><span class="p">(</span>
     <span class="n">roi</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
     <span class="n">start_year</span><span class="o">=</span><span class="mi">1984</span><span class="p">,</span>
-    <span class="n">end_year</span><span class="o">=</span><span class="mi">2022</span><span class="p">,</span>
+    <span class="n">end_year</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
     <span class="n">start_date</span><span class="o">=</span><span class="s2">&quot;06-10&quot;</span><span class="p">,</span>
     <span class="n">end_date</span><span class="o">=</span><span class="s2">&quot;09-20&quot;</span><span class="p">,</span>
     <span class="n">apply_fmask</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
@@ -8094,7 +8118,7 @@ Credits to Justin Braaten. See also https://jstnbraaten.medium.com/goes-in-earth
 <span class="sd">    Args:</span>
 <span class="sd">        roi (object, optional): Region of interest to create the timelapse. Defaults to None.</span>
 <span class="sd">        start_year (int, optional): Starting year for the timelapse. Defaults to 1984.</span>
-<span class="sd">        end_year (int, optional): Ending year for the timelapse. Defaults to 2022.</span>
+<span class="sd">        end_year (int, optional): Ending year for the timelapse. Defaults to None, which means the current year.</span>
 <span class="sd">        start_date (str, optional): Starting date (month-day) each year for filtering ImageCollection. Defaults to &#39;06-10&#39;.</span>
 <span class="sd">        end_date (str, optional): Ending date (month-day) each year for filtering ImageCollection. Defaults to &#39;09-20&#39;.</span>
 <span class="sd">        apply_fmask (bool, optional): Whether to apply Fmask (Function of mask) for automated clouds, cloud shadows, snow, and water masking.</span>
@@ -8122,8 +8146,10 @@ Credits to Justin Braaten. See also https://jstnbraaten.medium.com/goes-in-earth
             <span class="kc">False</span><span class="p">,</span>
         <span class="p">)</span>
 
-    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">roi</span><span class="p">,</span> <span class="n">ee</span><span class="o">.</span><span class="n">Geometry</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">end_year</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">end_year</span> <span class="o">=</span> <span class="n">get_current_year</span><span class="p">()</span>
 
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">roi</span><span class="p">,</span> <span class="n">ee</span><span class="o">.</span><span class="n">Geometry</span><span class="p">):</span>
         <span class="k">try</span><span class="p">:</span>
             <span class="n">roi</span> <span class="o">=</span> <span class="n">roi</span><span class="o">.</span><span class="n">geometry</span><span class="p">()</span>
         <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
@@ -8144,16 +8170,24 @@ Credits to Justin Braaten. See also https://jstnbraaten.medium.com/goes-in-earth
         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;frequency must be year, quarter, or month.&quot;</span><span class="p">)</span>
 
     <span class="c1"># Setup vars to get dates.</span>
-    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">start_year</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">start_year</span> <span class="o">&gt;=</span> <span class="mi">1984</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">start_year</span> <span class="o">&lt;</span> <span class="mi">2022</span><span class="p">):</span>
+    <span class="k">if</span> <span class="p">(</span>
+        <span class="nb">isinstance</span><span class="p">(</span><span class="n">start_year</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span>
+        <span class="ow">and</span> <span class="p">(</span><span class="n">start_year</span> <span class="o">&gt;=</span> <span class="mi">1984</span><span class="p">)</span>
+        <span class="ow">and</span> <span class="p">(</span><span class="n">start_year</span> <span class="o">&lt;</span> <span class="n">get_current_year</span><span class="p">())</span>
+    <span class="p">):</span>
         <span class="k">pass</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The start year must be an integer &gt;= 1984.&quot;</span><span class="p">)</span>
         <span class="k">return</span>
 
-    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">end_year</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">end_year</span> <span class="o">&gt;</span> <span class="mi">1984</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">end_year</span> <span class="o">&lt;=</span> <span class="mi">2022</span><span class="p">):</span>
+    <span class="k">if</span> <span class="p">(</span>
+        <span class="nb">isinstance</span><span class="p">(</span><span class="n">end_year</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span>
+        <span class="ow">and</span> <span class="p">(</span><span class="n">end_year</span> <span class="o">&gt;</span> <span class="mi">1984</span><span class="p">)</span>
+        <span class="ow">and</span> <span class="p">(</span><span class="n">end_year</span> <span class="o">&lt;=</span> <span class="n">get_current_year</span><span class="p">())</span>
+    <span class="p">):</span>
         <span class="k">pass</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The end year must be an integer &lt;= 2022.&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The end year must be an integer &lt;= </span><span class="si">{</span><span class="n">get_current_year</span><span class="p">()</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
         <span class="k">return</span>
 
     <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s2">&quot;[0-9]</span><span class="si">{2}</span><span class="s2">\-[0-9]</span><span class="si">{2}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">start_date</span><span class="p">)</span> <span class="ow">and</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span>
@@ -8278,7 +8312,6 @@ Credits to Justin Braaten. See also https://jstnbraaten.medium.com/goes-in-earth
 
     <span class="c1"># Get monthly median collection.</span>
     <span class="k">def</span> <span class="nf">getMonthlyComp</span><span class="p">(</span><span class="n">startDate</span><span class="p">):</span>
-
         <span class="n">startDate</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">Date</span><span class="p">(</span><span class="n">startDate</span><span class="p">)</span>
         <span class="n">endDate</span> <span class="o">=</span> <span class="n">startDate</span><span class="o">.</span><span class="n">advance</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;month&quot;</span><span class="p">)</span>
 
@@ -8305,7 +8338,6 @@ Credits to Justin Braaten. See also https://jstnbraaten.medium.com/goes-in-earth
 
     <span class="c1"># Get quarterly median collection.</span>
     <span class="k">def</span> <span class="nf">getQuarterlyComp</span><span class="p">(</span><span class="n">startDate</span><span class="p">):</span>
-
         <span class="n">startDate</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">Date</span><span class="p">(</span><span class="n">startDate</span><span class="p">)</span>
 
         <span class="n">endDate</span> <span class="o">=</span> <span class="n">startDate</span><span class="o">.</span><span class="n">advance</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;month&quot;</span><span class="p">)</span>
@@ -8506,7 +8538,6 @@ Credits to Justin Braaten. See also https://jstnbraaten.medium.com/goes-in-earth
         <span class="p">)</span>
 
     <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">roi</span><span class="p">,</span> <span class="n">ee</span><span class="o">.</span><span class="n">Geometry</span><span class="p">):</span>
-
         <span class="k">try</span><span class="p">:</span>
             <span class="n">roi</span> <span class="o">=</span> <span class="n">roi</span><span class="o">.</span><span class="n">geometry</span><span class="p">()</span>
         <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
@@ -8670,7 +8701,6 @@ Credits to Justin Braaten. See also https://jstnbraaten.medium.com/goes-in-earth
 
     <span class="c1"># Get monthly median collection.</span>
     <span class="k">def</span> <span class="nf">getMonthlyComp</span><span class="p">(</span><span class="n">startDate</span><span class="p">):</span>
-
         <span class="n">startDate</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">Date</span><span class="p">(</span><span class="n">startDate</span><span class="p">)</span>
         <span class="n">endDate</span> <span class="o">=</span> <span class="n">startDate</span><span class="o">.</span><span class="n">advance</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;month&quot;</span><span class="p">)</span>
 
@@ -8696,7 +8726,6 @@ Credits to Justin Braaten. See also https://jstnbraaten.medium.com/goes-in-earth
 
     <span class="c1"># Get quarterly median collection.</span>
     <span class="k">def</span> <span class="nf">getQuarterlyComp</span><span class="p">(</span><span class="n">startDate</span><span class="p">):</span>
-
         <span class="n">startDate</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">Date</span><span class="p">(</span><span class="n">startDate</span><span class="p">)</span>
 
         <span class="n">endDate</span> <span class="o">=</span> <span class="n">startDate</span><span class="o">.</span><span class="n">advance</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;month&quot;</span><span class="p">)</span>
@@ -9707,7 +9736,6 @@ Credits to Justin Braaten. See also https://jstnbraaten.medium.com/goes-in-earth
             <span class="n">text_sequence</span> <span class="o">=</span> <span class="p">[</span><span class="n">d</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">,</span> <span class="s2">&quot;-&quot;</span><span class="p">)[</span><span class="mi">5</span><span class="p">:]</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">text</span><span class="p">]</span>
 
         <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">out_gif</span><span class="p">):</span>
-
             <span class="n">add_text_to_gif</span><span class="p">(</span>
                 <span class="n">out_gif</span><span class="p">,</span>
                 <span class="n">out_gif</span><span class="p">,</span>
@@ -10401,7 +10429,7 @@ Credits to Justin Braaten. See also https://jstnbraaten.medium.com/goes-in-earth
 
 
 <h2 id="geemap.timelapse.modis_timeseries" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">modis_timeseries</span><span class="p">(</span><span class="n">asset_id</span><span class="o">=</span><span class="s1">&#39;MODIS/006/MOD13A2&#39;</span><span class="p">,</span> <span class="n">band_name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">roi</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">start_year</span><span class="o">=</span><span class="mi">2001</span><span class="p">,</span> <span class="n">end_year</span><span class="o">=</span><span class="mi">2022</span><span class="p">,</span> <span class="n">start_date</span><span class="o">=</span><span class="s1">&#39;01-01&#39;</span><span class="p">,</span> <span class="n">end_date</span><span class="o">=</span><span class="s1">&#39;12-31&#39;</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">modis_timeseries</span><span class="p">(</span><span class="n">asset_id</span><span class="o">=</span><span class="s1">&#39;MODIS/006/MOD13A2&#39;</span><span class="p">,</span> <span class="n">band_name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">roi</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">start_year</span><span class="o">=</span><span class="mi">2001</span><span class="p">,</span> <span class="n">end_year</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">start_date</span><span class="o">=</span><span class="s1">&#39;01-01&#39;</span><span class="p">,</span> <span class="n">end_date</span><span class="o">=</span><span class="s1">&#39;12-31&#39;</span><span class="p">)</span></code>
 
 
 <a href="#geemap.timelapse.modis_timeseries" class="headerlink" title="Permanent link">&para;</a></h2>
@@ -10448,8 +10476,8 @@ Credits to Justin Braaten. See also https://jstnbraaten.medium.com/goes-in-earth
       <tr>
         <td><code>end_year</code></td>
         <td><code>int</code></td>
-        <td><p>Ending year for the timelapse. Defaults to 2020.</p></td>
-        <td><code>2022</code></td>
+        <td><p>Ending year for the timelapse. Defaults to None, which is the current year.</p></td>
+        <td><code>None</code></td>
       </tr>
       <tr>
         <td><code>start_date</code></td>
@@ -10487,7 +10515,7 @@ Credits to Justin Braaten. See also https://jstnbraaten.medium.com/goes-in-earth
     <span class="n">band_name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
     <span class="n">roi</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
     <span class="n">start_year</span><span class="o">=</span><span class="mi">2001</span><span class="p">,</span>
-    <span class="n">end_year</span><span class="o">=</span><span class="mi">2022</span><span class="p">,</span>
+    <span class="n">end_year</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
     <span class="n">start_date</span><span class="o">=</span><span class="s2">&quot;01-01&quot;</span><span class="p">,</span>
     <span class="n">end_date</span><span class="o">=</span><span class="s2">&quot;12-31&quot;</span><span class="p">,</span>
 <span class="p">):</span>
@@ -10497,7 +10525,7 @@ Credits to Justin Braaten. See also https://jstnbraaten.medium.com/goes-in-earth
 <span class="sd">        band_name (str, optional): The band name of the image to use.</span>
 <span class="sd">        roi (object, optional): Region of interest to create the timelapse. Defaults to None.</span>
 <span class="sd">        start_year (int, optional): Starting year for the timelapse. Defaults to 1984.</span>
-<span class="sd">        end_year (int, optional): Ending year for the timelapse. Defaults to 2020.</span>
+<span class="sd">        end_year (int, optional): Ending year for the timelapse. Defaults to None, which is the current year.</span>
 <span class="sd">        start_date (str, optional): Starting date (month-day) each year for filtering ImageCollection. Defaults to &#39;06-10&#39;.</span>
 <span class="sd">        end_date (str, optional): Ending date (month-day) each year for filtering ImageCollection. Defaults to &#39;09-20&#39;.</span>
 <span class="sd">    Returns:</span>
@@ -10505,6 +10533,9 @@ Credits to Justin Braaten. See also https://jstnbraaten.medium.com/goes-in-earth
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="k">try</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">end_year</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">end_year</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">year</span>
+
         <span class="n">collection</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">ImageCollection</span><span class="p">(</span><span class="n">asset_id</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">band_name</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">band_name</span> <span class="o">=</span> <span class="n">collection</span><span class="o">.</span><span class="n">first</span><span class="p">()</span><span class="o">.</span><span class="n">bandNames</span><span class="p">()</span><span class="o">.</span><span class="n">getInfo</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
@@ -10525,7 +10556,6 @@ Credits to Justin Braaten. See also https://jstnbraaten.medium.com/goes-in-earth
         <span class="n">seq</span> <span class="o">=</span> <span class="n">date_sequence</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="s2">&quot;month&quot;</span><span class="p">)</span>
 
         <span class="k">def</span> <span class="nf">monthly_modis</span><span class="p">(</span><span class="n">start_d</span><span class="p">):</span>
-
             <span class="n">end_d</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">Date</span><span class="p">(</span><span class="n">start_d</span><span class="p">)</span><span class="o">.</span><span class="n">advance</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;month&quot;</span><span class="p">)</span>
             <span class="k">return</span> <span class="n">ee</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="n">collection</span><span class="o">.</span><span class="n">filterDate</span><span class="p">(</span><span class="n">start_d</span><span class="p">,</span> <span class="n">end_d</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
 
@@ -10547,7 +10577,7 @@ Credits to Justin Braaten. See also https://jstnbraaten.medium.com/goes-in-earth
 
 
 <h2 id="geemap.timelapse.naip_timelapse" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">naip_timelapse</span><span class="p">(</span><span class="n">roi</span><span class="p">,</span> <span class="n">start_year</span><span class="o">=</span><span class="mi">2003</span><span class="p">,</span> <span class="n">end_year</span><span class="o">=</span><span class="mi">2022</span><span class="p">,</span> <span class="n">out_gif</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">bands</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">vis_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">dimensions</span><span class="o">=</span><span class="mi">768</span><span class="p">,</span> <span class="n">frames_per_second</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">crs</span><span class="o">=</span><span class="s1">&#39;EPSG:3857&#39;</span><span class="p">,</span> <span class="n">overlay_data</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">overlay_color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">overlay_width</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">overlay_opacity</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">title_xy</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;2%&#39;</span><span class="p">,</span> <span class="s1">&#39;90%&#39;</span><span class="p">),</span> <span class="n">add_text</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">text_xy</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;2%&#39;</span><span class="p">,</span> <span class="s1">&#39;2%&#39;</span><span class="p">),</span> <span class="n">text_sequence</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">font_type</span><span class="o">=</span><span class="s1">&#39;arial.ttf&#39;</span><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">font_color</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">,</span> <span class="n">add_progress_bar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">progress_bar_color</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">,</span> <span class="n">progress_bar_height</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">loop</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">mp4</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">fading</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">naip_timelapse</span><span class="p">(</span><span class="n">roi</span><span class="p">,</span> <span class="n">start_year</span><span class="o">=</span><span class="mi">2003</span><span class="p">,</span> <span class="n">end_year</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">out_gif</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">bands</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">vis_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">dimensions</span><span class="o">=</span><span class="mi">768</span><span class="p">,</span> <span class="n">frames_per_second</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">crs</span><span class="o">=</span><span class="s1">&#39;EPSG:3857&#39;</span><span class="p">,</span> <span class="n">overlay_data</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">overlay_color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">overlay_width</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">overlay_opacity</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">title_xy</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;2%&#39;</span><span class="p">,</span> <span class="s1">&#39;90%&#39;</span><span class="p">),</span> <span class="n">add_text</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">text_xy</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;2%&#39;</span><span class="p">,</span> <span class="s1">&#39;2%&#39;</span><span class="p">),</span> <span class="n">text_sequence</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">font_type</span><span class="o">=</span><span class="s1">&#39;arial.ttf&#39;</span><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">font_color</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">,</span> <span class="n">add_progress_bar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">progress_bar_color</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">,</span> <span class="n">progress_bar_height</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">loop</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">mp4</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">fading</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 
 <a href="#geemap.timelapse.naip_timelapse" class="headerlink" title="Permanent link">&para;</a></h2>
@@ -10582,8 +10612,8 @@ Credits to Justin Braaten. See also https://jstnbraaten.medium.com/goes-in-earth
       <tr>
         <td><code>end_year</code></td>
         <td><code>int | str</code></td>
-        <td><p>The end year of the timeseries. It must be formatted like this: 'YYYY'. Defaults to 2022.</p></td>
-        <td><code>2022</code></td>
+        <td><p>The end year of the timeseries. It must be formatted like this: 'YYYY'. Defaults to None, which will use the current year.</p></td>
+        <td><code>None</code></td>
       </tr>
       <tr>
         <td><code>out_gif</code></td>
@@ -10757,7 +10787,7 @@ Credits to Justin Braaten. See also https://jstnbraaten.medium.com/goes-in-earth
           <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">naip_timelapse</span><span class="p">(</span>
     <span class="n">roi</span><span class="p">,</span>
     <span class="n">start_year</span><span class="o">=</span><span class="mi">2003</span><span class="p">,</span>
-    <span class="n">end_year</span><span class="o">=</span><span class="mi">2022</span><span class="p">,</span>
+    <span class="n">end_year</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
     <span class="n">out_gif</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
     <span class="n">bands</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
     <span class="n">palette</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
@@ -10789,7 +10819,7 @@ Credits to Justin Braaten. See also https://jstnbraaten.medium.com/goes-in-earth
 <span class="sd">    Args:</span>
 <span class="sd">        roi (ee.Geometry): The region to use to filter the collection of images. It must be an ee.Geometry object. Defaults to None.</span>
 <span class="sd">        start_year (int | str, optional): The start year of the timeseries. It must be formatted like this: &#39;YYYY&#39;. Defaults to 2003.</span>
-<span class="sd">        end_year (int | str, optional): The end year of the timeseries. It must be formatted like this: &#39;YYYY&#39;. Defaults to 2022.</span>
+<span class="sd">        end_year (int | str, optional): The end year of the timeseries. It must be formatted like this: &#39;YYYY&#39;. Defaults to None, which will use the current year.</span>
 <span class="sd">        out_gif (str): The output gif file path. Defaults to None.</span>
 <span class="sd">        bands (list, optional): A list of band names to use in the timelapse. Defaults to None.</span>
 <span class="sd">        palette (list, optional): A list of colors to render a single-band image in the timelapse. Defaults to None.</span>
@@ -10822,6 +10852,9 @@ Credits to Justin Braaten. See also https://jstnbraaten.medium.com/goes-in-earth
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="k">try</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">end_year</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">end_year</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">year</span>
+
         <span class="n">collection</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">ImageCollection</span><span class="p">(</span><span class="s2">&quot;USDA/NAIP/DOQQ&quot;</span><span class="p">)</span>
         <span class="n">start_date</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">start_year</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;-01-01&quot;</span>
         <span class="n">end_date</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">end_year</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;-12-31&quot;</span>
@@ -10884,7 +10917,7 @@ Credits to Justin Braaten. See also https://jstnbraaten.medium.com/goes-in-earth
 
 
 <h2 id="geemap.timelapse.naip_timeseries" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">naip_timeseries</span><span class="p">(</span><span class="n">roi</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">start_year</span><span class="o">=</span><span class="mi">2003</span><span class="p">,</span> <span class="n">end_year</span><span class="o">=</span><span class="mi">2022</span><span class="p">,</span> <span class="n">RGBN</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">naip_timeseries</span><span class="p">(</span><span class="n">roi</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">start_year</span><span class="o">=</span><span class="mi">2003</span><span class="p">,</span> <span class="n">end_year</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">RGBN</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 
 <a href="#geemap.timelapse.naip_timeseries" class="headerlink" title="Permanent link">&para;</a></h2>
@@ -10919,8 +10952,8 @@ Credits to Justin Braaten. See also https://jstnbraaten.medium.com/goes-in-earth
       <tr>
         <td><code>end_year</code></td>
         <td><code>int</code></td>
-        <td><p>Ending year for the timeseries. Defaults to 2022.</p></td>
-        <td><code>2022</code></td>
+        <td><p>Ending year for the timeseries. Defaults to None, which will use the current year.</p></td>
+        <td><code>None</code></td>
       </tr>
       <tr>
         <td><code>RGBN</code></td>
@@ -10947,18 +10980,20 @@ Credits to Justin Braaten. See also https://jstnbraaten.medium.com/goes-in-earth
 </table>
         <details class="quote">
           <summary>Source code in <code>geemap/timelapse.py</code></summary>
-          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">naip_timeseries</span><span class="p">(</span><span class="n">roi</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">start_year</span><span class="o">=</span><span class="mi">2003</span><span class="p">,</span> <span class="n">end_year</span><span class="o">=</span><span class="mi">2022</span><span class="p">,</span> <span class="n">RGBN</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">naip_timeseries</span><span class="p">(</span><span class="n">roi</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">start_year</span><span class="o">=</span><span class="mi">2003</span><span class="p">,</span> <span class="n">end_year</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">RGBN</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Creates NAIP annual timeseries</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        roi (object, optional): An ee.Geometry representing the region of interest. Defaults to None.</span>
 <span class="sd">        start_year (int, optional): Starting year for the timeseries. Defaults to 2003.</span>
-<span class="sd">        end_year (int, optional): Ending year for the timeseries. Defaults to 2022.</span>
+<span class="sd">        end_year (int, optional): Ending year for the timeseries. Defaults to None, which will use the current year.</span>
 <span class="sd">        RGBN (bool, optional): Whether to retrieve 4-band NAIP imagery only.</span>
 <span class="sd">    Returns:</span>
 <span class="sd">        object: An ee.ImageCollection representing annual NAIP imagery.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">try</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">end_year</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">end_year</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">year</span>
 
         <span class="k">def</span> <span class="nf">get_annual_NAIP</span><span class="p">(</span><span class="n">year</span><span class="p">):</span>
             <span class="k">try</span><span class="p">:</span>
@@ -12105,7 +12140,6 @@ Full list properties: https://developers.google.com/earth-engine/datasets/catalo
             <span class="n">clean_up</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
         <span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
-
         <span class="n">video_args</span> <span class="o">=</span> <span class="n">vis_params</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
         <span class="n">video_args</span><span class="p">[</span><span class="s2">&quot;dimensions&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dimensions</span>
         <span class="n">video_args</span><span class="p">[</span><span class="s2">&quot;region&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">roi</span>
@@ -12385,7 +12419,7 @@ based on mean composites following a steady frequency (f.e. 1 image per month)
       <tr>
         <td><code>end_year</code></td>
         <td><code>int</code></td>
-        <td><p>Ending year for the timelapse. Defaults to 2022.</p></td>
+        <td><p>Ending year for the timelapse. Defaults to None, which means the current year.</p></td>
         <td><code>None</code></td>
       </tr>
       <tr>
@@ -12615,7 +12649,7 @@ based on mean composites following a steady frequency (f.e. 1 image per month)
 <span class="sd">        roi (object, optional): Region of interest to create the timelapse. Defaults to None.</span>
 <span class="sd">        out_gif (str, optional): File path to the output animated GIF. Defaults to None.</span>
 <span class="sd">        start_year (int, optional): Starting year for the timelapse. Defaults to 2015.</span>
-<span class="sd">        end_year (int, optional): Ending year for the timelapse. Defaults to 2022.</span>
+<span class="sd">        end_year (int, optional): Ending year for the timelapse. Defaults to None, which means the current year.</span>
 <span class="sd">        start_date (str, optional): Starting date (month-day) each year for filtering ImageCollection. Defaults to &#39;06-10&#39;.</span>
 <span class="sd">        end_date (str, optional): Ending date (month-day) each year for filtering ImageCollection. Defaults to &#39;09-20&#39;.</span>
 <span class="sd">        bands (list, optional): Three bands selected from [&#39;Blue&#39;, &#39;Green&#39;, &#39;Red&#39;, &#39;NIR&#39;, &#39;SWIR1&#39;, &#39;SWIR2&#39;, &#39;Red Edge 1&#39;, &#39;Red Edge 2&#39;, &#39;Red Edge 3&#39;, &#39;Red Edge 4&#39;]. Defaults to [&#39;NIR&#39;, &#39;Red&#39;, &#39;Green&#39;].</span>
@@ -12648,6 +12682,9 @@ based on mean composites following a steady frequency (f.e. 1 image per month)
 <span class="sd">    Returns:</span>
 <span class="sd">        str: File path to the output GIF image.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="n">end_year</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">end_year</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">year</span>
 
     <span class="k">if</span> <span class="n">roi</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
         <span class="n">roi</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">Geometry</span><span class="o">.</span><span class="n">Polygon</span><span class="p">(</span>
@@ -12709,7 +12746,6 @@ based on mean composites following a steady frequency (f.e. 1 image per month)
         <span class="p">)</span>
 
     <span class="k">try</span><span class="p">:</span>
-
         <span class="k">if</span> <span class="n">vis_params</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">vis_params</span> <span class="o">=</span> <span class="p">{}</span>
             <span class="n">vis_params</span><span class="p">[</span><span class="s2">&quot;bands&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">bands</span>
@@ -12769,7 +12805,6 @@ based on mean composites following a steady frequency (f.e. 1 image per month)
                 <span class="n">clean_up</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
             <span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
-
             <span class="n">video_args</span> <span class="o">=</span> <span class="n">vis_params</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
             <span class="n">video_args</span><span class="p">[</span><span class="s2">&quot;dimensions&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dimensions</span>
             <span class="n">video_args</span><span class="p">[</span><span class="s2">&quot;region&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">roi</span>
@@ -12880,7 +12915,7 @@ based on mean composites following a steady frequency (f.e. 1 image per month)
       <tr>
         <td><code>end_year</code></td>
         <td><code>int</code></td>
-        <td><p>Ending year for the timelapse. Defaults to 2022.</p></td>
+        <td><p>Ending year for the timelapse. Defaults to None, which will use the current year.</p></td>
         <td><code>None</code></td>
       </tr>
       <tr>
@@ -12976,7 +13011,7 @@ based on mean composites following a steady frequency (f.e. 1 image per month)
 
 <span class="sd">        roi (object, optional): Region of interest to create the timelapse. Defaults to None.</span>
 <span class="sd">        start_year (int, optional): Starting year for the timelapse. Defaults to 2015.</span>
-<span class="sd">        end_year (int, optional): Ending year for the timelapse. Defaults to 2022.</span>
+<span class="sd">        end_year (int, optional): Ending year for the timelapse. Defaults to None, which will use the current year.</span>
 <span class="sd">        start_date (str, optional): Starting date (month-day) each year for filtering ImageCollection. Defaults to &#39;01-01&#39;.</span>
 <span class="sd">        mask_cloud (bool, optional): Whether to mask clouds. Defaults to True.</span>
 <span class="sd">        end_date (str, optional): Ending date (month-day) each year for filtering ImageCollection. Defaults to &#39;12-31&#39;.</span>
@@ -13045,7 +13080,7 @@ based on mean composites following a steady frequency (f.e. 1 image per month)
 
 
 <h2 id="geemap.timelapse.sentinel2_timeseries_legacy" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">sentinel2_timeseries_legacy</span><span class="p">(</span><span class="n">roi</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">start_year</span><span class="o">=</span><span class="mi">2015</span><span class="p">,</span> <span class="n">end_year</span><span class="o">=</span><span class="mi">2022</span><span class="p">,</span> <span class="n">start_date</span><span class="o">=</span><span class="s1">&#39;01-01&#39;</span><span class="p">,</span> <span class="n">end_date</span><span class="o">=</span><span class="s1">&#39;12-31&#39;</span><span class="p">,</span> <span class="n">apply_fmask</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">frequency</span><span class="o">=</span><span class="s1">&#39;year&#39;</span><span class="p">,</span> <span class="n">date_format</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">sentinel2_timeseries_legacy</span><span class="p">(</span><span class="n">roi</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">start_year</span><span class="o">=</span><span class="mi">2015</span><span class="p">,</span> <span class="n">end_year</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">start_date</span><span class="o">=</span><span class="s1">&#39;01-01&#39;</span><span class="p">,</span> <span class="n">end_date</span><span class="o">=</span><span class="s1">&#39;12-31&#39;</span><span class="p">,</span> <span class="n">apply_fmask</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">frequency</span><span class="o">=</span><span class="s1">&#39;year&#39;</span><span class="p">,</span> <span class="n">date_format</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 
 <a href="#geemap.timelapse.sentinel2_timeseries_legacy" class="headerlink" title="Permanent link">&para;</a></h2>
@@ -13081,8 +13116,8 @@ based on mean composites following a steady frequency (f.e. 1 image per month)
       <tr>
         <td><code>end_year</code></td>
         <td><code>int</code></td>
-        <td><p>Ending year for the timelapse. Defaults to 2022.</p></td>
-        <td><code>2022</code></td>
+        <td><p>Ending year for the timelapse. Defaults to None, which will use the current year.</p></td>
+        <td><code>None</code></td>
       </tr>
       <tr>
         <td><code>start_date</code></td>
@@ -13136,7 +13171,7 @@ based on mean composites following a steady frequency (f.e. 1 image per month)
           <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">sentinel2_timeseries_legacy</span><span class="p">(</span>
     <span class="n">roi</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
     <span class="n">start_year</span><span class="o">=</span><span class="mi">2015</span><span class="p">,</span>
-    <span class="n">end_year</span><span class="o">=</span><span class="mi">2022</span><span class="p">,</span>
+    <span class="n">end_year</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
     <span class="n">start_date</span><span class="o">=</span><span class="s2">&quot;01-01&quot;</span><span class="p">,</span>
     <span class="n">end_date</span><span class="o">=</span><span class="s2">&quot;12-31&quot;</span><span class="p">,</span>
     <span class="n">apply_fmask</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
@@ -13149,7 +13184,7 @@ based on mean composites following a steady frequency (f.e. 1 image per month)
 
 <span class="sd">        roi (object, optional): Region of interest to create the timelapse. Defaults to None.</span>
 <span class="sd">        start_year (int, optional): Starting year for the timelapse. Defaults to 2015.</span>
-<span class="sd">        end_year (int, optional): Ending year for the timelapse. Defaults to 2022.</span>
+<span class="sd">        end_year (int, optional): Ending year for the timelapse. Defaults to None, which will use the current year.</span>
 <span class="sd">        start_date (str, optional): Starting date (month-day) each year for filtering ImageCollection. Defaults to &#39;01-01&#39;.</span>
 <span class="sd">        end_date (str, optional): Ending date (month-day) each year for filtering ImageCollection. Defaults to &#39;12-31&#39;.</span>
 <span class="sd">        apply_fmask (bool, optional): Whether to apply Fmask (Function of mask) for automated clouds, cloud shadows, snow, and water masking.</span>
@@ -13167,6 +13202,9 @@ based on mean composites following a steady frequency (f.e. 1 image per month)
     <span class="kn">import</span> <span class="nn">re</span>
 
     <span class="c1"># import datetime</span>
+
+    <span class="k">if</span> <span class="n">end_year</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">end_year</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span><span class="o">.</span><span class="n">year</span>
 
     <span class="k">if</span> <span class="n">roi</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
         <span class="c1"># roi = ee.Geometry.Polygon(</span>
@@ -13190,7 +13228,6 @@ based on mean composites following a steady frequency (f.e. 1 image per month)
         <span class="p">)</span>
 
     <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">roi</span><span class="p">,</span> <span class="n">ee</span><span class="o">.</span><span class="n">Geometry</span><span class="p">):</span>
-
         <span class="k">try</span><span class="p">:</span>
             <span class="n">roi</span> <span class="o">=</span> <span class="n">roi</span><span class="o">.</span><span class="n">geometry</span><span class="p">()</span>
         <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
@@ -13217,16 +13254,24 @@ based on mean composites following a steady frequency (f.e. 1 image per month)
 
     <span class="c1">################################################################################</span>
     <span class="c1"># Setup vars to get dates.</span>
-    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">start_year</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">start_year</span> <span class="o">&gt;=</span> <span class="mi">2015</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">start_year</span> <span class="o">&lt;=</span> <span class="mi">2022</span><span class="p">):</span>
+    <span class="k">if</span> <span class="p">(</span>
+        <span class="nb">isinstance</span><span class="p">(</span><span class="n">start_year</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span>
+        <span class="ow">and</span> <span class="p">(</span><span class="n">start_year</span> <span class="o">&gt;=</span> <span class="mi">2015</span><span class="p">)</span>
+        <span class="ow">and</span> <span class="p">(</span><span class="n">start_year</span> <span class="o">&lt;=</span> <span class="n">get_current_year</span><span class="p">())</span>
+    <span class="p">):</span>
         <span class="k">pass</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The start year must be an integer &gt;= 2015.&quot;</span><span class="p">)</span>
         <span class="k">return</span>
 
-    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">end_year</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">end_year</span> <span class="o">&gt;=</span> <span class="mi">2015</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">end_year</span> <span class="o">&lt;=</span> <span class="mi">2022</span><span class="p">):</span>
+    <span class="k">if</span> <span class="p">(</span>
+        <span class="nb">isinstance</span><span class="p">(</span><span class="n">end_year</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span>
+        <span class="ow">and</span> <span class="p">(</span><span class="n">end_year</span> <span class="o">&gt;=</span> <span class="mi">2015</span><span class="p">)</span>
+        <span class="ow">and</span> <span class="p">(</span><span class="n">end_year</span> <span class="o">&lt;=</span> <span class="n">get_current_year</span><span class="p">())</span>
+    <span class="p">):</span>
         <span class="k">pass</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The end year must be an integer &lt;= 2022.&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The end year must be an integer &lt;= </span><span class="si">{</span><span class="n">get_current_year</span><span class="p">()</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
         <span class="k">return</span>
 
     <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s2">&quot;[0-9]</span><span class="si">{2}</span><span class="s2">\-[0-9]</span><span class="si">{2}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">start_date</span><span class="p">)</span> <span class="ow">and</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span>
@@ -13475,7 +13520,7 @@ based on mean composites following a steady frequency (f.e. 1 image per month)
 
     <div class="doc doc-contents ">
 
-      <p>Convert a vector to a gif. This function was inspired by by Johannes Uhl's shapefile2gif repo at 
+      <p>Convert a vector to a gif. This function was inspired by by Johannes Uhl's shapefile2gif repo at
         https://github.com/johannesuhl/shapefile2gif. Credits to Johannes Uhl.</p>
 
 <p><strong>Parameters:</strong></p>
@@ -13663,7 +13708,7 @@ based on mean composites following a steady frequency (f.e. 1 image per month)
     <span class="n">open_args</span><span class="o">=</span><span class="p">{},</span>
     <span class="n">plot_args</span><span class="o">=</span><span class="p">{},</span>
 <span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Convert a vector to a gif. This function was inspired by by Johannes Uhl&#39;s shapefile2gif repo at </span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Convert a vector to a gif. This function was inspired by by Johannes Uhl&#39;s shapefile2gif repo at</span>
 <span class="sd">            https://github.com/johannesuhl/shapefile2gif. Credits to Johannes Uhl.</span>
 
 <span class="sd">    Args:</span>
@@ -13847,50 +13892,14 @@ based on mean composites following a steady frequency (f.e. 1 image per month)
           
         </div>
         
-          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
             Back to top
-          </a>
+          </button>
         
       </main>
       
         <footer class="md-footer">
-  
-    
-    <nav class="md-footer__inner md-grid" aria-label="Footer" >
-      
-        
-        <a href="../plotlymap/" class="md-footer__link md-footer__link--prev" aria-label="Previous: plotlymap module" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              plotlymap module
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../toolbar/" class="md-footer__link md-footer__link--next" aria-label="Next: toolbar module" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              toolbar module
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -13912,47 +13921,57 @@ based on mean composites following a steady frequency (f.e. 1 image per month)
   
     
     
+    
+    
       
       
     
     <a href="https://github.com/giswqs" target="_blank" rel="noopener" title="github.com" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
     </a>
   
+    
+    
     
     
       
       
     
     <a href="https://medium.com/@giswqs" target="_blank" rel="noopener" title="medium.com" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M180.5 74.262C80.813 74.262 0 155.633 0 256s80.819 181.738 180.5 181.738S361 356.373 361 256 280.191 74.262 180.5 74.262Zm288.25 10.646c-49.845 0-90.245 76.619-90.245 171.095s40.406 171.1 90.251 171.1 90.251-76.619 90.251-171.1H559c0-94.503-40.4-171.095-90.248-171.095Zm139.506 17.821c-17.526 0-31.735 68.628-31.735 153.274s14.2 153.274 31.735 153.274S640 340.631 640 256c0-84.649-14.215-153.271-31.742-153.271Z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M180.5 74.262C80.813 74.262 0 155.633 0 256s80.819 181.738 180.5 181.738S361 356.373 361 256 280.191 74.262 180.5 74.262Zm288.25 10.646c-49.845 0-90.245 76.619-90.245 171.095s40.406 171.1 90.251 171.1 90.251-76.619 90.251-171.1H559c0-94.503-40.4-171.095-90.248-171.095Zm139.506 17.821c-17.526 0-31.735 68.628-31.735 153.274s14.2 153.274 31.735 153.274S640 340.631 640 256c0-84.649-14.215-153.271-31.742-153.271Z"/></svg>
     </a>
   
+    
+    
     
     
       
       
     
     <a href="https://twitter.com/giswqs" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
     </a>
   
+    
+    
     
     
       
       
     
     <a href="https://www.linkedin.com/in/qiushengwu" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
     </a>
   
+    
+    
     
     
       
       
     
     <a href="https://youtube.com/@giswqs" target="_blank" rel="noopener" title="youtube.com" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
     </a>
   
 </div>
@@ -13966,16 +13985,15 @@ based on mean composites following a steady frequency (f.e. 1 image per month)
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.top", "search.highlight", "search.share"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.top", "search.highlight", "search.share"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      <script src="../assets/javascripts/bundle.407015b8.min.js"></script>
       
         <script src="../js/timeago.min.js"></script>
       
         <script src="../js/timeago_mkdocs_material.js"></script>
       
-    
     
   </body>
 </html>

@@ -1,5 +1,71 @@
 # Changelog
 
+## v0.20.4 - Mar 27, 2023
+
+**Improvement**
+
+-   Fixed image export file per band bug (#1481)
+-   Added filenames parameter to export image collection (#1478)
+-   Removed ipykernel import
+
+## v0.20.3 - Mar 22, 2023
+
+**Improvement**
+
+-   Fixed ipywidgets comm error ([#1474](https://github.com/giswqs/geemap/pull/1474))
+
+## v0.20.2 - Mar 19, 2023
+
+**New Features**
+
+-   Added AmericaView workshop notebook ([#1459](https://github.com/giswqs/geemap/pull/1459))
+-   Added geemap docker image ([#1456](https://github.com/giswqs/geemap/pull/1456))
+-   Added geemap logo ([#1448](https://github.com/giswqs/geemap/pull/1448))
+
+**Improvement**
+
+-   Cleaned up notebooks ([#1469](https://github.com/giswqs/geemap/pull/1469))
+-   Fixed zonal stats by group bug ([#1441](https://github.com/giswqs/geemap/pull/1441))
+-   Disable docs search due to large file [#1437](https://github.com/giswqs/geemap/issues/1437)
+-   Fixed datapane bug #1450 ([#1452](https://github.com/giswqs/geemap/pull/1452))
+
+## v0.20.0 - Feb 18, 2023
+
+**New Features**
+
+-   Added support for gradio for developing interactive web apps ([#1436](https://github.com/giswqs/geemap/pull/1436))
+
+**Improvement**
+
+-   Updated JRC water product to v1.4 ([#1428](https://github.com/giswqs/geemap/pull/1428))
+-   Fixed tar file bug CVE-2007-4559 ([#1419](https://github.com/giswqs/geemap/pull/1419))
+-   zonal_stats_by_group patch ([#1418](https://github.com/giswqs/geemap/pull/1418))
+
+## v0.19.6 - Jan 23, 2023
+
+**Improvement**
+
+-   Automatically copy converted JavaScript to Python script to clipboard ([#1411](https://github.com/giswqs/geemap/issues/1411))
+
+## v0.19.5 - Jan 19, 2023
+
+**Improvement**
+
+-   Pin ipywidgets version <8.0 as VS Code does not support ipywidgets 8.x ([#1408](https://github.com/giswqs/geemap/pull/1408))
+
+## v0.19.4 - Jan 19, 2023
+
+**Improvement**
+
+-   Added layer control to split map ([#1405](https://github.com/giswqs/geemap/pull/1405))
+-   Improved JavaScript to Python conversion ([#1405](https://github.com/giswqs/geemap/pull/1405))
+
+## v0.19.3 - Jan 17, 2023
+
+**Improvement**
+
+-   Updated timelapse default end year [#1400](https://github.com/giswqs/geemap/pull/1400)
+
 ## v0.19.2 - Jan 11, 2023
 
 **Improvement**
