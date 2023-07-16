@@ -5557,10 +5557,12 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
 <span class="sd">            max_height (int, optional): Max height of the widget (in pixels), if None it will respect the content size. Defaults to None.</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s1">&#39;_plot_widget&#39;</span><span class="p">)</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">_plot_widget</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;_plot_widget&quot;</span><span class="p">)</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">_plot_widget</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">plot_widget</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_plot_widget</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="n">plot_widget</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Output</span><span class="p">(</span><span class="n">layout</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;border&quot;</span><span class="p">:</span> <span class="s2">&quot;1px solid black&quot;</span><span class="p">})</span>
+            <span class="n">plot_widget</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Output</span><span class="p">(</span>
+                <span class="n">layout</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;border&quot;</span><span class="p">:</span> <span class="s2">&quot;1px solid black&quot;</span><span class="p">,</span> <span class="s2">&quot;max_width&quot;</span><span class="p">:</span> <span class="s2">&quot;500px&quot;</span><span class="p">}</span>
+            <span class="p">)</span>
             <span class="n">plot_control</span> <span class="o">=</span> <span class="n">ipyleaflet</span><span class="o">.</span><span class="n">WidgetControl</span><span class="p">(</span>
                 <span class="n">widget</span><span class="o">=</span><span class="n">plot_widget</span><span class="p">,</span>
                 <span class="n">position</span><span class="o">=</span><span class="n">position</span><span class="p">,</span>
@@ -5661,7 +5663,7 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
         <span class="k">if</span> <span class="s2">&quot;min_width&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="p">:</span>
             <span class="n">min_width</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="k">if</span> <span class="s2">&quot;max_width&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="p">:</span>
-            <span class="n">max_width</span> <span class="o">=</span> <span class="kc">None</span>
+            <span class="n">max_width</span> <span class="o">=</span> <span class="s2">&quot;300px&quot;</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="n">max_width</span> <span class="o">=</span> <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;max_width&quot;</span><span class="p">]</span>
         <span class="k">if</span> <span class="s2">&quot;min_height&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="p">:</span>
@@ -5823,6 +5825,7 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
                 <span class="n">widget</span><span class="o">=</span><span class="n">legend_output_widget</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="n">position</span>
             <span class="p">)</span>
             <span class="c1"># legend_output.append_display_data(legend_widget)</span>
+            <span class="n">legend_output</span><span class="o">.</span><span class="n">clear_output</span><span class="p">()</span>
             <span class="k">with</span> <span class="n">legend_output</span><span class="p">:</span>
                 <span class="n">display</span><span class="p">(</span><span class="n">legend_widget</span><span class="p">)</span>
 
@@ -5853,6 +5856,7 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
         <span class="n">layer_name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
         <span class="n">font_size</span><span class="o">=</span><span class="mi">9</span><span class="p">,</span>
         <span class="n">axis_off</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">max_width</span><span class="o">=</span><span class="s2">&quot;270px&quot;</span><span class="p">,</span>
         <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
     <span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Add a matplotlib colorbar to the map</span>
@@ -5868,6 +5872,7 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
 <span class="sd">            layer_name (str, optional): The layer name associated with the colorbar. Defaults to None.</span>
 <span class="sd">            font_size (int, optional): Font size for the colorbar. Defaults to 9.</span>
 <span class="sd">            axis_off (bool, optional): Whether to turn off the axis. Defaults to False.</span>
+<span class="sd">            max_width (str, optional): Maximum width of the colorbar in pixels. Defaults to &quot;300px&quot;.</span>
 
 <span class="sd">        Raises:</span>
 <span class="sd">            TypeError: If the vis_params is not a dictionary.</span>
@@ -5994,7 +5999,7 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
         <span class="k">if</span> <span class="n">transparent_bg</span><span class="p">:</span>
             <span class="n">fig</span><span class="o">.</span><span class="n">patch</span><span class="o">.</span><span class="n">set_alpha</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span>
 
-        <span class="n">output</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Output</span><span class="p">()</span>
+        <span class="n">output</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Output</span><span class="p">(</span><span class="n">layout</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="n">max_width</span><span class="p">))</span>
         <span class="n">colormap_ctrl</span> <span class="o">=</span> <span class="n">ipyleaflet</span><span class="o">.</span><span class="n">WidgetControl</span><span class="p">(</span>
             <span class="n">widget</span><span class="o">=</span><span class="n">output</span><span class="p">,</span>
             <span class="n">position</span><span class="o">=</span><span class="n">position</span><span class="p">,</span>
@@ -6018,7 +6023,7 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
 
     <span class="k">def</span> <span class="nf">remove_colorbar</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Remove colorbar from the map.&quot;&quot;&quot;</span>
-        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s1">&#39;_colorbar&#39;</span><span class="p">)</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">_colorbar</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;_colorbar&quot;</span><span class="p">)</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">_colorbar</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">remove_control</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_colorbar</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">remove_colorbars</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -6030,7 +6035,7 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
 
     <span class="k">def</span> <span class="nf">remove_legend</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Remove legend from the map.&quot;&quot;&quot;</span>
-        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s1">&#39;_legend&#39;</span><span class="p">)</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">_legend</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;_legend&quot;</span><span class="p">)</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">_legend</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_legend</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">controls</span><span class="p">:</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">remove_control</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_legend</span><span class="p">)</span>
 
@@ -6073,8 +6078,11 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
         <span class="n">layer_gamma</span> <span class="o">=</span> <span class="mi">1</span>
         <span class="n">left_value</span> <span class="o">=</span> <span class="mi">0</span>
         <span class="n">right_value</span> <span class="o">=</span> <span class="mi">10000</span>
+        <span class="n">max_width</span> <span class="o">=</span> <span class="s2">&quot;270px&quot;</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">_colorbar_widget</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Output</span><span class="p">(</span><span class="n">layout</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span><span class="n">height</span><span class="o">=</span><span class="s2">&quot;60px&quot;</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_colorbar_widget</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Output</span><span class="p">(</span>
+            <span class="n">layout</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span><span class="n">height</span><span class="o">=</span><span class="s2">&quot;60px&quot;</span><span class="p">,</span> <span class="n">max_width</span><span class="o">=</span><span class="n">max_width</span><span class="p">)</span>
+        <span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_colorbar_ctrl</span> <span class="o">=</span> <span class="n">ipyleaflet</span><span class="o">.</span><span class="n">WidgetControl</span><span class="p">(</span>
             <span class="n">widget</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_colorbar_widget</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="s2">&quot;bottomright&quot;</span>
         <span class="p">)</span>
@@ -6213,7 +6221,9 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
 
                         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_colorbar_widget</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
                             <span class="bp">self</span><span class="o">.</span><span class="n">_colorbar_widget</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Output</span><span class="p">(</span>
-                                <span class="n">layout</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span><span class="n">height</span><span class="o">=</span><span class="s2">&quot;60px&quot;</span><span class="p">)</span>
+                                <span class="n">layout</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span>
+                                    <span class="n">height</span><span class="o">=</span><span class="s2">&quot;60px&quot;</span><span class="p">,</span> <span class="n">max_width</span><span class="o">=</span><span class="n">max_width</span>
+                                <span class="p">)</span>
                             <span class="p">)</span>
 
                         <span class="k">if</span> <span class="p">(</span><span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;_colorbar_ctrl&quot;</span><span class="p">))</span> <span class="ow">or</span> <span class="p">(</span>
@@ -6408,7 +6418,7 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
 
                     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_colorbar_widget</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
                         <span class="bp">self</span><span class="o">.</span><span class="n">_colorbar_widget</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Output</span><span class="p">(</span>
-                            <span class="n">layout</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span><span class="n">height</span><span class="o">=</span><span class="s2">&quot;60px&quot;</span><span class="p">)</span>
+                            <span class="n">layout</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span><span class="n">height</span><span class="o">=</span><span class="s2">&quot;60px&quot;</span><span class="p">,</span> <span class="n">max_width</span><span class="o">=</span><span class="s2">&quot;270px&quot;</span><span class="p">)</span>
                         <span class="p">)</span>
 
                     <span class="k">if</span> <span class="p">(</span>
@@ -6710,7 +6720,7 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
                     <span class="p">)</span>
 
                     <span class="bp">self</span><span class="o">.</span><span class="n">_colorbar_widget</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Output</span><span class="p">(</span>
-                        <span class="n">layout</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span><span class="n">height</span><span class="o">=</span><span class="s2">&quot;60px&quot;</span><span class="p">)</span>
+                        <span class="n">layout</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span><span class="n">height</span><span class="o">=</span><span class="s2">&quot;60px&quot;</span><span class="p">,</span> <span class="n">max_width</span><span class="o">=</span><span class="n">max_width</span><span class="p">)</span>
                     <span class="p">)</span>
                     <span class="bp">self</span><span class="o">.</span><span class="n">_colorbar_ctrl</span> <span class="o">=</span> <span class="n">ipyleaflet</span><span class="o">.</span><span class="n">WidgetControl</span><span class="p">(</span>
                         <span class="n">widget</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_colorbar_widget</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="s2">&quot;bottomright&quot;</span>
@@ -7006,7 +7016,9 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
 
                         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_colorbar_widget</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
                             <span class="bp">self</span><span class="o">.</span><span class="n">_colorbar_widget</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Output</span><span class="p">(</span>
-                                <span class="n">layout</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span><span class="n">height</span><span class="o">=</span><span class="s2">&quot;60px&quot;</span><span class="p">)</span>
+                                <span class="n">layout</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span>
+                                    <span class="n">height</span><span class="o">=</span><span class="s2">&quot;60px&quot;</span><span class="p">,</span> <span class="n">max_width</span><span class="o">=</span><span class="n">max_width</span>
+                                <span class="p">)</span>
                             <span class="p">)</span>
 
                         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_colorbar_ctrl</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
@@ -7053,7 +7065,7 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
 
                     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_colorbar_widget</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
                         <span class="bp">self</span><span class="o">.</span><span class="n">_colorbar_widget</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Output</span><span class="p">(</span>
-                            <span class="n">layout</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span><span class="n">height</span><span class="o">=</span><span class="s2">&quot;60px&quot;</span><span class="p">)</span>
+                            <span class="n">layout</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span><span class="n">height</span><span class="o">=</span><span class="s2">&quot;60px&quot;</span><span class="p">,</span> <span class="n">max_width</span><span class="o">=</span><span class="n">max_width</span><span class="p">)</span>
                         <span class="p">)</span>
 
                     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_colorbar_ctrl</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
@@ -7125,7 +7137,7 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
                         <span class="bp">self</span><span class="o">.</span><span class="n">_colorbar_widget</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 
                     <span class="bp">self</span><span class="o">.</span><span class="n">_colorbar_widget</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Output</span><span class="p">(</span>
-                        <span class="n">layout</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span><span class="n">height</span><span class="o">=</span><span class="s2">&quot;60px&quot;</span><span class="p">)</span>
+                        <span class="n">layout</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span><span class="n">height</span><span class="o">=</span><span class="s2">&quot;60px&quot;</span><span class="p">,</span> <span class="n">max_width</span><span class="o">=</span><span class="n">max_width</span><span class="p">)</span>
                     <span class="p">)</span>
                     <span class="bp">self</span><span class="o">.</span><span class="n">_colorbar_ctrl</span> <span class="o">=</span> <span class="n">ipyleaflet</span><span class="o">.</span><span class="n">WidgetControl</span><span class="p">(</span>
                         <span class="n">widget</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_colorbar_widget</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="s2">&quot;bottomright&quot;</span>
@@ -9059,7 +9071,7 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
 
     <span class="k">def</span> <span class="nf">toolbar_reset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Reset the toolbar so that no tool is selected.&quot;&quot;&quot;</span>
-        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s1">&#39;_toolbar&#39;</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;_toolbar&quot;</span><span class="p">):</span>
             <span class="n">toolbar_grid</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_toolbar</span>
             <span class="k">if</span> <span class="n">toolbar_grid</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
                 <span class="k">for</span> <span class="n">tool</span> <span class="ow">in</span> <span class="n">toolbar_grid</span><span class="o">.</span><span class="n">children</span><span class="p">:</span>
@@ -11297,7 +11309,7 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
         <span class="n">add_header</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
         <span class="n">opened</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
         <span class="n">show_close_button</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-        <span class="n">widget_icon</span><span class="o">=</span><span class="s1">&#39;gear&#39;</span><span class="p">,</span>
+        <span class="n">widget_icon</span><span class="o">=</span><span class="s2">&quot;gear&quot;</span><span class="p">,</span>
         <span class="n">close_button_icon</span><span class="o">=</span><span class="s2">&quot;times&quot;</span><span class="p">,</span>
         <span class="n">widget_args</span><span class="o">=</span><span class="p">{},</span>
         <span class="n">close_button_args</span><span class="o">=</span><span class="p">{},</span>
@@ -12503,7 +12515,7 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
 
 
 <h3 id="geemap.geemap.Map.add_colorbar" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">add_colorbar</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vis_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">discrete</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">orientation</span><span class="o">=</span><span class="s1">&#39;horizontal&#39;</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="s1">&#39;bottomright&#39;</span><span class="p">,</span> <span class="n">transparent_bg</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">layer_name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="mi">9</span><span class="p">,</span> <span class="n">axis_off</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">add_colorbar</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vis_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">discrete</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">orientation</span><span class="o">=</span><span class="s1">&#39;horizontal&#39;</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="s1">&#39;bottomright&#39;</span><span class="p">,</span> <span class="n">transparent_bg</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">layer_name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="mi">9</span><span class="p">,</span> <span class="n">axis_off</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">max_width</span><span class="o">=</span><span class="s1">&#39;270px&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
 
 
 <a href="#geemap.geemap.Map.add_colorbar" class="headerlink" title="Permanent link">&para;</a></h3>
@@ -12583,6 +12595,12 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
         <td><p>Whether to turn off the axis. Defaults to False.</p></td>
         <td><code>False</code></td>
       </tr>
+      <tr>
+        <td><code>max_width</code></td>
+        <td><code>str</code></td>
+        <td><p>Maximum width of the colorbar in pixels. Defaults to "300px".</p></td>
+        <td><code>&#39;270px&#39;</code></td>
+      </tr>
   </tbody>
 </table>
 <p><strong>Exceptions:</strong></p>
@@ -12634,6 +12652,7 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
     <span class="n">layer_name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
     <span class="n">font_size</span><span class="o">=</span><span class="mi">9</span><span class="p">,</span>
     <span class="n">axis_off</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">max_width</span><span class="o">=</span><span class="s2">&quot;270px&quot;</span><span class="p">,</span>
     <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
 <span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Add a matplotlib colorbar to the map</span>
@@ -12649,6 +12668,7 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
 <span class="sd">        layer_name (str, optional): The layer name associated with the colorbar. Defaults to None.</span>
 <span class="sd">        font_size (int, optional): Font size for the colorbar. Defaults to 9.</span>
 <span class="sd">        axis_off (bool, optional): Whether to turn off the axis. Defaults to False.</span>
+<span class="sd">        max_width (str, optional): Maximum width of the colorbar in pixels. Defaults to &quot;300px&quot;.</span>
 
 <span class="sd">    Raises:</span>
 <span class="sd">        TypeError: If the vis_params is not a dictionary.</span>
@@ -12775,7 +12795,7 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
     <span class="k">if</span> <span class="n">transparent_bg</span><span class="p">:</span>
         <span class="n">fig</span><span class="o">.</span><span class="n">patch</span><span class="o">.</span><span class="n">set_alpha</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span>
 
-    <span class="n">output</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Output</span><span class="p">()</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Output</span><span class="p">(</span><span class="n">layout</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="n">max_width</span><span class="p">))</span>
     <span class="n">colormap_ctrl</span> <span class="o">=</span> <span class="n">ipyleaflet</span><span class="o">.</span><span class="n">WidgetControl</span><span class="p">(</span>
         <span class="n">widget</span><span class="o">=</span><span class="n">output</span><span class="p">,</span>
         <span class="n">position</span><span class="o">=</span><span class="n">position</span><span class="p">,</span>
@@ -15419,7 +15439,7 @@ style_callback = lambda feat: {"fillColor": feat["properties"][&quot;color&quot;
     <span class="k">if</span> <span class="s2">&quot;min_width&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="p">:</span>
         <span class="n">min_width</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="k">if</span> <span class="s2">&quot;max_width&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="p">:</span>
-        <span class="n">max_width</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">max_width</span> <span class="o">=</span> <span class="s2">&quot;300px&quot;</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="n">max_width</span> <span class="o">=</span> <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;max_width&quot;</span><span class="p">]</span>
     <span class="k">if</span> <span class="s2">&quot;min_height&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="p">:</span>
@@ -15581,6 +15601,7 @@ style_callback = lambda feat: {"fillColor": feat["properties"][&quot;color&quot;
             <span class="n">widget</span><span class="o">=</span><span class="n">legend_output_widget</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="n">position</span>
         <span class="p">)</span>
         <span class="c1"># legend_output.append_display_data(legend_widget)</span>
+        <span class="n">legend_output</span><span class="o">.</span><span class="n">clear_output</span><span class="p">()</span>
         <span class="k">with</span> <span class="n">legend_output</span><span class="p">:</span>
             <span class="n">display</span><span class="p">(</span><span class="n">legend_widget</span><span class="p">)</span>
 
@@ -19964,7 +19985,7 @@ os.environ[&#39;LOCALTILESERVER_CLIENT_PREFIX&#39;] = &#39;proxy/{port}&#39;
     <span class="n">add_header</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
     <span class="n">opened</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
     <span class="n">show_close_button</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-    <span class="n">widget_icon</span><span class="o">=</span><span class="s1">&#39;gear&#39;</span><span class="p">,</span>
+    <span class="n">widget_icon</span><span class="o">=</span><span class="s2">&quot;gear&quot;</span><span class="p">,</span>
     <span class="n">close_button_icon</span><span class="o">=</span><span class="s2">&quot;times&quot;</span><span class="p">,</span>
     <span class="n">widget_args</span><span class="o">=</span><span class="p">{},</span>
     <span class="n">close_button_args</span><span class="o">=</span><span class="p">{},</span>
@@ -20736,8 +20757,11 @@ os.environ[&#39;LOCALTILESERVER_CLIENT_PREFIX&#39;] = &#39;proxy/{port}&#39;
     <span class="n">layer_gamma</span> <span class="o">=</span> <span class="mi">1</span>
     <span class="n">left_value</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">right_value</span> <span class="o">=</span> <span class="mi">10000</span>
+    <span class="n">max_width</span> <span class="o">=</span> <span class="s2">&quot;270px&quot;</span>
 
-    <span class="bp">self</span><span class="o">.</span><span class="n">_colorbar_widget</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Output</span><span class="p">(</span><span class="n">layout</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span><span class="n">height</span><span class="o">=</span><span class="s2">&quot;60px&quot;</span><span class="p">))</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_colorbar_widget</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Output</span><span class="p">(</span>
+        <span class="n">layout</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span><span class="n">height</span><span class="o">=</span><span class="s2">&quot;60px&quot;</span><span class="p">,</span> <span class="n">max_width</span><span class="o">=</span><span class="n">max_width</span><span class="p">)</span>
+    <span class="p">)</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">_colorbar_ctrl</span> <span class="o">=</span> <span class="n">ipyleaflet</span><span class="o">.</span><span class="n">WidgetControl</span><span class="p">(</span>
         <span class="n">widget</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_colorbar_widget</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="s2">&quot;bottomright&quot;</span>
     <span class="p">)</span>
@@ -20876,7 +20900,9 @@ os.environ[&#39;LOCALTILESERVER_CLIENT_PREFIX&#39;] = &#39;proxy/{port}&#39;
 
                     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_colorbar_widget</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
                         <span class="bp">self</span><span class="o">.</span><span class="n">_colorbar_widget</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Output</span><span class="p">(</span>
-                            <span class="n">layout</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span><span class="n">height</span><span class="o">=</span><span class="s2">&quot;60px&quot;</span><span class="p">)</span>
+                            <span class="n">layout</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span>
+                                <span class="n">height</span><span class="o">=</span><span class="s2">&quot;60px&quot;</span><span class="p">,</span> <span class="n">max_width</span><span class="o">=</span><span class="n">max_width</span>
+                            <span class="p">)</span>
                         <span class="p">)</span>
 
                     <span class="k">if</span> <span class="p">(</span><span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;_colorbar_ctrl&quot;</span><span class="p">))</span> <span class="ow">or</span> <span class="p">(</span>
@@ -21071,7 +21097,7 @@ os.environ[&#39;LOCALTILESERVER_CLIENT_PREFIX&#39;] = &#39;proxy/{port}&#39;
 
                 <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_colorbar_widget</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
                     <span class="bp">self</span><span class="o">.</span><span class="n">_colorbar_widget</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Output</span><span class="p">(</span>
-                        <span class="n">layout</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span><span class="n">height</span><span class="o">=</span><span class="s2">&quot;60px&quot;</span><span class="p">)</span>
+                        <span class="n">layout</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span><span class="n">height</span><span class="o">=</span><span class="s2">&quot;60px&quot;</span><span class="p">,</span> <span class="n">max_width</span><span class="o">=</span><span class="s2">&quot;270px&quot;</span><span class="p">)</span>
                     <span class="p">)</span>
 
                 <span class="k">if</span> <span class="p">(</span>
@@ -21373,7 +21399,7 @@ os.environ[&#39;LOCALTILESERVER_CLIENT_PREFIX&#39;] = &#39;proxy/{port}&#39;
                 <span class="p">)</span>
 
                 <span class="bp">self</span><span class="o">.</span><span class="n">_colorbar_widget</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Output</span><span class="p">(</span>
-                    <span class="n">layout</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span><span class="n">height</span><span class="o">=</span><span class="s2">&quot;60px&quot;</span><span class="p">)</span>
+                    <span class="n">layout</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span><span class="n">height</span><span class="o">=</span><span class="s2">&quot;60px&quot;</span><span class="p">,</span> <span class="n">max_width</span><span class="o">=</span><span class="n">max_width</span><span class="p">)</span>
                 <span class="p">)</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">_colorbar_ctrl</span> <span class="o">=</span> <span class="n">ipyleaflet</span><span class="o">.</span><span class="n">WidgetControl</span><span class="p">(</span>
                     <span class="n">widget</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_colorbar_widget</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="s2">&quot;bottomright&quot;</span>
@@ -21669,7 +21695,9 @@ os.environ[&#39;LOCALTILESERVER_CLIENT_PREFIX&#39;] = &#39;proxy/{port}&#39;
 
                     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_colorbar_widget</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
                         <span class="bp">self</span><span class="o">.</span><span class="n">_colorbar_widget</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Output</span><span class="p">(</span>
-                            <span class="n">layout</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span><span class="n">height</span><span class="o">=</span><span class="s2">&quot;60px&quot;</span><span class="p">)</span>
+                            <span class="n">layout</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span>
+                                <span class="n">height</span><span class="o">=</span><span class="s2">&quot;60px&quot;</span><span class="p">,</span> <span class="n">max_width</span><span class="o">=</span><span class="n">max_width</span>
+                            <span class="p">)</span>
                         <span class="p">)</span>
 
                     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_colorbar_ctrl</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
@@ -21716,7 +21744,7 @@ os.environ[&#39;LOCALTILESERVER_CLIENT_PREFIX&#39;] = &#39;proxy/{port}&#39;
 
                 <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_colorbar_widget</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
                     <span class="bp">self</span><span class="o">.</span><span class="n">_colorbar_widget</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Output</span><span class="p">(</span>
-                        <span class="n">layout</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span><span class="n">height</span><span class="o">=</span><span class="s2">&quot;60px&quot;</span><span class="p">)</span>
+                        <span class="n">layout</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span><span class="n">height</span><span class="o">=</span><span class="s2">&quot;60px&quot;</span><span class="p">,</span> <span class="n">max_width</span><span class="o">=</span><span class="n">max_width</span><span class="p">)</span>
                     <span class="p">)</span>
 
                 <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_colorbar_ctrl</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
@@ -21788,7 +21816,7 @@ os.environ[&#39;LOCALTILESERVER_CLIENT_PREFIX&#39;] = &#39;proxy/{port}&#39;
                     <span class="bp">self</span><span class="o">.</span><span class="n">_colorbar_widget</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 
                 <span class="bp">self</span><span class="o">.</span><span class="n">_colorbar_widget</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Output</span><span class="p">(</span>
-                    <span class="n">layout</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span><span class="n">height</span><span class="o">=</span><span class="s2">&quot;60px&quot;</span><span class="p">)</span>
+                    <span class="n">layout</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span><span class="n">height</span><span class="o">=</span><span class="s2">&quot;60px&quot;</span><span class="p">,</span> <span class="n">max_width</span><span class="o">=</span><span class="n">max_width</span><span class="p">)</span>
                 <span class="p">)</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">_colorbar_ctrl</span> <span class="o">=</span> <span class="n">ipyleaflet</span><span class="o">.</span><span class="n">WidgetControl</span><span class="p">(</span>
                     <span class="n">widget</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_colorbar_widget</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="s2">&quot;bottomright&quot;</span>
@@ -23058,10 +23086,12 @@ os.environ[&#39;LOCALTILESERVER_CLIENT_PREFIX&#39;] = &#39;proxy/{port}&#39;
 <span class="sd">        max_height (int, optional): Max height of the widget (in pixels), if None it will respect the content size. Defaults to None.</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s1">&#39;_plot_widget&#39;</span><span class="p">)</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">_plot_widget</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;_plot_widget&quot;</span><span class="p">)</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">_plot_widget</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
         <span class="n">plot_widget</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_plot_widget</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="n">plot_widget</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Output</span><span class="p">(</span><span class="n">layout</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;border&quot;</span><span class="p">:</span> <span class="s2">&quot;1px solid black&quot;</span><span class="p">})</span>
+        <span class="n">plot_widget</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Output</span><span class="p">(</span>
+            <span class="n">layout</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;border&quot;</span><span class="p">:</span> <span class="s2">&quot;1px solid black&quot;</span><span class="p">,</span> <span class="s2">&quot;max_width&quot;</span><span class="p">:</span> <span class="s2">&quot;500px&quot;</span><span class="p">}</span>
+        <span class="p">)</span>
         <span class="n">plot_control</span> <span class="o">=</span> <span class="n">ipyleaflet</span><span class="o">.</span><span class="n">WidgetControl</span><span class="p">(</span>
             <span class="n">widget</span><span class="o">=</span><span class="n">plot_widget</span><span class="p">,</span>
             <span class="n">position</span><span class="o">=</span><span class="n">position</span><span class="p">,</span>
@@ -23502,7 +23532,7 @@ os.environ[&#39;LOCALTILESERVER_CLIENT_PREFIX&#39;] = &#39;proxy/{port}&#39;
           <summary>Source code in <code>geemap/geemap.py</code></summary>
           <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">remove_colorbar</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Remove colorbar from the map.&quot;&quot;&quot;</span>
-    <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s1">&#39;_colorbar&#39;</span><span class="p">)</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">_colorbar</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;_colorbar&quot;</span><span class="p">)</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">_colorbar</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">remove_control</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_colorbar</span><span class="p">)</span>
 </code></pre></div>
         </details>
@@ -23739,7 +23769,7 @@ os.environ[&#39;LOCALTILESERVER_CLIENT_PREFIX&#39;] = &#39;proxy/{port}&#39;
           <summary>Source code in <code>geemap/geemap.py</code></summary>
           <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">remove_legend</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Remove legend from the map.&quot;&quot;&quot;</span>
-    <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s1">&#39;_legend&#39;</span><span class="p">)</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">_legend</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;_legend&quot;</span><span class="p">)</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">_legend</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_legend</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">controls</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">remove_control</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_legend</span><span class="p">)</span>
 </code></pre></div>
@@ -25056,7 +25086,7 @@ os.environ[&#39;LOCALTILESERVER_CLIENT_PREFIX&#39;] = &#39;proxy/{port}&#39;
           <summary>Source code in <code>geemap/geemap.py</code></summary>
           <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">toolbar_reset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Reset the toolbar so that no tool is selected.&quot;&quot;&quot;</span>
-    <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s1">&#39;_toolbar&#39;</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;_toolbar&quot;</span><span class="p">):</span>
         <span class="n">toolbar_grid</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_toolbar</span>
         <span class="k">if</span> <span class="n">toolbar_grid</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">for</span> <span class="n">tool</span> <span class="ow">in</span> <span class="n">toolbar_grid</span><span class="o">.</span><span class="n">children</span><span class="p">:</span>
